@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4431BC030540050E298 /* AppDelegate.swift */; };
+		22F5A4461BC030540050E298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4451BC030540050E298 /* ViewController.swift */; };
+		22F5A4491BC030540050E298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A4471BC030540050E298 /* Main.storyboard */; };
+		22F5A44B1BC030540050E298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A44A1BC030540050E298 /* Assets.xcassets */; };
+		22F5A44E1BC030540050E298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */; };
+		22F5A4591BC030540050E298 /* HomieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4581BC030540050E298 /* HomieTests.swift */; };
+		22F5A4641BC030540050E298 /* HomieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4631BC030540050E298 /* HomieUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22F5A4551BC030540050E298 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22F5A4381BC030540050E298 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22F5A43F1BC030540050E298;
+			remoteInfo = Homie;
+		};
+		22F5A4601BC030540050E298 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22F5A4381BC030540050E298 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22F5A43F1BC030540050E298;
+			remoteInfo = Homie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22F5A4401BC030540050E298 /* Homie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F5A4431BC030540050E298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22F5A4451BC030540050E298 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22F5A4481BC030540050E298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22F5A44A1BC030540050E298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22F5A44D1BC030540050E298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22F5A44F1BC030540050E298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F5A4541BC030540050E298 /* HomieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F5A4581BC030540050E298 /* HomieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomieTests.swift; sourceTree = "<group>"; };
+		22F5A45A1BC030540050E298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F5A45F1BC030540050E298 /* HomieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F5A4631BC030540050E298 /* HomieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomieUITests.swift; sourceTree = "<group>"; };
+		22F5A4651BC030540050E298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22F5A43D1BC030540050E298 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F5A4511BC030540050E298 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F5A45C1BC030540050E298 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22F5A4371BC030540050E298 = {
+			isa = PBXGroup;
+			children = (
+				22F5A4421BC030540050E298 /* Homie */,
+				22F5A4571BC030540050E298 /* HomieTests */,
+				22F5A4621BC030540050E298 /* HomieUITests */,
+				22F5A4411BC030540050E298 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22F5A4411BC030540050E298 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22F5A4401BC030540050E298 /* Homie.app */,
+				22F5A4541BC030540050E298 /* HomieTests.xctest */,
+				22F5A45F1BC030540050E298 /* HomieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22F5A4421BC030540050E298 /* Homie */ = {
+			isa = PBXGroup;
+			children = (
+				22F5A4431BC030540050E298 /* AppDelegate.swift */,
+				22F5A4451BC030540050E298 /* ViewController.swift */,
+				22F5A4471BC030540050E298 /* Main.storyboard */,
+				22F5A44A1BC030540050E298 /* Assets.xcassets */,
+				22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */,
+				22F5A44F1BC030540050E298 /* Info.plist */,
+			);
+			path = Homie;
+			sourceTree = "<group>";
+		};
+		22F5A4571BC030540050E298 /* HomieTests */ = {
+			isa = PBXGroup;
+			children = (
+				22F5A4581BC030540050E298 /* HomieTests.swift */,
+				22F5A45A1BC030540050E298 /* Info.plist */,
+			);
+			path = HomieTests;
+			sourceTree = "<group>";
+		};
+		22F5A4621BC030540050E298 /* HomieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22F5A4631BC030540050E298 /* HomieUITests.swift */,
+				22F5A4651BC030540050E298 /* Info.plist */,
+			);
+			path = HomieUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22F5A43F1BC030540050E298 /* Homie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F5A4681BC030540050E298 /* Build configuration list for PBXNativeTarget "Homie" */;
+			buildPhases = (
+				22F5A43C1BC030540050E298 /* Sources */,
+				22F5A43D1BC030540050E298 /* Frameworks */,
+				22F5A43E1BC030540050E298 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Homie;
+			productName = Homie;
+			productReference = 22F5A4401BC030540050E298 /* Homie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22F5A4531BC030540050E298 /* HomieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F5A46B1BC030540050E298 /* Build configuration list for PBXNativeTarget "HomieTests" */;
+			buildPhases = (
+				22F5A4501BC030540050E298 /* Sources */,
+				22F5A4511BC030540050E298 /* Frameworks */,
+				22F5A4521BC030540050E298 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22F5A4561BC030540050E298 /* PBXTargetDependency */,
+			);
+			name = HomieTests;
+			productName = HomieTests;
+			productReference = 22F5A4541BC030540050E298 /* HomieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22F5A45E1BC030540050E298 /* HomieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F5A46E1BC030540050E298 /* Build configuration list for PBXNativeTarget "HomieUITests" */;
+			buildPhases = (
+				22F5A45B1BC030540050E298 /* Sources */,
+				22F5A45C1BC030540050E298 /* Frameworks */,
+				22F5A45D1BC030540050E298 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22F5A4611BC030540050E298 /* PBXTargetDependency */,
+			);
+			name = HomieUITests;
+			productName = HomieUITests;
+			productReference = 22F5A45F1BC030540050E298 /* HomieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22F5A4381BC030540050E298 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Homie;
+				TargetAttributes = {
+					22F5A43F1BC030540050E298 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					22F5A4531BC030540050E298 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 22F5A43F1BC030540050E298;
+					};
+					22F5A45E1BC030540050E298 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 22F5A43F1BC030540050E298;
+					};
+				};
+			};
+			buildConfigurationList = 22F5A43B1BC030540050E298 /* Build configuration list for PBXProject "Homie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22F5A4371BC030540050E298;
+			productRefGroup = 22F5A4411BC030540050E298 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22F5A43F1BC030540050E298 /* Homie */,
+				22F5A4531BC030540050E298 /* HomieTests */,
+				22F5A45E1BC030540050E298 /* HomieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22F5A43E1BC030540050E298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F5A44E1BC030540050E298 /* LaunchScreen.storyboard in Resources */,
+				22F5A44B1BC030540050E298 /* Assets.xcassets in Resources */,
+				22F5A4491BC030540050E298 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F5A4521BC030540050E298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F5A45D1BC030540050E298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22F5A43C1BC030540050E298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F5A4461BC030540050E298 /* ViewController.swift in Sources */,
+				22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F5A4501BC030540050E298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F5A4591BC030540050E298 /* HomieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F5A45B1BC030540050E298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F5A4641BC030540050E298 /* HomieUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22F5A4561BC030540050E298 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22F5A43F1BC030540050E298 /* Homie */;
+			targetProxy = 22F5A4551BC030540050E298 /* PBXContainerItemProxy */;
+		};
+		22F5A4611BC030540050E298 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22F5A43F1BC030540050E298 /* Homie */;
+			targetProxy = 22F5A4601BC030540050E298 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22F5A4471BC030540050E298 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22F5A4481BC030540050E298 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22F5A44D1BC030540050E298 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22F5A4661BC030540050E298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22F5A4671BC030540050E298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22F5A4691BC030540050E298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Homie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.homie.io.Homie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22F5A46A1BC030540050E298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Homie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.homie.io.Homie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		22F5A46C1BC030540050E298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HomieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.homie.io.HomieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Homie.app/Homie";
+			};
+			name = Debug;
+		};
+		22F5A46D1BC030540050E298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HomieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.homie.io.HomieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Homie.app/Homie";
+			};
+			name = Release;
+		};
+		22F5A46F1BC030540050E298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HomieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.homie.io.HomieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Homie;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		22F5A4701BC030540050E298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HomieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.homie.io.HomieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Homie;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22F5A43B1BC030540050E298 /* Build configuration list for PBXProject "Homie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F5A4661BC030540050E298 /* Debug */,
+				22F5A4671BC030540050E298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22F5A4681BC030540050E298 /* Build configuration list for PBXNativeTarget "Homie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F5A4691BC030540050E298 /* Debug */,
+				22F5A46A1BC030540050E298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		22F5A46B1BC030540050E298 /* Build configuration list for PBXNativeTarget "HomieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F5A46C1BC030540050E298 /* Debug */,
+				22F5A46D1BC030540050E298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		22F5A46E1BC030540050E298 /* Build configuration list for PBXNativeTarget "HomieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F5A46F1BC030540050E298 /* Debug */,
+				22F5A4701BC030540050E298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22F5A4381BC030540050E298 /* Project object */;
+}
