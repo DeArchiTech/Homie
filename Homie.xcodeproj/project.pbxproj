@@ -14,6 +14,7 @@
 		22F5A44E1BC030540050E298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */; };
 		22F5A4591BC030540050E298 /* HomieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4581BC030540050E298 /* HomieTests.swift */; };
 		22F5A4641BC030540050E298 /* HomieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4631BC030540050E298 /* HomieUITests.swift */; };
+		874B3BD417CBB5C15E45A743 /* Pods_Homie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE1BCE1700007DC01417445 /* Pods_Homie.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		22F5A45F1BC030540050E298 /* HomieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F5A4631BC030540050E298 /* HomieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomieUITests.swift; sourceTree = "<group>"; };
 		22F5A4651BC030540050E298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51A19C6DD93C3E38B4BFA848 /* Pods-Homie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.release.xcconfig"; sourceTree = "<group>"; };
+		AD9FE8CC8FA759738C5875FC /* Pods-Homie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.debug.xcconfig"; sourceTree = "<group>"; };
+		CFE1BCE1700007DC01417445 /* Pods_Homie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874B3BD417CBB5C15E45A743 /* Pods_Homie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				22F5A4571BC030540050E298 /* HomieTests */,
 				22F5A4621BC030540050E298 /* HomieUITests */,
 				22F5A4411BC030540050E298 /* Products */,
+				FF1F8B09E94648D2F0DA17F2 /* Pods */,
+				80CF5AD9D7B0263A3AD4C0D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,23 @@
 			path = HomieUITests;
 			sourceTree = "<group>";
 		};
+		80CF5AD9D7B0263A3AD4C0D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFE1BCE1700007DC01417445 /* Pods_Homie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF1F8B09E94648D2F0DA17F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD9FE8CC8FA759738C5875FC /* Pods-Homie.debug.xcconfig */,
+				51A19C6DD93C3E38B4BFA848 /* Pods-Homie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22F5A4681BC030540050E298 /* Build configuration list for PBXNativeTarget "Homie" */;
 			buildPhases = (
+				3A9ED8F89E8AF80E363352C7 /* Check Pods Manifest.lock */,
 				22F5A43C1BC030540050E298 /* Sources */,
 				22F5A43D1BC030540050E298 /* Frameworks */,
 				22F5A43E1BC030540050E298 /* Resources */,
+				DA7FE6DD4768AD30C43EC183 /* Embed Pods Frameworks */,
+				A7B5DECE28825E436D700C4E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +276,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A9ED8F89E8AF80E363352C7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A7B5DECE28825E436D700C4E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Homie/Pods-Homie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA7FE6DD4768AD30C43EC183 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Homie/Pods-Homie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22F5A43C1BC030540050E298 /* Sources */ = {
@@ -394,6 +469,7 @@
 		};
 		22F5A4691BC030540050E298 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD9FE8CC8FA759738C5875FC /* Pods-Homie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Homie/Info.plist;
@@ -405,6 +481,7 @@
 		};
 		22F5A46A1BC030540050E298 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A19C6DD93C3E38B4BFA848 /* Pods-Homie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Homie/Info.plist;
@@ -481,6 +558,7 @@
 				22F5A46A1BC030540050E298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22F5A46B1BC030540050E298 /* Build configuration list for PBXNativeTarget "HomieTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +567,7 @@
 				22F5A46D1BC030540050E298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22F5A46E1BC030540050E298 /* Build configuration list for PBXNativeTarget "HomieUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +576,7 @@
 				22F5A4701BC030540050E298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
