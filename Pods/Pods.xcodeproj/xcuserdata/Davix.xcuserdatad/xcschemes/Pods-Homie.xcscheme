@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A70361C7E75149A0B4159429"
+               BlueprintIdentifier = "288FADE83429C2CE4150C915"
                BuildableName = "Pods_Homie.framework"
                BlueprintName = "Pods-Homie"
                ReferencedContainer = "container:Pods.xcodeproj">

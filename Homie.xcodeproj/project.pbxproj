@@ -79,6 +79,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		229BA63B1BC246F700FFEA41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		229BA63C1BC2470E00FFEA41 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		229BA63D1BC2471800FFEA41 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		229BA63E1BC2472100FFEA41 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		229BA63F1BC2473D00FFEA41 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		229BA6401BC2474700FFEA41 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		22F5A4371BC030540050E298 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +146,12 @@
 		22F5A4421BC030540050E298 /* Homie */ = {
 			isa = PBXGroup;
 			children = (
+				229BA6401BC2474700FFEA41 /* Helpers */,
+				229BA63F1BC2473D00FFEA41 /* Stores */,
+				229BA63E1BC2472100FFEA41 /* Controllers */,
+				229BA63D1BC2471800FFEA41 /* ViewModels */,
+				229BA63C1BC2470E00FFEA41 /* Views */,
+				229BA63B1BC246F700FFEA41 /* Models */,
 				22F5A4431BC030540050E298 /* AppDelegate.swift */,
 				22F5A4451BC030540050E298 /* ViewController.swift */,
 				22F5A4471BC030540050E298 /* Main.storyboard */,
