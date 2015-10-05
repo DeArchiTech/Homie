@@ -7,7 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Homie/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Base.lproj/Main.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Homie/MockJson.json" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Homie/UserModelJson.json" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Models/HomeModel.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Models/Structs/LoginForm.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Models/UserModel.swift" isTestSource="false" />

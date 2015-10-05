@@ -7,14 +7,24 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class UserModel{
+class UserModel : Mappable{
 
     var userID : Int?
-    var email : String?
+    var identifier : String?
     
     init(){
         
     }
-    
+
+    required init?(_ map: Map) {
+    }
+
+    func mapping(map: Map) {
+        self.userID <- map["userID"]
+        self.identifier <- map["identifier"]
+    }
+
+
 }

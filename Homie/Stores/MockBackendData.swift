@@ -4,26 +4,41 @@
 //
 
 import Foundation
-import SwiftyJSON
+import ObjectMapper
 
 class MockBackendData {
 
-    var user : UserModel?
+    var user: UserModel?
 
-    init(){
+    init() {
 
-        let path : String = NSBundle.mainBundle().pathForResource("MockJson" , ofType: "json") as String!
-        let jsonData = NSData(contentsOfFile: path) as NSData!
-        let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
-        initUser(readableJSON);
+        initUser()
 
     }
 
-    func initUser(json : JSON){
+    func initUser() {
 
+        let path: String = NSBundle.mainBundle().pathForResource("UserModelJson", ofType: "json") as String!
+        let data = NSData(contentsOfFile: path) as NSData!
+
+        do {
+            
+            let JSONObject: AnyObject? = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
+            self.user = Mapper<UserModel>().map(JSONObject)
+            print(self.user)
+
+        
+        }catch{
+            
+            print(error)
+        
+        }
+        print(getUser().userID)
+        print(getUser().identifier)
+        
     }
 
-    func getUser() -> UserModel{
+    func getUser() -> UserModel {
         return self.user!
     }
 
