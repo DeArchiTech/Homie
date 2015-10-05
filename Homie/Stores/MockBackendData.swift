@@ -24,22 +24,20 @@ class MockBackendData {
         do {
             
             let JSONObject: AnyObject? = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
-            self.user = Mapper<UserModel>().map(JSONObject)
-            print(self.user)
-
+            var userInfo = Mapper<UserInfo>().map(JSONObject)
+            self.user = UserModel(userInfo : userInfo!)
         
         }catch{
             
             print(error)
         
         }
-        print(getUser().userID)
-        print(getUser().identifier)
+        print(getUser().userInfo.userID)
+        print(getUser().userInfo.identifier)
         
     }
 
     func getUser() -> UserModel {
-        return self.user!
-    }
+        return self.user!    }
 
 }
