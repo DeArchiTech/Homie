@@ -4,11 +4,27 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class MockBackendData {
 
-    func getUser() -> UserModel{
+    var user : UserModel?
 
+    init(){
+
+        let path : String = NSBundle.mainBundle().pathForResource("MockJson" , ofType: "json") as String!
+        let jsonData = NSData(contentsOfFile: path) as NSData!
+        let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        initUser(readableJSON);
+
+    }
+
+    func initUser(json : JSON){
+
+    }
+
+    func getUser() -> UserModel{
+        return self.user!
     }
 
 }

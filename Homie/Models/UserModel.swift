@@ -10,8 +10,11 @@ import Foundation
 
 class UserModel{
 
-    var userID : Int
-    var email : String
-    var password : String
+    var userID : Int?
+    var email : String?
+    
+    init(){
+        
+    }
     
 }

@@ -7,6 +7,12 @@ import Foundation
 
 class MockBackEndManager : BackEndProtocol {
 
+    var data: MockBackendData = MockBackendData()
+
+    init(){
+
+    }
+
     var endPoint: String {
         get {
             return "http://www.dummieApiEndPoint.com"
@@ -15,12 +21,12 @@ class MockBackEndManager : BackEndProtocol {
         }
     }
 
-    func login(loginForm: LoginForm) -> Alamofire.Request.response.statusCode {
+    func login(loginForm: LoginForm) -> Int{
         return 200
     }
 
-    func getUser(userID: Int) -> UserModel {
-        return nil
+    func getUser(userID: Int) -> UserModel?{
+        return self.data.getUser()
     }
 
 }

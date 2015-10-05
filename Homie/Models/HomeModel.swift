@@ -10,9 +10,9 @@ import Foundation
 
 class User{
 
-    var houseID : Int
-    var physicalAddress : String
-    var photos : [String]
-    var active : Boolean
+    var houseID : Int?
+    var physicalAddress : String?
+    var photos : [String]?
+    var active : Bool?
 
 }

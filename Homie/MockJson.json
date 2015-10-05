@@ -1,0 +1,11 @@
+{
+
+  UserModel : {
+
+    var userID : Int
+    var email : String
+    var password : String
+
+  }
+
+}

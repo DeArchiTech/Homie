@@ -10,7 +10,7 @@ import AlamofireObjectMapper
 protocol BackEndProtocol{
 
     var endPoint: String { get set }
-    func login(loginForm : LoginForm) -> Alamofire.Request.response.statusCode
-    func getUser(userID : Int) -> UserModel
+    func login(loginForm : LoginForm) -> Int
+    func getUser(userID : Int) -> UserModel?
 
 }

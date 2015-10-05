@@ -14,8 +14,14 @@ class BackEndManager : BackEndProtocol{
         set {
         }
     }
-    func login(loginForm: LoginForm) -> Alamofire.Request {
+    func login(loginForm: LoginForm) -> Int {
+        return 200
+    }
+
+    func getUser(userID: Int) -> UserModel?{
+        //TODO: Implement
         return nil
     }
+
 
 }

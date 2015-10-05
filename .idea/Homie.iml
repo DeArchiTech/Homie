@@ -6,14 +6,15 @@
       <sourceFolder url="file://$MODULE_DIR$/Homie/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Base.lproj/Main.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Homie/Stores/MockBackendData.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Homie/MockJson.json" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Models/HomeModel.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Models/Structs/LoginForm.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Models/UserModel.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Network/BackEndManager.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Network/BackEndProtocol.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Network/MockBackEndManager.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Homie/Stores/MockBackendData.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/ViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieTests/HomieTests.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieTests/Info.plist" isTestSource="false" />
