@@ -11,6 +11,9 @@
 		229BA6451BC251B000FFEA41 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6441BC251B000FFEA41 /* HomeModel.swift */; settings = {ASSET_TAGS = (); }; };
 		229BA6471BC26CAC00FFEA41 /* UserModelJson.json in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1EE4693BD9E4EB29CC822 /* UserModelJson.json */; };
 		22C16C3F1BC2708400D02243 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C3E1BC2708400D02243 /* UserInfo.swift */; settings = {ASSET_TAGS = (); }; };
+		22C16C411BC2839B00D02243 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C401BC2839B00D02243 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		22C16C431BC2866D00D02243 /* UserModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C421BC2866D00D02243 /* UserModelTest.swift */; settings = {ASSET_TAGS = (); }; };
+		22C16C461BC289FB00D02243 /* MockBackEndManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */; settings = {ASSET_TAGS = (); }; };
 		22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4431BC030540050E298 /* AppDelegate.swift */; };
 		22F5A4461BC030540050E298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4451BC030540050E298 /* ViewController.swift */; };
 		22F5A4491BC030540050E298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A4471BC030540050E298 /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 		229BA6421BC251A700FFEA41 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		229BA6441BC251B000FFEA41 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		22C16C3E1BC2708400D02243 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		22C16C401BC2839B00D02243 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		22C16C421BC2866D00D02243 /* UserModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelTest.swift; sourceTree = "<group>"; };
+		22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockBackEndManagerTest.swift; sourceTree = "<group>"; };
 		22F5A4401BC030540050E298 /* Homie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F5A4431BC030540050E298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F5A4451BC030540050E298 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3EC1EFF8A6F890251972C95E /* MockBackendData.swift */,
+				22C16C401BC2839B00D02243 /* Constants.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 			children = (
 				22F5A4581BC030540050E298 /* HomieTests.swift */,
 				22F5A45A1BC030540050E298 /* Info.plist */,
+				22C16C421BC2866D00D02243 /* UserModelTest.swift */,
+				22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */,
 			);
 			path = HomieTests;
 			sourceTree = "<group>";
@@ -434,6 +443,7 @@
 				3EC1E89CC730DE4ABE1CB005 /* MockBackEndManager.swift in Sources */,
 				22C16C3F1BC2708400D02243 /* UserInfo.swift in Sources */,
 				3EC1E5029EDC3225307C9EEA /* MockBackendData.swift in Sources */,
+				22C16C411BC2839B00D02243 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +451,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C16C431BC2866D00D02243 /* UserModelTest.swift in Sources */,
+				22C16C461BC289FB00D02243 /* MockBackEndManagerTest.swift in Sources */,
 				22F5A4591BC030540050E298 /* HomieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

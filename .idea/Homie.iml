@@ -14,11 +14,14 @@
       <sourceFolder url="file://$MODULE_DIR$/Homie/Network/BackEndManager.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Network/BackEndProtocol.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Network/MockBackEndManager.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Homie/Stores/Constants.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/Stores/MockBackendData.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/UserModelJson.json" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homie/ViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieTests/HomieTests.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieTests/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomieTests/MockBackEndManagerTest.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomieTests/UserModelTest.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieUITests/HomieUITests.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieUITests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />

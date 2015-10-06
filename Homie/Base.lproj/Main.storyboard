@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,11 +16,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="9mS-Gf-diH">
+                                <rect key="frame" x="164" y="0.0" width="366" height="87"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="Aiu-w3-I8L">
+                                <rect key="frame" x="58" y="480" width="499" height="91"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifier" textAlignment="natural" minimumFontSize="17" background="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Ao-RW-toU">
+                                <rect key="frame" x="65" y="398" width="484" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ph7-fi-6OF">
+                                <rect key="frame" x="65" y="442" width="484" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAq-5p-Y4l">
+                                <rect key="frame" x="172" y="508" width="257" height="35"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Take Me Home">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="36" name="ChalkboardSE-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Take Me Home" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGm-61-u0V">
+                                <rect key="frame" x="280" y="337" width="118" height="30"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="hmL-qA-Di0">
+                                <rect key="frame" x="126" y="112" width="348" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Ao-RW-toU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="0Qm-3D-by2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aiu-w3-I8L" secondAttribute="trailing" constant="100" id="1Wl-1r-S9U"/>
+                            <constraint firstItem="WAq-5p-Y4l" firstAttribute="top" secondItem="ph7-fi-6OF" secondAttribute="bottom" constant="20" id="86n-kv-r0K"/>
+                            <constraint firstItem="2Ao-RW-toU" firstAttribute="top" secondItem="hmL-qA-Di0" secondAttribute="bottom" constant="20" id="9Mq-t6-lTh"/>
+                            <constraint firstItem="hmL-qA-Di0" firstAttribute="top" secondItem="9mS-Gf-diH" secondAttribute="bottom" constant="20" id="CAI-go-gzR"/>
+                            <constraint firstItem="9mS-Gf-diH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="CNi-i2-pIo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WAq-5p-Y4l" secondAttribute="bottom" constant="20" id="DOn-FV-Jov"/>
+                            <constraint firstItem="hmL-qA-Di0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="Fa6-1j-Twt"/>
+                            <constraint firstItem="hmL-qA-Di0" firstAttribute="top" secondItem="9mS-Gf-diH" secondAttribute="bottom" constant="20" id="Fhm-cY-LGE"/>
+                            <constraint firstItem="hmL-qA-Di0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="HOH-FC-330"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9mS-Gf-diH" secondAttribute="trailing" constant="100" id="JsC-0K-uLx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Ao-RW-toU" secondAttribute="trailing" constant="100" id="MxB-BA-ydW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aiu-w3-I8L" secondAttribute="bottom" constant="20" id="NI5-JI-7x7"/>
+                            <constraint firstItem="Aiu-w3-I8L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="O2A-Sd-y1Z"/>
+                            <constraint firstItem="9mS-Gf-diH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="Qnc-kj-feH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9mS-Gf-diH" secondAttribute="trailing" constant="50" id="TT9-YR-Q32"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hmL-qA-Di0" secondAttribute="trailing" constant="130" id="UYV-BI-Mk4"/>
+                            <constraint firstItem="2Ao-RW-toU" firstAttribute="top" secondItem="hmL-qA-Di0" secondAttribute="bottom" constant="20" id="YsE-f0-2or"/>
+                            <constraint firstItem="ph7-fi-6OF" firstAttribute="top" secondItem="2Ao-RW-toU" secondAttribute="bottom" constant="20" id="frE-Gc-6h3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hmL-qA-Di0" secondAttribute="trailing" constant="100" id="i3c-eb-MJn"/>
+                            <constraint firstItem="9mS-Gf-diH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="lk9-uC-JG8"/>
+                            <constraint firstItem="ph7-fi-6OF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="nwR-nH-tLv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ph7-fi-6OF" secondAttribute="trailing" constant="100" id="tVb-5j-sp0"/>
+                            <constraint firstItem="9mS-Gf-diH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="xHF-XC-ngR"/>
+                            <constraint firstItem="Aiu-w3-I8L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="xQK-UU-MfQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aiu-w3-I8L" secondAttribute="trailing" constant="40" id="yVt-G3-wyn"/>
+                            <constraint firstItem="Aiu-w3-I8L" firstAttribute="top" secondItem="ph7-fi-6OF" secondAttribute="bottom" constant="20" id="zve-qj-BTL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mGm-61-u0V"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="565" y="314"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="609" height="145"/>
+        <image name="Image-1" width="516" height="439"/>
+        <image name="Image-2" width="662" height="113"/>
+    </resources>
 </document>
