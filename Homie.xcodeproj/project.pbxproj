@@ -10,12 +10,14 @@
 		229BA6431BC251A700FFEA41 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6421BC251A700FFEA41 /* UserModel.swift */; settings = {ASSET_TAGS = (); }; };
 		229BA6451BC251B000FFEA41 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6441BC251B000FFEA41 /* HomeModel.swift */; settings = {ASSET_TAGS = (); }; };
 		229BA6471BC26CAC00FFEA41 /* UserModelJson.json in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1EE4693BD9E4EB29CC822 /* UserModelJson.json */; };
+		22B19B381BC5C09F00241232 /* LoginControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B19B371BC5C09F00241232 /* LoginControllerTest.swift */; settings = {ASSET_TAGS = (); }; };
+		22B19B3A1BC5D21B00241232 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B19B391BC5D21B00241232 /* CommunityViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		22C16C3F1BC2708400D02243 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C3E1BC2708400D02243 /* UserInfo.swift */; settings = {ASSET_TAGS = (); }; };
 		22C16C411BC2839B00D02243 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C401BC2839B00D02243 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 		22C16C431BC2866D00D02243 /* UserModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C421BC2866D00D02243 /* UserModelTest.swift */; settings = {ASSET_TAGS = (); }; };
 		22C16C461BC289FB00D02243 /* MockBackEndManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */; settings = {ASSET_TAGS = (); }; };
 		22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4431BC030540050E298 /* AppDelegate.swift */; };
-		22F5A4461BC030540050E298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4451BC030540050E298 /* ViewController.swift */; };
+		22F5A4461BC030540050E298 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4451BC030540050E298 /* LoginViewController.swift */; };
 		22F5A4491BC030540050E298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A4471BC030540050E298 /* Main.storyboard */; };
 		22F5A44B1BC030540050E298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A44A1BC030540050E298 /* Assets.xcassets */; };
 		22F5A44E1BC030540050E298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */; };
@@ -50,13 +52,15 @@
 /* Begin PBXFileReference section */
 		229BA6421BC251A700FFEA41 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		229BA6441BC251B000FFEA41 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		22B19B371BC5C09F00241232 /* LoginControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerTest.swift; sourceTree = "<group>"; };
+		22B19B391BC5D21B00241232 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		22C16C3E1BC2708400D02243 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		22C16C401BC2839B00D02243 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22C16C421BC2866D00D02243 /* UserModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelTest.swift; sourceTree = "<group>"; };
 		22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockBackEndManagerTest.swift; sourceTree = "<group>"; };
 		22F5A4401BC030540050E298 /* Homie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F5A4431BC030540050E298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22F5A4451BC030540050E298 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22F5A4451BC030540050E298 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		22F5A4481BC030540050E298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22F5A44A1BC030540050E298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F5A44D1BC030540050E298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 		229BA63E1BC2472100FFEA41 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				22F5A4451BC030540050E298 /* LoginViewController.swift */,
+				22B19B391BC5D21B00241232 /* CommunityViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,7 +200,6 @@
 				229BA63C1BC2470E00FFEA41 /* Views */,
 				229BA63B1BC246F700FFEA41 /* Models */,
 				22F5A4431BC030540050E298 /* AppDelegate.swift */,
-				22F5A4451BC030540050E298 /* ViewController.swift */,
 				22F5A4471BC030540050E298 /* Main.storyboard */,
 				22F5A44A1BC030540050E298 /* Assets.xcassets */,
 				22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */,
@@ -211,6 +216,7 @@
 				22F5A45A1BC030540050E298 /* Info.plist */,
 				22C16C421BC2866D00D02243 /* UserModelTest.swift */,
 				22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */,
+				22B19B371BC5C09F00241232 /* LoginControllerTest.swift */,
 			);
 			path = HomieTests;
 			sourceTree = "<group>";
@@ -434,13 +440,14 @@
 			files = (
 				229BA6471BC26CAC00FFEA41 /* UserModelJson.json in Sources */,
 				229BA6451BC251B000FFEA41 /* HomeModel.swift in Sources */,
-				22F5A4461BC030540050E298 /* ViewController.swift in Sources */,
+				22F5A4461BC030540050E298 /* LoginViewController.swift in Sources */,
 				229BA6431BC251A700FFEA41 /* UserModel.swift in Sources */,
 				22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */,
 				3EC1E2F653DF5925DD1577D2 /* BackEndManager.swift in Sources */,
 				3EC1E7A6513357B5502F2D82 /* BackEndProtocol.swift in Sources */,
 				3EC1EE1DB587041043F9A140 /* LoginForm.swift in Sources */,
 				3EC1E89CC730DE4ABE1CB005 /* MockBackEndManager.swift in Sources */,
+				22B19B3A1BC5D21B00241232 /* CommunityViewController.swift in Sources */,
 				22C16C3F1BC2708400D02243 /* UserInfo.swift in Sources */,
 				3EC1E5029EDC3225307C9EEA /* MockBackendData.swift in Sources */,
 				22C16C411BC2839B00D02243 /* Constants.swift in Sources */,
@@ -452,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C16C431BC2866D00D02243 /* UserModelTest.swift in Sources */,
+				22B19B381BC5C09F00241232 /* LoginControllerTest.swift in Sources */,
 				22C16C461BC289FB00D02243 /* MockBackEndManagerTest.swift in Sources */,
 				22F5A4591BC030540050E298 /* HomieTests.swift in Sources */,
 			);
