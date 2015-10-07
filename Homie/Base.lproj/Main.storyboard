@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -64,10 +65,19 @@
                                     <constraint firstAttribute="height" constant="87" id="ud1-s6-VSz"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofb-GS-yqf">
+                                <rect key="frame" x="65" y="487" width="484" height="74"/>
+                                <state key="normal" title="TAKE ME HOME!" image="Image-2"/>
+                                <connections>
+                                    <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nue-MA-ysh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ph7-fi-6OF" firstAttribute="centerX" secondItem="G64-0p-dpC" secondAttribute="centerX" id="4ar-rs-ONN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ph7-fi-6OF" secondAttribute="bottom" constant="128" id="4gu-AV-cc6"/>
+                            <constraint firstItem="ph7-fi-6OF" firstAttribute="leading" secondItem="Ofb-GS-yqf" secondAttribute="leading" id="7IJ-eR-Ucd"/>
                             <constraint firstItem="2Ao-RW-toU" firstAttribute="trailing" secondItem="ph7-fi-6OF" secondAttribute="trailing" id="83U-bf-biS"/>
                             <constraint firstItem="9mS-Gf-diH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="977-fA-t97"/>
                             <constraint firstItem="ph7-fi-6OF" firstAttribute="leading" secondItem="2Ao-RW-toU" secondAttribute="leading" id="APT-40-ehi"/>
@@ -76,16 +86,22 @@
                             <constraint firstItem="hmL-qA-Di0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="KEn-wM-yuu"/>
                             <constraint firstItem="hmL-qA-Di0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="135" id="Kcz-gB-PTa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Aiu-w3-I8L" secondAttribute="trailing" constant="23" id="Lw6-9n-qBg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Ofb-GS-yqf" secondAttribute="bottom" constant="39" id="MHn-CG-uGw"/>
                             <constraint firstItem="9mS-Gf-diH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="Mw4-FY-u2R"/>
                             <constraint firstItem="hmL-qA-Di0" firstAttribute="top" secondItem="9mS-Gf-diH" secondAttribute="top" constant="-9" id="OP5-3I-Gki"/>
                             <constraint firstItem="G64-0p-dpC" firstAttribute="centerY" secondItem="Aiu-w3-I8L" secondAttribute="centerY" id="PKR-6g-D8l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hmL-qA-Di0" secondAttribute="trailing" constant="22" id="RWa-Sm-e1n"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hmL-qA-Di0" secondAttribute="bottom" constant="121" id="Vrr-wb-s8k"/>
                             <constraint firstItem="G64-0p-dpC" firstAttribute="centerX" secondItem="Aiu-w3-I8L" secondAttribute="centerX" id="ZDJ-Mt-zPr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ph7-fi-6OF" secondAttribute="trailing" constant="31" id="ZQF-df-8Nt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aiu-w3-I8L" secondAttribute="bottom" constant="29" id="aJu-IM-T2Z"/>
                             <constraint firstItem="9mS-Gf-diH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="b4R-yb-4Ak"/>
                             <constraint firstItem="hmL-qA-Di0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="135" id="bxw-bN-dqs"/>
+                            <constraint firstItem="Ofb-GS-yqf" firstAttribute="top" secondItem="2Ao-RW-toU" secondAttribute="bottom" constant="59" id="f9U-Wg-1ez"/>
+                            <constraint firstItem="Ofb-GS-yqf" firstAttribute="trailing" secondItem="ph7-fi-6OF" secondAttribute="trailing" id="krN-Bl-fIC"/>
                             <constraint firstItem="9mS-Gf-diH" firstAttribute="centerX" secondItem="hmL-qA-Di0" secondAttribute="centerX" id="lcd-up-PsN"/>
                             <constraint firstItem="G64-0p-dpC" firstAttribute="top" secondItem="hmL-qA-Di0" secondAttribute="bottom" constant="29" id="mdm-kr-jkO"/>
+                            <constraint firstItem="2Ao-RW-toU" firstAttribute="top" secondItem="hmL-qA-Di0" secondAttribute="bottom" constant="-81" id="pqD-6A-ymJ"/>
                             <constraint firstItem="Aiu-w3-I8L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="qb1-1o-xUA"/>
                             <constraint firstItem="Aiu-w3-I8L" firstAttribute="top" secondItem="ph7-fi-6OF" secondAttribute="bottom" constant="8" symbolic="YES" id="rS7-lT-90X"/>
                             <constraint firstItem="2Ao-RW-toU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="45" id="ssF-Gw-DiA"/>
@@ -95,6 +111,8 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="fvN-S0-kGe"/>
+                                <exclude reference="Aiu-w3-I8L"/>
+                                <exclude reference="G64-0p-dpC"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Kcz-gB-PTa"/>
