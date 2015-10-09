@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User{
+class HomeModel{
 
     var houseID : Int?
     var physicalAddress : String?
