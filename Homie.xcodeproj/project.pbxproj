@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22794B391BC74D1E008092AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22794B381BC74D1E008092AE /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		229BA6431BC251A700FFEA41 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6421BC251A700FFEA41 /* UserModel.swift */; settings = {ASSET_TAGS = (); }; };
 		229BA6451BC251B000FFEA41 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6441BC251B000FFEA41 /* HomeModel.swift */; settings = {ASSET_TAGS = (); }; };
 		229BA6471BC26CAC00FFEA41 /* UserModelJson.json in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1EE4693BD9E4EB29CC822 /* UserModelJson.json */; };
@@ -19,7 +20,6 @@
 		22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4431BC030540050E298 /* AppDelegate.swift */; };
 		22F5A4461BC030540050E298 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4451BC030540050E298 /* LoginViewController.swift */; };
 		22F5A4491BC030540050E298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A4471BC030540050E298 /* Main.storyboard */; };
-		22F5A44B1BC030540050E298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A44A1BC030540050E298 /* Assets.xcassets */; };
 		22F5A44E1BC030540050E298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */; };
 		22F5A4591BC030540050E298 /* HomieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4581BC030540050E298 /* HomieTests.swift */; };
 		22F5A4641BC030540050E298 /* HomieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4631BC030540050E298 /* HomieUITests.swift */; };
@@ -50,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22794B381BC74D1E008092AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		229BA6421BC251A700FFEA41 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		229BA6441BC251B000FFEA41 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		22B19B371BC5C09F00241232 /* LoginControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerTest.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		22F5A4431BC030540050E298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F5A4451BC030540050E298 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		22F5A4481BC030540050E298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		22F5A44A1BC030540050E298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F5A44D1BC030540050E298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22F5A44F1BC030540050E298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F5A4541BC030540050E298 /* HomieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,7 +201,7 @@
 				229BA63B1BC246F700FFEA41 /* Models */,
 				22F5A4431BC030540050E298 /* AppDelegate.swift */,
 				22F5A4471BC030540050E298 /* Main.storyboard */,
-				22F5A44A1BC030540050E298 /* Assets.xcassets */,
+				22794B381BC74D1E008092AE /* Assets.xcassets */,
 				22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */,
 				22F5A44F1BC030540050E298 /* Info.plist */,
 				3EC1EE4693BD9E4EB29CC822 /* UserModelJson.json */,
@@ -326,6 +326,7 @@
 				TargetAttributes = {
 					22F5A43F1BC030540050E298 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = J9T57DG7T3;
 					};
 					22F5A4531BC030540050E298 = {
 						CreatedOnToolsVersion = 7.0;
@@ -363,8 +364,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F5A44E1BC030540050E298 /* LaunchScreen.storyboard in Resources */,
-				22F5A44B1BC030540050E298 /* Assets.xcassets in Resources */,
 				22F5A4491BC030540050E298 /* Main.storyboard in Resources */,
+				22794B391BC74D1E008092AE /* Assets.xcassets in Resources */,
 				3EC1E9638F11320AED5DAA3A /* UserModelJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,10 +595,13 @@
 			baseConfigurationReference = AD9FE8CC8FA759738C5875FC /* Pods-Homie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.homie.io.Homie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -606,10 +610,13 @@
 			baseConfigurationReference = 51A19C6DD93C3E38B4BFA848 /* Pods-Homie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.homie.io.Homie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

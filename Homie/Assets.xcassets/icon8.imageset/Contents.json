@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "iconWallet.png",
       "scale" : "1x"
     },
     {

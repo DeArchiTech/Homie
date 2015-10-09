@@ -681,6 +681,20 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					032F47EA07D13D8BF93DD5BF8E5B3942 = {
+						DevelopmentTeam = J9T57DG7T3;
+					};
+					1572E4AEB98F08BC9B092943F6E50EAC = {
+						DevelopmentTeam = J9T57DG7T3;
+					};
+					A71565762F8A1599330999186E238FD1 = {
+						DevelopmentTeam = J9T57DG7T3;
+					};
+					B9A04D3C9B208813656510FDA8ADAE02 = {
+						DevelopmentTeam = J9T57DG7T3;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -835,6 +849,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F7B2F34A975644DBD27935DB7D5E780 /* Alamofire-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.0.2;
 				DEFINES_MODULE = YES;
@@ -850,6 +865,7 @@
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Alamofire;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -893,6 +909,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEADFAE0EA9C89E0936B29E98470D035 /* ObjectMapper-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.17.0;
 				DEFINES_MODULE = YES;
@@ -908,6 +925,7 @@
 				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = ObjectMapper;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -960,6 +978,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14EAE12DA19598E66F93EECD456C7D91 /* SwiftyJSON-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.3.0;
 				DEFINES_MODULE = YES;
@@ -975,6 +994,7 @@
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftyJSON;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1021,6 +1041,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F7B2F34A975644DBD27935DB7D5E780 /* Alamofire-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.0.2;
 				DEFINES_MODULE = YES;
@@ -1036,6 +1057,7 @@
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Alamofire;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1048,6 +1070,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FA30ED01D6F928643D2C1B8F5845B09 /* OHHTTPStubs-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 4.3.0;
 				DEFINES_MODULE = YES;
@@ -1063,6 +1086,7 @@
 				MODULEMAP_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = OHHTTPStubs;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1075,6 +1099,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FA30ED01D6F928643D2C1B8F5845B09 /* OHHTTPStubs-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 4.3.0;
 				DEFINES_MODULE = YES;
@@ -1090,6 +1115,7 @@
 				MODULEMAP_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = OHHTTPStubs;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1132,6 +1158,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEADFAE0EA9C89E0936B29E98470D035 /* ObjectMapper-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.17.0;
 				DEFINES_MODULE = YES;
@@ -1147,6 +1174,7 @@
 				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = ObjectMapper;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1214,6 +1242,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14EAE12DA19598E66F93EECD456C7D91 /* SwiftyJSON-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.3.0;
 				DEFINES_MODULE = YES;
@@ -1229,6 +1258,7 @@
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SwiftyJSON;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

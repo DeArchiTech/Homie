@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "iconCar.png",
       "scale" : "1x"
     },
     {
