@@ -9,4 +9,12 @@
 import Foundation
 
 class EventModel{
+    
+    var eventID : Int?
+    var name: String?
+    var description: String?
+    var photos : [String]?
+    var lattitude : Double?
+    var longitute : Double?
+
 }

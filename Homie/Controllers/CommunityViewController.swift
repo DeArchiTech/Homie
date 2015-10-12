@@ -15,6 +15,8 @@ class CommunityViewController: UIViewController {
 
     @IBOutlet var mapViewOutlet: MKMapView!
     
+    @IBOutlet var searchBarOutlet: UISearchBar!
+    
     @IBAction func DinningButtonPressed(sender: AnyObject) {
         print("dinning button pressed")
     }

@@ -19,6 +19,8 @@
 		22C16C411BC2839B00D02243 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C401BC2839B00D02243 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 		22C16C431BC2866D00D02243 /* UserModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C421BC2866D00D02243 /* UserModelTest.swift */; settings = {ASSET_TAGS = (); }; };
 		22C16C461BC289FB00D02243 /* MockBackEndManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */; settings = {ASSET_TAGS = (); }; };
+		22F2BDAE1BCC7C53003F1F93 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2BDAD1BCC7C53003F1F93 /* FinanceViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		22F2BDB01BCC7CEA003F1F93 /* HomeOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2BDAF1BCC7CEA003F1F93 /* HomeOSViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4431BC030540050E298 /* AppDelegate.swift */; };
 		22F5A4461BC030540050E298 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4451BC030540050E298 /* LoginViewController.swift */; };
 		22F5A4491BC030540050E298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A4471BC030540050E298 /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		22C16C401BC2839B00D02243 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22C16C421BC2866D00D02243 /* UserModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelTest.swift; sourceTree = "<group>"; };
 		22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockBackEndManagerTest.swift; sourceTree = "<group>"; };
+		22F2BDAD1BCC7C53003F1F93 /* FinanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
+		22F2BDAF1BCC7CEA003F1F93 /* HomeOSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeOSViewController.swift; sourceTree = "<group>"; };
 		22F5A4401BC030540050E298 /* Homie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F5A4431BC030540050E298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F5A4451BC030540050E298 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 			children = (
 				22F5A4451BC030540050E298 /* LoginViewController.swift */,
 				22B19B391BC5D21B00241232 /* CommunityViewController.swift */,
+				22F2BDAD1BCC7C53003F1F93 /* FinanceViewController.swift */,
+				22F2BDAF1BCC7CEA003F1F93 /* HomeOSViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -450,10 +456,12 @@
 				229BA6451BC251B000FFEA41 /* HomeModel.swift in Sources */,
 				22F5A4461BC030540050E298 /* LoginViewController.swift in Sources */,
 				229BA6431BC251A700FFEA41 /* UserModel.swift in Sources */,
+				22F2BDB01BCC7CEA003F1F93 /* HomeOSViewController.swift in Sources */,
 				22794B3B1BC86883008092AE /* EventModel.swift in Sources */,
 				22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */,
 				3EC1E2F653DF5925DD1577D2 /* BackEndManager.swift in Sources */,
 				3EC1E7A6513357B5502F2D82 /* BackEndProtocol.swift in Sources */,
+				22F2BDAE1BCC7C53003F1F93 /* FinanceViewController.swift in Sources */,
 				3EC1EE1DB587041043F9A140 /* LoginForm.swift in Sources */,
 				3EC1E89CC730DE4ABE1CB005 /* MockBackEndManager.swift in Sources */,
 				22B19B3A1BC5D21B00241232 /* CommunityViewController.swift in Sources */,
