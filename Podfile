@@ -8,6 +8,7 @@ target 'Homie' do
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
     pod 'OHHTTPStubs/Swift'
     pod 'ObjectMapper'
+    pod 'IQKeyboardManagerSwift'
 end
 
 target 'HomieTests' do

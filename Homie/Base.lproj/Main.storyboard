@@ -391,13 +391,13 @@
                                 <exclude reference="yFU-kT-sVI"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="3SG-Ek-8TR"/>
                                 <exclude reference="5q8-CI-yvY"/>
                                 <exclude reference="YtJ-gG-rl7"/>
                                 <exclude reference="sKA-sA-YfU"/>
                                 <exclude reference="rs9-Tk-Sjn"/>
                                 <exclude reference="sTP-LR-LKa"/>
                                 <exclude reference="wO7-d4-kqJ"/>
-                                <exclude reference="3SG-Ek-8TR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -407,13 +407,13 @@
                                 <include reference="yFU-kT-sVI"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="3SG-Ek-8TR"/>
                                 <include reference="5q8-CI-yvY"/>
                                 <include reference="YtJ-gG-rl7"/>
                                 <include reference="sKA-sA-YfU"/>
                                 <include reference="rs9-Tk-Sjn"/>
                                 <include reference="sTP-LR-LKa"/>
                                 <include reference="wO7-d4-kqJ"/>
-                                <include reference="3SG-Ek-8TR"/>
                             </mask>
                         </variation>
                     </view>
@@ -447,6 +447,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QRM-pc-Y4y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GxV-L2-ksi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -484,6 +485,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WlU-MV-cfi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pfO-Ci-MTt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
