@@ -7,13 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22794B391BC74D1E008092AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22794B381BC74D1E008092AE /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		22794B3B1BC86883008092AE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22794B3A1BC86883008092AE /* EventModel.swift */; settings = {ASSET_TAGS = (); }; };
+		22794B3D1BC86894008092AE /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22794B3C1BC86894008092AE /* ItemModel.swift */; settings = {ASSET_TAGS = (); }; };
+		2295ADA81BCDA55900CB9601 /* SetttingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295ADA71BCDA55900CB9601 /* SetttingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		229BA6431BC251A700FFEA41 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6421BC251A700FFEA41 /* UserModel.swift */; settings = {ASSET_TAGS = (); }; };
+		229BA6451BC251B000FFEA41 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6441BC251B000FFEA41 /* HomeModel.swift */; settings = {ASSET_TAGS = (); }; };
+		229BA6471BC26CAC00FFEA41 /* UserModelJson.json in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1EE4693BD9E4EB29CC822 /* UserModelJson.json */; };
+		22B19B381BC5C09F00241232 /* LoginControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B19B371BC5C09F00241232 /* LoginControllerTest.swift */; settings = {ASSET_TAGS = (); }; };
+		22B19B3A1BC5D21B00241232 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B19B391BC5D21B00241232 /* CommunityViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		22C16C3F1BC2708400D02243 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C3E1BC2708400D02243 /* UserInfo.swift */; settings = {ASSET_TAGS = (); }; };
+		22C16C411BC2839B00D02243 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C401BC2839B00D02243 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		22C16C431BC2866D00D02243 /* UserModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C421BC2866D00D02243 /* UserModelTest.swift */; settings = {ASSET_TAGS = (); }; };
+		22C16C461BC289FB00D02243 /* MockBackEndManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */; settings = {ASSET_TAGS = (); }; };
+		22F2BDAE1BCC7C53003F1F93 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2BDAD1BCC7C53003F1F93 /* FinanceViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		22F2BDB01BCC7CEA003F1F93 /* HomeOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2BDAF1BCC7CEA003F1F93 /* HomeOSViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		22F2BDB21BCC8DB0003F1F93 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2BDB11BCC8DB0003F1F93 /* MarketViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4431BC030540050E298 /* AppDelegate.swift */; };
-		22F5A4461BC030540050E298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4451BC030540050E298 /* ViewController.swift */; };
+		22F5A4461BC030540050E298 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4451BC030540050E298 /* LoginViewController.swift */; };
 		22F5A4491BC030540050E298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A4471BC030540050E298 /* Main.storyboard */; };
-		22F5A44B1BC030540050E298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A44A1BC030540050E298 /* Assets.xcassets */; };
 		22F5A44E1BC030540050E298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */; };
 		22F5A4591BC030540050E298 /* HomieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4581BC030540050E298 /* HomieTests.swift */; };
 		22F5A4641BC030540050E298 /* HomieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4631BC030540050E298 /* HomieUITests.swift */; };
+		3EC1E2F653DF5925DD1577D2 /* BackEndManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1E7207FACC740BE6F93C5 /* BackEndManager.swift */; };
+		3EC1E5029EDC3225307C9EEA /* MockBackendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1EFF8A6F890251972C95E /* MockBackendData.swift */; };
+		3EC1E7A6513357B5502F2D82 /* BackEndProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1E0C8DF5A79ED25E9EFFC /* BackEndProtocol.swift */; };
+		3EC1E89CC730DE4ABE1CB005 /* MockBackEndManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1E8E5D5F7EEEF9A072271 /* MockBackEndManager.swift */; };
+		3EC1E9638F11320AED5DAA3A /* UserModelJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EC1EE4693BD9E4EB29CC822 /* UserModelJson.json */; };
+		3EC1EE1DB587041043F9A140 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1E09090B4D55AE0561645 /* LoginForm.swift */; };
 		874B3BD417CBB5C15E45A743 /* Pods_Homie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE1BCE1700007DC01417445 /* Pods_Homie.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -35,11 +56,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22794B381BC74D1E008092AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22794B3A1BC86883008092AE /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		22794B3C1BC86894008092AE /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		2295ADA71BCDA55900CB9601 /* SetttingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetttingsViewController.swift; sourceTree = "<group>"; };
+		229BA6421BC251A700FFEA41 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		229BA6441BC251B000FFEA41 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		22B19B371BC5C09F00241232 /* LoginControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerTest.swift; sourceTree = "<group>"; };
+		22B19B391BC5D21B00241232 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		22C16C3E1BC2708400D02243 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		22C16C401BC2839B00D02243 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		22C16C421BC2866D00D02243 /* UserModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelTest.swift; sourceTree = "<group>"; };
+		22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockBackEndManagerTest.swift; sourceTree = "<group>"; };
+		22F2BDAD1BCC7C53003F1F93 /* FinanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
+		22F2BDAF1BCC7CEA003F1F93 /* HomeOSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeOSViewController.swift; sourceTree = "<group>"; };
+		22F2BDB11BCC8DB0003F1F93 /* MarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 		22F5A4401BC030540050E298 /* Homie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F5A4431BC030540050E298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22F5A4451BC030540050E298 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22F5A4451BC030540050E298 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		22F5A4481BC030540050E298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		22F5A44A1BC030540050E298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F5A44D1BC030540050E298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22F5A44F1BC030540050E298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F5A4541BC030540050E298 /* HomieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +83,12 @@
 		22F5A45F1BC030540050E298 /* HomieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F5A4631BC030540050E298 /* HomieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomieUITests.swift; sourceTree = "<group>"; };
 		22F5A4651BC030540050E298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EC1E09090B4D55AE0561645 /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		3EC1E0C8DF5A79ED25E9EFFC /* BackEndProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackEndProtocol.swift; sourceTree = "<group>"; };
+		3EC1E7207FACC740BE6F93C5 /* BackEndManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackEndManager.swift; sourceTree = "<group>"; };
+		3EC1E8E5D5F7EEEF9A072271 /* MockBackEndManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockBackEndManager.swift; sourceTree = "<group>"; };
+		3EC1EE4693BD9E4EB29CC822 /* UserModelJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserModelJson.json; sourceTree = "<group>"; };
+		3EC1EFF8A6F890251972C95E /* MockBackendData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockBackendData.swift; sourceTree = "<group>"; };
 		51A19C6DD93C3E38B4BFA848 /* Pods-Homie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.release.xcconfig"; sourceTree = "<group>"; };
 		AD9FE8CC8FA759738C5875FC /* Pods-Homie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.debug.xcconfig"; sourceTree = "<group>"; };
 		CFE1BCE1700007DC01417445 /* Pods_Homie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +123,11 @@
 		229BA63B1BC246F700FFEA41 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				229BA6421BC251A700FFEA41 /* UserModel.swift */,
+				229BA6441BC251B000FFEA41 /* HomeModel.swift */,
+				22794B3A1BC86883008092AE /* EventModel.swift */,
+				22794B3C1BC86894008092AE /* ItemModel.swift */,
+				3EC1E6296516D1ECC9209D6C /* Structs */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -103,6 +149,12 @@
 		229BA63E1BC2472100FFEA41 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				22F5A4451BC030540050E298 /* LoginViewController.swift */,
+				22B19B391BC5D21B00241232 /* CommunityViewController.swift */,
+				22F2BDAD1BCC7C53003F1F93 /* FinanceViewController.swift */,
+				22F2BDAF1BCC7CEA003F1F93 /* HomeOSViewController.swift */,
+				22F2BDB11BCC8DB0003F1F93 /* MarketViewController.swift */,
+				2295ADA71BCDA55900CB9601 /* SetttingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +162,8 @@
 		229BA63F1BC2473D00FFEA41 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				3EC1EFF8A6F890251972C95E /* MockBackendData.swift */,
+				22C16C401BC2839B00D02243 /* Constants.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -119,6 +173,16 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		229BA6461BC2569100FFEA41 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3EC1E7207FACC740BE6F93C5 /* BackEndManager.swift */,
+				3EC1E0C8DF5A79ED25E9EFFC /* BackEndProtocol.swift */,
+				3EC1E8E5D5F7EEEF9A072271 /* MockBackEndManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		22F5A4371BC030540050E298 = {
@@ -146,6 +210,7 @@
 		22F5A4421BC030540050E298 /* Homie */ = {
 			isa = PBXGroup;
 			children = (
+				229BA6461BC2569100FFEA41 /* Network */,
 				229BA6401BC2474700FFEA41 /* Helpers */,
 				229BA63F1BC2473D00FFEA41 /* Stores */,
 				229BA63E1BC2472100FFEA41 /* Controllers */,
@@ -153,11 +218,11 @@
 				229BA63C1BC2470E00FFEA41 /* Views */,
 				229BA63B1BC246F700FFEA41 /* Models */,
 				22F5A4431BC030540050E298 /* AppDelegate.swift */,
-				22F5A4451BC030540050E298 /* ViewController.swift */,
 				22F5A4471BC030540050E298 /* Main.storyboard */,
-				22F5A44A1BC030540050E298 /* Assets.xcassets */,
+				22794B381BC74D1E008092AE /* Assets.xcassets */,
 				22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */,
 				22F5A44F1BC030540050E298 /* Info.plist */,
+				3EC1EE4693BD9E4EB29CC822 /* UserModelJson.json */,
 			);
 			path = Homie;
 			sourceTree = "<group>";
@@ -167,6 +232,9 @@
 			children = (
 				22F5A4581BC030540050E298 /* HomieTests.swift */,
 				22F5A45A1BC030540050E298 /* Info.plist */,
+				22C16C421BC2866D00D02243 /* UserModelTest.swift */,
+				22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */,
+				22B19B371BC5C09F00241232 /* LoginControllerTest.swift */,
 			);
 			path = HomieTests;
 			sourceTree = "<group>";
@@ -178,6 +246,15 @@
 				22F5A4651BC030540050E298 /* Info.plist */,
 			);
 			path = HomieUITests;
+			sourceTree = "<group>";
+		};
+		3EC1E6296516D1ECC9209D6C /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				3EC1E09090B4D55AE0561645 /* LoginForm.swift */,
+				22C16C3E1BC2708400D02243 /* UserInfo.swift */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 		80CF5AD9D7B0263A3AD4C0D3 /* Frameworks */ = {
@@ -267,6 +344,7 @@
 				TargetAttributes = {
 					22F5A43F1BC030540050E298 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = J9T57DG7T3;
 					};
 					22F5A4531BC030540050E298 = {
 						CreatedOnToolsVersion = 7.0;
@@ -304,8 +382,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F5A44E1BC030540050E298 /* LaunchScreen.storyboard in Resources */,
-				22F5A44B1BC030540050E298 /* Assets.xcassets in Resources */,
 				22F5A4491BC030540050E298 /* Main.storyboard in Resources */,
+				22794B391BC74D1E008092AE /* Assets.xcassets in Resources */,
+				3EC1E9638F11320AED5DAA3A /* UserModelJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +457,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F5A4461BC030540050E298 /* ViewController.swift in Sources */,
+				22794B3D1BC86894008092AE /* ItemModel.swift in Sources */,
+				229BA6471BC26CAC00FFEA41 /* UserModelJson.json in Sources */,
+				229BA6451BC251B000FFEA41 /* HomeModel.swift in Sources */,
+				22F5A4461BC030540050E298 /* LoginViewController.swift in Sources */,
+				229BA6431BC251A700FFEA41 /* UserModel.swift in Sources */,
+				22F2BDB01BCC7CEA003F1F93 /* HomeOSViewController.swift in Sources */,
+				22794B3B1BC86883008092AE /* EventModel.swift in Sources */,
+				22F2BDB21BCC8DB0003F1F93 /* MarketViewController.swift in Sources */,
 				22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */,
+				3EC1E2F653DF5925DD1577D2 /* BackEndManager.swift in Sources */,
+				3EC1E7A6513357B5502F2D82 /* BackEndProtocol.swift in Sources */,
+				22F2BDAE1BCC7C53003F1F93 /* FinanceViewController.swift in Sources */,
+				3EC1EE1DB587041043F9A140 /* LoginForm.swift in Sources */,
+				2295ADA81BCDA55900CB9601 /* SetttingsViewController.swift in Sources */,
+				3EC1E89CC730DE4ABE1CB005 /* MockBackEndManager.swift in Sources */,
+				22B19B3A1BC5D21B00241232 /* CommunityViewController.swift in Sources */,
+				22C16C3F1BC2708400D02243 /* UserInfo.swift in Sources */,
+				3EC1E5029EDC3225307C9EEA /* MockBackendData.swift in Sources */,
+				22C16C411BC2839B00D02243 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +483,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C16C431BC2866D00D02243 /* UserModelTest.swift in Sources */,
+				22B19B381BC5C09F00241232 /* LoginControllerTest.swift in Sources */,
+				22C16C461BC289FB00D02243 /* MockBackEndManagerTest.swift in Sources */,
 				22F5A4591BC030540050E298 /* HomieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,10 +619,13 @@
 			baseConfigurationReference = AD9FE8CC8FA759738C5875FC /* Pods-Homie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.homie.io.Homie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -532,10 +634,13 @@
 			baseConfigurationReference = 51A19C6DD93C3E38B4BFA848 /* Pods-Homie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.homie.io.Homie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
