@@ -417,7 +417,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Community" id="5RU-mh-1YP"/>
+                    <tabBarItem key="tabBarItem" title="House" id="5RU-mh-1YP"/>
                     <navigationItem key="navigationItem" title="Community Page" id="Uoe-Ip-Iyu"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -438,7 +438,7 @@
             </objects>
             <point key="canvasLocation" x="2747.25" y="-129.375"/>
         </scene>
-        <!--Finance-->
+        <!--Community-->
         <scene sceneID="yRC-IH-VN7">
             <objects>
                 <viewController id="zWN-mV-UyU" customClass="FinanceViewController" customModule="Homie" customModuleProvider="target" sceneMemberID="viewController">
@@ -451,11 +451,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Finance" id="JhE-Lo-BeC"/>
+                    <tabBarItem key="tabBarItem" title="Community" id="JhE-Lo-BeC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Au-wV-11b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3410.25" y="-129.375"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="V0j-nq-ZPz">
+            <objects>
+                <viewController id="7x8-Ha-jsZ" customClass="SettingsViewController" customModule="Homie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ytL-hr-ZbW"/>
+                        <viewControllerLayoutGuide type="bottom" id="YOJ-C1-oK7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i0f-nB-r2i">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="9SI-GT-kIi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTA-5Q-XpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3410.25" y="430.875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DQQ-lN-ocD">
@@ -470,13 +488,15 @@
                         <segue destination="t5J-sQ-HTe" kind="relationship" relationship="viewControllers" id="7Fr-18-cO9"/>
                         <segue destination="zWN-mV-UyU" kind="relationship" relationship="viewControllers" id="aPn-U9-5jE"/>
                         <segue destination="hCZ-rV-MMY" kind="relationship" relationship="viewControllers" id="Rqa-vP-ENE"/>
+                        <segue destination="jvh-7q-wWS" kind="relationship" relationship="viewControllers" id="ii8-9r-Btd"/>
+                        <segue destination="7x8-Ha-jsZ" kind="relationship" relationship="viewControllers" id="pp4-CF-dMO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRF-7W-Uiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2049.75" y="179.625"/>
         </scene>
-        <!--Home OS-->
+        <!--Events-->
         <scene sceneID="gLc-k6-UIX">
             <objects>
                 <viewController id="hCZ-rV-MMY" customClass="HomeOSViewController" customModule="Homie" customModuleProvider="target" sceneMemberID="viewController">
@@ -489,11 +509,92 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home OS" id="pKY-jy-WkX"/>
+                    <tabBarItem key="tabBarItem" title="Events" id="pKY-jy-WkX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3x-rw-5Xp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2756.25" y="439.875"/>
+            <point key="canvasLocation" x="4091.25" y="-129.375"/>
+        </scene>
+        <!--Market-->
+        <scene sceneID="T8x-Tw-bSF">
+            <objects>
+                <viewController id="jvh-7q-wWS" customClass="MarketViewController" customModule="Homie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NAv-gD-8dd"/>
+                        <viewControllerLayoutGuide type="bottom" id="q9G-z7-SG5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Xw-mh-VfS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uED-KC-m9b">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Swh-bg-OKG" style="IBUITableViewCellStyleDefault" id="B66-PU-5jd">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B66-PU-5jd" id="tHw-gs-rpQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Swh-bg-OKG">
+                                                    <rect key="frame" x="15" y="0.0" width="210" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jvh-7q-wWS" id="lUi-Z2-Kmr"/>
+                                    <outlet property="delegate" destination="jvh-7q-wWS" id="kss-6I-uOR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uED-KC-m9b" firstAttribute="top" secondItem="NAv-gD-8dd" secondAttribute="bottom" id="ATv-sF-8lo"/>
+                            <constraint firstItem="uED-KC-m9b" firstAttribute="bottom" secondItem="q9G-z7-SG5" secondAttribute="top" id="ORC-2y-oD0"/>
+                            <constraint firstAttribute="trailing" secondItem="uED-KC-m9b" secondAttribute="trailing" id="kas-Uc-9cC"/>
+                            <constraint firstItem="uED-KC-m9b" firstAttribute="leading" secondItem="1Xw-mh-VfS" secondAttribute="leading" id="u2c-sb-HUv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="uED-KC-m9b"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ATv-sF-8lo"/>
+                                <exclude reference="ORC-2y-oD0"/>
+                                <exclude reference="kas-Uc-9cC"/>
+                                <exclude reference="u2c-sb-HUv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="uED-KC-m9b"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ATv-sF-8lo"/>
+                                <include reference="ORC-2y-oD0"/>
+                                <include reference="kas-Uc-9cC"/>
+                                <include reference="u2c-sb-HUv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Market" id="pKV-ro-EJg"/>
+                    <connections>
+                        <outlet property="tableView" destination="uED-KC-m9b" id="6M2-D9-RMx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLT-Vf-J1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2769.75" y="430.875"/>
         </scene>
     </scenes>
     <resources>
