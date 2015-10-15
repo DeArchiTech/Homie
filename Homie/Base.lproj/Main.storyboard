@@ -337,7 +337,7 @@
             </objects>
             <point key="canvasLocation" x="591.75" y="272.625"/>
         </scene>
-        <!--Community Page-->
+        <!--House Page-->
         <scene sceneID="DBQ-ad-xrf">
             <objects>
                 <viewController id="t5J-sQ-HTe" customClass="CommunityViewController" customModule="Homie" customModuleProvider="target" sceneMemberID="viewController">
@@ -417,8 +417,8 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="House" id="5RU-mh-1YP"/>
-                    <navigationItem key="navigationItem" title="Community Page" id="Uoe-Ip-Iyu"/>
+                    <tabBarItem key="tabBarItem" title="House" image="homeIcon" selectedImage="homeIcon" id="5RU-mh-1YP"/>
+                    <navigationItem key="navigationItem" title="House Page" id="Uoe-Ip-Iyu"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mapViewOutlet" destination="yFU-kT-sVI" id="0E9-uT-Dso"/>
@@ -451,7 +451,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Community" id="JhE-Lo-BeC"/>
+                    <tabBarItem key="tabBarItem" title="Community" image="communityIcon" id="JhE-Lo-BeC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Au-wV-11b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -466,10 +466,74 @@
                         <viewControllerLayoutGuide type="bottom" id="YOJ-C1-oK7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i0f-nB-r2i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-Jl-TUy">
+                                <rect key="frame" x="60" y="44" width="252" height="203"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pE7-yf-buH">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="168" height="163"/>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLI-uY-sTr">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.9215686917" green="0.34509804840000002" blue="0.43921571970000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="178" y="71" width="168" height="21"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="QLI-uY-sTr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" axis="horizontal" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="64" width="346" height="163"/>
+                                    <mask key="subviews">
+                                        <include reference="QLI-uY-sTr"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zhe-Jl-TUy" firstAttribute="leading" secondItem="i0f-nB-r2i" secondAttribute="leadingMargin" constant="-20" id="2zG-Ey-BBg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zhe-Jl-TUy" secondAttribute="trailing" constant="25" id="Nlq-BJ-4Ks">
+                                <variation key="heightClass=regular-widthClass=compact" constant="17"/>
+                            </constraint>
+                            <constraint firstItem="Zhe-Jl-TUy" firstAttribute="centerX" secondItem="i0f-nB-r2i" secondAttribute="centerX" id="SxR-zo-Qpz">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-18.5"/>
+                            </constraint>
+                            <constraint firstItem="Zhe-Jl-TUy" firstAttribute="top" secondItem="ytL-hr-ZbW" secondAttribute="bottom" id="hIC-81-Lq0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2zG-Ey-BBg"/>
+                                <exclude reference="Nlq-BJ-4Ks"/>
+                                <exclude reference="SxR-zo-Qpz"/>
+                                <exclude reference="hIC-81-Lq0"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="2zG-Ey-BBg"/>
+                                <include reference="Nlq-BJ-4Ks"/>
+                                <include reference="SxR-zo-Qpz"/>
+                                <include reference="hIC-81-Lq0"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="9SI-GT-kIi"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingsIcon" id="9SI-GT-kIi"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="pE7-yf-buH" id="lCt-aj-e0y"/>
+                        <outlet property="statusUILabel" destination="QLI-uY-sTr" id="S5N-2U-iVU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QTA-5Q-XpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -509,7 +573,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Events" id="pKY-jy-WkX"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="eventIcon" id="pKY-jy-WkX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3x-rw-5Xp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -587,7 +651,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Market" id="pKV-ro-EJg"/>
+                    <tabBarItem key="tabBarItem" title="Market" image="marketIcon" id="pKV-ro-EJg"/>
                     <connections>
                         <outlet property="tableView" destination="uED-KC-m9b" id="6M2-D9-RMx"/>
                     </connections>
@@ -602,6 +666,11 @@
         <image name="Image-2" width="662" height="113"/>
         <image name="appTitle" width="609" height="145"/>
         <image name="button" width="662" height="113"/>
+        <image name="communityIcon" width="45" height="37"/>
+        <image name="eventIcon" width="30" height="32"/>
+        <image name="homeIcon" width="30" height="32"/>
         <image name="house" width="516" height="439"/>
+        <image name="marketIcon" width="32" height="32"/>
+        <image name="settingsIcon" width="32" height="32"/>
     </resources>
 </document>
