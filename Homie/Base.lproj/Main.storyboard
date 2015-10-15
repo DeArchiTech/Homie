@@ -469,71 +469,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-Jl-TUy">
-                                <rect key="frame" x="60" y="44" width="252" height="203"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oyn-f2-nD3">
+                                <rect key="frame" x="12" y="81" width="510" height="304"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pE7-yf-buH">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="168" height="163"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-Uj-t65">
+                                        <rect key="frame" x="0.0" y="0.0" width="510" height="67"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="profileImagePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="ex2-cD-LhV">
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="67"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="liY-wb-TZB"/>
+                                                    <constraint firstAttribute="width" constant="160" id="uac-kY-OaF"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="liY-wb-TZB"/>
+                                                        <exclude reference="uac-kY-OaF"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="3" width="160" height="160"/>
+                                                    <mask key="constraints">
+                                                        <include reference="liY-wb-TZB"/>
+                                                        <include reference="uac-kY-OaF"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pdP-T3-UBG">
+                                                <rect key="frame" x="360" y="0.0" width="150" height="67"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="&quot;I only want to live once&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FW5-vC-cHW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" red="0.9215686917" green="0.34509804840000002" blue="0.43921571970000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="-Taylor Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edZ-FJ-mle">
+                                                        <rect key="frame" x="0.0" y="46" width="150" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.9215686917" green="0.36862745879999997" blue="0.45882356169999999" alpha="1" colorSpace="deviceRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <variation key="heightClass=regular-widthClass=compact" alignment="center" axis="vertical" misplaced="YES">
+                                                    <rect key="frame" x="170" y="42" width="133" height="83"/>
+                                                </variation>
+                                            </stackView>
+                                        </subviews>
+                                        <variation key="heightClass=regular-widthClass=compact" alignment="center" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="303" height="166"/>
                                         </variation>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLI-uY-sTr">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LtZ-aQ-o9V">
+                                        <rect key="frame" x="0.0" y="67" width="510" height="216"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Jxw-aD-khz" style="IBUITableViewCellStyleDefault" id="3e0-xY-WCQ">
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3e0-xY-WCQ" id="XyX-GF-2K8">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jxw-aD-khz">
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="176" width="303" height="307"/>
+                                        </variation>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Homie - V-1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIU-x6-rWb">
+                                        <rect key="frame" x="0.0" y="283" width="510" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.9215686917" green="0.34509804840000002" blue="0.43921571970000001" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="178" y="71" width="168" height="21"/>
-                                        </variation>
                                     </label>
                                 </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="QLI-uY-sTr"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" axis="horizontal" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="64" width="346" height="163"/>
-                                    <mask key="subviews">
-                                        <include reference="QLI-uY-sTr"/>
-                                    </mask>
-                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" alignment="center" axis="vertical"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Zhe-Jl-TUy" firstAttribute="leading" secondItem="i0f-nB-r2i" secondAttribute="leadingMargin" constant="-20" id="2zG-Ey-BBg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zhe-Jl-TUy" secondAttribute="trailing" constant="25" id="Nlq-BJ-4Ks">
-                                <variation key="heightClass=regular-widthClass=compact" constant="17"/>
-                            </constraint>
-                            <constraint firstItem="Zhe-Jl-TUy" firstAttribute="centerX" secondItem="i0f-nB-r2i" secondAttribute="centerX" id="SxR-zo-Qpz">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-18.5"/>
-                            </constraint>
-                            <constraint firstItem="Zhe-Jl-TUy" firstAttribute="top" secondItem="ytL-hr-ZbW" secondAttribute="bottom" id="hIC-81-Lq0"/>
+                            <constraint firstItem="oyn-f2-nD3" firstAttribute="top" secondItem="ytL-hr-ZbW" secondAttribute="bottom" constant="20" id="3Eh-yH-BzO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oyn-f2-nD3" secondAttribute="trailing" constant="20" id="GDd-VQ-3ci"/>
+                            <constraint firstItem="YOJ-C1-oK7" firstAttribute="top" secondItem="oyn-f2-nD3" secondAttribute="bottom" constant="20" id="GJ2-ZS-EjU"/>
+                            <constraint firstItem="oyn-f2-nD3" firstAttribute="leading" secondItem="i0f-nB-r2i" secondAttribute="leadingMargin" constant="20" id="a64-TZ-XpK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="2zG-Ey-BBg"/>
-                                <exclude reference="Nlq-BJ-4Ks"/>
-                                <exclude reference="SxR-zo-Qpz"/>
-                                <exclude reference="hIC-81-Lq0"/>
+                                <exclude reference="3Eh-yH-BzO"/>
+                                <exclude reference="GDd-VQ-3ci"/>
+                                <exclude reference="a64-TZ-XpK"/>
+                                <exclude reference="GJ2-ZS-EjU"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="2zG-Ey-BBg"/>
-                                <include reference="Nlq-BJ-4Ks"/>
-                                <include reference="SxR-zo-Qpz"/>
-                                <include reference="hIC-81-Lq0"/>
+                                <include reference="3Eh-yH-BzO"/>
+                                <include reference="GDd-VQ-3ci"/>
+                                <include reference="a64-TZ-XpK"/>
+                                <include reference="GJ2-ZS-EjU"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settingsIcon" id="9SI-GT-kIi"/>
-                    <connections>
-                        <outlet property="profileImageView" destination="pE7-yf-buH" id="lCt-aj-e0y"/>
-                        <outlet property="statusUILabel" destination="QLI-uY-sTr" id="S5N-2U-iVU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QTA-5Q-XpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -671,6 +718,7 @@
         <image name="homeIcon" width="30" height="32"/>
         <image name="house" width="516" height="439"/>
         <image name="marketIcon" width="32" height="32"/>
+        <image name="profileImagePlaceHolder" width="360" height="360"/>
         <image name="settingsIcon" width="32" height="32"/>
     </resources>
 </document>

@@ -9,15 +9,10 @@
 import Foundation
 import UIKit
 
-class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    @IBOutlet weak var contentTableView: UITableView!
-    @IBOutlet weak var versionCodeUILabel: UILabel!
-    @IBOutlet weak var statusUILabel: UILabel!
-    
+class SettingsViewController: UIViewController, UITableViewDelegate {
+    //UITableViewDataSource
     var textArray: NSMutableArray! = NSMutableArray()
     var arrayTitle: String = "Buy and sell items"
-    @IBOutlet weak var profileImageView: UIImageView!
     var defaultSettings: Bool = true
     
     override func viewDidLoad(){
@@ -47,6 +42,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
+    /*
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell: UITableViewCell = self.contentTableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
@@ -54,7 +50,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.textLabel?.text = self.textArray.objectAtIndex(indexPath.row) as? String
         
         return cell
-    }
+    }*/
     
     func loadDefaultValues(){
         
@@ -66,6 +62,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.textArray.addObject("Homie ID")
         self.textArray.addObject("Push Notification")
         
+        /*
         self.contentTableView.rowHeight = UITableViewAutomaticDimension
         self.contentTableView.estimatedRowHeight = 44.0
         
@@ -79,6 +76,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.statusUILabel.text = "\"I only want to live once\" - Taylor Swift"
         self.versionCodeUILabel.text = "\"Homie v-1.0"
         
+        */
     }
     
     /*

@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var identifierTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var developmentMode: Bool = true
     
     var backEndManager : BackEndProtocol = MockBackEndManager()
     
@@ -28,7 +29,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonPressed(){
         
-        print("hello world")
         var loginForm = LoginForm(identifier : identifierTextField.text!
             ,password : passwordTextField.text!)
         handleLoginResponse(loginAction(loginForm))
@@ -74,8 +74,9 @@ class LoginViewController: UIViewController {
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)
         
-        presentViewController(alertController, animated: true, completion: nil)
-        
+        if(!developmentMode){
+            presentViewController(alertController, animated: true, completion: nil)
+        }
         
     }
 }
