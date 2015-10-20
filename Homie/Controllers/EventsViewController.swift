@@ -24,12 +24,17 @@ class EventsViewController: UIViewController , UITableViewDataSource, UITableVie
         self.textArray.addObject("SecondEvent")
         self.textArray.addObject("ThirdEvent")
         
+        self.textArray.addObject("FirstEvent")
+        self.textArray.addObject("SecondEvent")
+        self.textArray.addObject("ThirdEvent")
+        
         //register custom cell
         let nib = UINib(nibName: "EventItemCell", bundle: nil)
         self.eventsTableView.registerNib(nib, forCellReuseIdentifier: "cell")
         
         self.eventsTableView.rowHeight = UITableViewAutomaticDimension
-        self.eventsTableView.estimatedRowHeight = 250.0
+        self.eventsTableView.estimatedRowHeight = 600.0
+        self.eventsTableView.rowHeight = 600.0
         
     }
     

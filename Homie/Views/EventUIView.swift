@@ -9,16 +9,34 @@
 import Foundation
 import UIKit
 
-class EventUIView: UIView {
+@IBDesignable class EventUIView: UIView {
     
-    @IBOutlet weak var view: UIView!
+    var view: UIView!
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var actionLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    override func awakeFromNib(){
-        super.awakeFromNib()
+    override init(frame: CGRect){
+        // properties
+        super.init(frame:frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+        super.init(coder : aDecoder)
+        view = loadViewFromNib()
+        addSubview(view)
+        
+    }
+    
+    func loadViewFromNib() -> UIView {
+        
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let nib = UINib(nibName: "EventUIView", bundle: bundle)
+        let view = nib.instantiateWithOwner(self, options:nil)[0] as! UIView
+        return view
+        
     }
     
 }
