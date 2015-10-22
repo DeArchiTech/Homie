@@ -4,11 +4,12 @@
 target 'Homie' do
     use_frameworks!
     pod 'Alamofire'
-    pod 'AlamofireObjectMapper', '~> 1.0'
+    pod 'pod 'Parse'AlamofireObjectMapper', '~> 1.0'
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
     pod 'OHHTTPStubs/Swift'
     pod 'ObjectMapper'
     pod 'IQKeyboardManagerSwift'
+    pod 'Parse'
 end
 
 target 'HomieTests' do

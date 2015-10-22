@@ -24,8 +24,16 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         self.textArray.addObject("SecondItem")
         self.textArray.addObject("ThirdItem")
         
+        self.textArray.addObject("FirstItem")
+        self.textArray.addObject("SecondItem")
+        self.textArray.addObject("ThirdItem")
+        
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 44.0
+        self.tableView.estimatedRowHeight = 88.0
+        
+        //register custom cell
+        var nib = UINib(nibName: "MarketItemCell", bundle: nil)
+        self.tableView.registerNib(nib, forCellReuseIdentifier: "marketItemCell")
         
     }
     
@@ -47,9 +55,13 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
+        let cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("marketItemCell") as UITableViewCell!
         
-        cell.textLabel?.text = self.textArray.objectAtIndex(indexPath.row) as? String
+        var customCell : MarketItemCell! = cell as? MarketItemCell
+        
+        customCell.titleLabel?.text = self.textArray.objectAtIndex(indexPath.row) as? String
+
+        customCell.descriptionLabel?.text = self.textArray.objectAtIndex(indexPath.row) as? String
         
         return cell
     }
