@@ -6,11 +6,19 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import SwiftyJSON
 
 protocol BackEndProtocol{
 
     var endPoint: String { get set }
+    
     func login(loginForm : LoginForm) -> Int
+    func signUp(signUpForm : SignUpForm) -> Int
+    
     func getUser(userID : Int) -> UserModel?
-
+    func getTrendingItems() -> [ItemModel]
+    func getSearchResults(jsonObject : JSON) ->[ItemModel]
+    func postItem(item: ItemModel) -> Int
+    func postImage(image: UIImage)-> Int
+    
 }

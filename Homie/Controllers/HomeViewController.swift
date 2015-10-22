@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Parse
 
 class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     
@@ -26,6 +27,22 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
         
+        let user = PFUser()
+        user.username = "davix1013"
+        user.password = "davix1013"
+        user.email = "davidkwokhochan@gmail.com"
+        
+        // other fields can be set if you want to save more information
+        user["phone"] = "415-960-5816"
+        
+        user.signUpInBackgroundWithBlock{ (success, error) -> Void in
+            if error == nil {
+                // Hooray! Let them use the app now.
+            } else {
+                // Examine the error object and inform the user.
+            }
+        }
+ 
     }
     
     override func didReceiveMemoryWarning() {
