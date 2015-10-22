@@ -802,32 +802,110 @@
                     <view key="view" contentMode="scaleToFill" id="3Xf-WP-gw4">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsu-Rj-bhz">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="120" y="202" width="61" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uSc-OW-XYd">
+                                <rect key="frame" x="47" y="103" width="280" height="368"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signUp" translatesAutoresizingMaskIntoConstraints="NO" id="YXP-NQ-y4S">
+                                        <rect key="frame" x="20" y="20" width="240" height="128"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="80" y="0.0" width="141" height="36"/>
+                                        </variation>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jcx-hA-JcW">
+                                        <rect key="frame" x="27" y="156" width="225" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="NfO-hQ-6E8"/>
+                                            <constraint firstAttribute="width" constant="300" id="wsL-JH-FaD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="NfO-hQ-6E8"/>
+                                                <exclude reference="wsL-JH-FaD"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="66" width="300" height="45"/>
+                                            <mask key="constraints">
+                                                <include reference="NfO-hQ-6E8"/>
+                                                <include reference="wsL-JH-FaD"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RIo-zz-xfb">
+                                        <rect key="frame" x="28" y="224" width="225" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="1zp-Az-k1k"/>
+                                            <constraint firstAttribute="width" constant="300" id="wXs-3h-rVJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1zp-Az-k1k"/>
+                                                <exclude reference="wXs-3h-rVJ"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="141" width="300" height="45"/>
+                                            <mask key="constraints">
+                                                <include reference="1zp-Az-k1k"/>
+                                                <include reference="wXs-3h-rVJ"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cim-p6-FXj">
+                                        <rect key="frame" x="98" y="318" width="84" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="ShP-RK-725"/>
+                                            <constraint firstAttribute="height" constant="45" id="TOm-lA-jZh"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign Me Up!" backgroundImage="button">
+                                            <color key="titleColor" red="0.99607843137254903" green="0.95686274509803926" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ShP-RK-725"/>
+                                                <exclude reference="TOm-lA-jZh"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="216" width="300" height="45"/>
+                                            <mask key="constraints">
+                                                <include reference="ShP-RK-725"/>
+                                                <include reference="TOm-lA-jZh"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                </subviews>
+                                <variation key="widthClass=compact" alignment="center" axis="vertical" misplaced="YES">
+                                    <rect key="frame" x="37" y="194" width="300" height="261"/>
                                 </variation>
-                            </label>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uSc-OW-XYd" firstAttribute="centerX" secondItem="3Xf-WP-gw4" secondAttribute="centerX" id="6Fs-rQ-k2r"/>
+                            <constraint firstItem="uSc-OW-XYd" firstAttribute="centerY" secondItem="3Xf-WP-gw4" secondAttribute="centerY" id="gDg-tZ-aMa"/>
+                        </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="jsu-Rj-bhz"/>
+                            <mask key="constraints">
+                                <exclude reference="6Fs-rQ-k2r"/>
+                                <exclude reference="gDg-tZ-aMa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="jsu-Rj-bhz"/>
+                            <mask key="constraints">
+                                <include reference="6Fs-rQ-k2r"/>
+                                <include reference="gDg-tZ-aMa"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APg-Qg-7fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068.5" y="890"/>
+            <point key="canvasLocation" x="2067.75" y="889.5"/>
         </scene>
         <!--Market-->
         <scene sceneID="T8x-Tw-bSF">
@@ -921,6 +999,7 @@
         <image name="marketIcon" width="32" height="32"/>
         <image name="profileImagePlaceHolder" width="360" height="360"/>
         <image name="settingsIcon" width="32" height="32"/>
+        <image name="signUp" width="141" height="43"/>
         <image name="up-house_side-edit" width="618" height="338"/>
         <image name="user1" width="308" height="308"/>
         <image name="user2" width="308" height="308"/>
