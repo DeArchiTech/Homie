@@ -105,6 +105,17 @@
                                     <segue destination="gOt-iL-RSY" kind="show" id="4q1-Wh-pXu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EI-Zr-qs5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="161" y="610" width="55" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOF-7V-MMX"/>
+                                    <segue destination="4b4-HP-21k" kind="show" id="Zzo-7z-CH9"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4o-zn-IdC">
                                 <rect key="frame" x="65" y="442" width="484" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -174,6 +185,7 @@
                             <constraint firstAttribute="trailing" secondItem="hmL-qA-Di0" secondAttribute="trailing" constant="71" id="KBU-pP-L4Y"/>
                             <constraint firstItem="hmL-qA-Di0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="135" id="Kcz-gB-PTa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Aiu-w3-I8L" secondAttribute="trailing" constant="23" id="Lw6-9n-qBg"/>
+                            <constraint firstItem="2EI-Zr-qs5" firstAttribute="top" secondItem="Ofb-GS-yqf" secondAttribute="bottom" constant="8" id="MSO-9s-AM5"/>
                             <constraint firstAttribute="trailing" secondItem="2Ao-RW-toU" secondAttribute="trailing" constant="46" id="Mvo-xF-Set"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hmL-qA-Di0" secondAttribute="trailing" constant="51" id="Ohc-tN-V4v"/>
                             <constraint firstItem="G64-0p-dpC" firstAttribute="centerY" secondItem="Aiu-w3-I8L" secondAttribute="centerY" id="PKR-6g-D8l"/>
@@ -193,6 +205,7 @@
                             <constraint firstItem="G64-0p-dpC" firstAttribute="centerX" secondItem="Aiu-w3-I8L" secondAttribute="centerX" id="ZDJ-Mt-zPr"/>
                             <constraint firstItem="2Ao-RW-toU" firstAttribute="top" secondItem="hmL-qA-Di0" secondAttribute="bottom" constant="8" id="aCi-yI-gRS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aiu-w3-I8L" secondAttribute="bottom" constant="29" id="aJu-IM-T2Z"/>
+                            <constraint firstItem="2EI-Zr-qs5" firstAttribute="centerX" secondItem="Ofb-GS-yqf" secondAttribute="centerX" id="aVU-YD-j37"/>
                             <constraint firstItem="hmL-qA-Di0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="135" id="bxw-bN-dqs"/>
                             <constraint firstItem="Ofb-GS-yqf" firstAttribute="centerX" secondItem="ph7-fi-6OF" secondAttribute="centerX" id="imf-iH-yk9"/>
                             <constraint firstItem="2Ao-RW-toU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="jCF-MD-gkC"/>
@@ -216,6 +229,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="2EI-Zr-qs5"/>
                                 <exclude reference="S4o-zn-IdC"/>
                                 <exclude reference="fvN-S0-kGe"/>
                                 <exclude reference="Aiu-w3-I8L"/>
@@ -253,7 +267,18 @@
                                 <exclude reference="imf-iH-yk9"/>
                                 <exclude reference="jZ5-bP-JTf"/>
                                 <exclude reference="whC-lB-HTm"/>
+                                <exclude reference="MSO-9s-AM5"/>
+                                <exclude reference="aVU-YD-j37"/>
                                 <exclude reference="ESG-jz-COj"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2EI-Zr-qs5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="MSO-9s-AM5"/>
+                                <include reference="aVU-YD-j37"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -551,7 +576,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2747.25" y="-129.375"/>
+            <point key="canvasLocation" x="2750.25" y="-194.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="V0j-nq-ZPz">
@@ -745,7 +770,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QTA-5Q-XpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3410.25" y="430.875"/>
+            <point key="canvasLocation" x="3467.25" y="179.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DQQ-lN-ocD">
@@ -765,6 +790,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRF-7W-Uiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2049.75" y="179.625"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="ZZh-27-AqD">
+            <objects>
+                <viewController id="4b4-HP-21k" customClass="SignUpViewController" customModule="Homie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HM6-lM-9zX"/>
+                        <viewControllerLayoutGuide type="bottom" id="XHA-uU-ZNo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Xf-WP-gw4">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsu-Rj-bhz">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="120" y="202" width="61" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jsu-Rj-bhz"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jsu-Rj-bhz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APg-Qg-7fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2068.5" y="890"/>
         </scene>
         <!--Market-->
         <scene sceneID="T8x-Tw-bSF">
@@ -845,7 +908,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLT-Vf-J1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2769.75" y="430.875"/>
+            <point key="canvasLocation" x="2763.75" y="570.5"/>
         </scene>
     </scenes>
     <resources>

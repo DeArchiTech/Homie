@@ -58,6 +58,9 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func signUpButtonPressed(sender: AnyObject) {
+    }
+    
     func showResponseAlert(success : Bool){
         
         var title = "Failure"

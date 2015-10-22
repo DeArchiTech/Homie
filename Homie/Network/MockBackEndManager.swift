@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class MockBackEndManager : BackEndProtocol {
 
@@ -28,5 +29,39 @@ class MockBackEndManager : BackEndProtocol {
     func getUser(userID: Int) -> UserModel?{
         return self.data.getUser()
     }
-
+    
+    func signUp(signUpForm : SignUpForm) -> Int {
+        
+        //Todo: Implement
+        return 0
+        
+    }
+    
+    func getTrendingItems() -> [ItemModel]?{
+        
+        //Todo: Implement
+        return nil
+        
+    }
+    
+    func getSearchResults(jsonObject : JSON) ->[ItemModel]?{
+        
+        //Todo: Implement
+        return nil
+        
+    }
+    
+    func postItem(item: ItemModel) -> Int {
+        
+        //Todo: Implement
+        return 0
+        
+    }
+    
+    func postImage(image: UIImage)-> Int {
+        
+        //Todo: Implement
+        return 0
+        
+    }
 }
