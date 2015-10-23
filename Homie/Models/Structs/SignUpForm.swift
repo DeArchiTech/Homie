@@ -13,4 +13,10 @@ struct SignUpForm{
     var identifier : String
     var password : String
     
+    init(identifier : String, password : String){
+        
+        self.identifier = identifier
+        self.password = password
+    }
+    
 }

@@ -26,6 +26,9 @@
 		22794B391BC74D1E008092AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22794B381BC74D1E008092AE /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		22794B3B1BC86883008092AE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22794B3A1BC86883008092AE /* EventModel.swift */; settings = {ASSET_TAGS = (); }; };
 		22794B3D1BC86894008092AE /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22794B3C1BC86894008092AE /* ItemModel.swift */; settings = {ASSET_TAGS = (); }; };
+		22896B951BD9B4FE00500A45 /* SignUpControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22896B941BD9B4FE00500A45 /* SignUpControllerTest.swift */; settings = {ASSET_TAGS = (); }; };
+		22896B971BD9C03900500A45 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22896B961BD9C03900500A45 /* Utils.swift */; settings = {ASSET_TAGS = (); }; };
+		22896B991BD9C22700500A45 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22896B981BD9C22700500A45 /* UtilsTest.swift */; settings = {ASSET_TAGS = (); }; };
 		2295ADA81BCDA55900CB9601 /* SetttingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295ADA71BCDA55900CB9601 /* SetttingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		229BA6431BC251A700FFEA41 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6421BC251A700FFEA41 /* UserModel.swift */; settings = {ASSET_TAGS = (); }; };
 		229BA6451BC251B000FFEA41 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6441BC251B000FFEA41 /* HomeModel.swift */; settings = {ASSET_TAGS = (); }; };
@@ -34,8 +37,6 @@
 		22B19B3A1BC5D21B00241232 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B19B391BC5D21B00241232 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		22C16C3F1BC2708400D02243 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C3E1BC2708400D02243 /* UserInfo.swift */; settings = {ASSET_TAGS = (); }; };
 		22C16C411BC2839B00D02243 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C401BC2839B00D02243 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
-		22C16C431BC2866D00D02243 /* UserModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C421BC2866D00D02243 /* UserModelTest.swift */; settings = {ASSET_TAGS = (); }; };
-		22C16C461BC289FB00D02243 /* MockBackEndManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */; settings = {ASSET_TAGS = (); }; };
 		22C189F61BD0B8E30098B55B /* EventUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C189F51BD0B8E30098B55B /* EventUIView.xib */; settings = {ASSET_TAGS = (); }; };
 		22C189F81BD0B8FF0098B55B /* EventUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C189F71BD0B8FF0098B55B /* EventUIView.swift */; settings = {ASSET_TAGS = (); }; };
 		22C189FA1BD0BE9D0098B55B /* EventItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C189F91BD0BE9D0098B55B /* EventItemCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -49,7 +50,6 @@
 		22F5A4461BC030540050E298 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4451BC030540050E298 /* LoginViewController.swift */; };
 		22F5A4491BC030540050E298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A4471BC030540050E298 /* Main.storyboard */; };
 		22F5A44E1BC030540050E298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */; };
-		22F5A4591BC030540050E298 /* HomieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4581BC030540050E298 /* HomieTests.swift */; };
 		22F5A4641BC030540050E298 /* HomieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A4631BC030540050E298 /* HomieUITests.swift */; };
 		3EC1E5029EDC3225307C9EEA /* MockBackendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1EFF8A6F890251972C95E /* MockBackendData.swift */; };
 		3EC1E7A6513357B5502F2D82 /* BackEndProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1E0C8DF5A79ED25E9EFFC /* BackEndProtocol.swift */; };
@@ -96,6 +96,9 @@
 		22794B381BC74D1E008092AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22794B3A1BC86883008092AE /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		22794B3C1BC86894008092AE /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		22896B941BD9B4FE00500A45 /* SignUpControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpControllerTest.swift; sourceTree = "<group>"; };
+		22896B961BD9C03900500A45 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		22896B981BD9C22700500A45 /* UtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
 		2295ADA71BCDA55900CB9601 /* SetttingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetttingsViewController.swift; sourceTree = "<group>"; };
 		229BA6421BC251A700FFEA41 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		229BA6441BC251B000FFEA41 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
@@ -103,8 +106,6 @@
 		22B19B391BC5D21B00241232 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		22C16C3E1BC2708400D02243 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		22C16C401BC2839B00D02243 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		22C16C421BC2866D00D02243 /* UserModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelTest.swift; sourceTree = "<group>"; };
-		22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockBackEndManagerTest.swift; sourceTree = "<group>"; };
 		22C189F51BD0B8E30098B55B /* EventUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventUIView.xib; sourceTree = "<group>"; };
 		22C189F71BD0B8FF0098B55B /* EventUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventUIView.swift; sourceTree = "<group>"; };
 		22C189F91BD0BE9D0098B55B /* EventItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventItemCell.swift; sourceTree = "<group>"; };
@@ -121,7 +122,6 @@
 		22F5A44D1BC030540050E298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22F5A44F1BC030540050E298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F5A4541BC030540050E298 /* HomieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22F5A4581BC030540050E298 /* HomieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomieTests.swift; sourceTree = "<group>"; };
 		22F5A45A1BC030540050E298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F5A45F1BC030540050E298 /* HomieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F5A4631BC030540050E298 /* HomieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomieUITests.swift; sourceTree = "<group>"; };
@@ -237,6 +237,7 @@
 		229BA6401BC2474700FFEA41 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				22896B961BD9C03900500A45 /* Utils.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -307,11 +308,10 @@
 		22F5A4571BC030540050E298 /* HomieTests */ = {
 			isa = PBXGroup;
 			children = (
-				22F5A4581BC030540050E298 /* HomieTests.swift */,
 				22F5A45A1BC030540050E298 /* Info.plist */,
-				22C16C421BC2866D00D02243 /* UserModelTest.swift */,
-				22C16C451BC289FB00D02243 /* MockBackEndManagerTest.swift */,
 				22B19B371BC5C09F00241232 /* LoginControllerTest.swift */,
+				22896B941BD9B4FE00500A45 /* SignUpControllerTest.swift */,
+				22896B981BD9C22700500A45 /* UtilsTest.swift */,
 			);
 			path = HomieTests;
 			sourceTree = "<group>";
@@ -558,6 +558,7 @@
 				22F5A4461BC030540050E298 /* LoginViewController.swift in Sources */,
 				229BA6431BC251A700FFEA41 /* UserModel.swift in Sources */,
 				22F2BDB01BCC7CEA003F1F93 /* EventsViewController.swift in Sources */,
+				22896B971BD9C03900500A45 /* Utils.swift in Sources */,
 				22794B3B1BC86883008092AE /* EventModel.swift in Sources */,
 				22F2BDB21BCC8DB0003F1F93 /* MarketViewController.swift in Sources */,
 				22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */,
@@ -583,10 +584,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C16C431BC2866D00D02243 /* UserModelTest.swift in Sources */,
+				22896B991BD9C22700500A45 /* UtilsTest.swift in Sources */,
 				22B19B381BC5C09F00241232 /* LoginControllerTest.swift in Sources */,
-				22C16C461BC289FB00D02243 /* MockBackEndManagerTest.swift in Sources */,
-				22F5A4591BC030540050E298 /* HomieTests.swift in Sources */,
+				22896B951BD9B4FE00500A45 /* SignUpControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

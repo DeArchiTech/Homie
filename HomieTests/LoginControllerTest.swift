@@ -23,29 +23,15 @@ class LoginControllerTest: XCTestCase {
     func testLoginAction() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertTrue(false)
     }
     
-    func testloginButtonPressed(){
+    func testLoginButtonPressed(){
       
         //Test Succeed
-        
+        XCTAssertTrue(false)
         //Test fail
         
-    }
-    
-    func testloginAction() {
-        
-        //Test Succeed
-        
-        //Test fail
-        
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
     }
 
 }
