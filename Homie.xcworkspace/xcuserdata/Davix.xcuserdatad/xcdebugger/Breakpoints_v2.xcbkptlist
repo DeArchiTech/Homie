@@ -166,92 +166,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomieTests/SignUpControllerTest.swift"
-            timestampString = "467253202.4887"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomieTests.SignUpControllerTest.__deallocating_deinit"
-                  moduleName = "HomieTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Davix/Source/Homie/HomieTests/SignUpControllerTest.swift"
-                  timestampString = "467258477.732339"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomieTests.SignUpControllerTest.init (HomieTests.SignUpControllerTest.Type)(invocation : Swift.Optional&lt;ObjectiveC.NSInvocation&gt;) -&gt; HomieTests.SignUpControllerTest"
-                  moduleName = "HomieTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Davix/Source/Homie/HomieTests/SignUpControllerTest.swift"
-                  timestampString = "467258477.732615"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomieTests.SignUpControllerTest.init (HomieTests.SignUpControllerTest.Type)(selector : ObjectiveC.Selector) -&gt; HomieTests.SignUpControllerTest"
-                  moduleName = "HomieTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Davix/Source/Homie/HomieTests/SignUpControllerTest.swift"
-                  timestampString = "467258477.732816"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomieTests.SignUpControllerTest.init (HomieTests.SignUpControllerTest.Type)() -&gt; HomieTests.SignUpControllerTest"
-                  moduleName = "HomieTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Davix/Source/Homie/HomieTests/SignUpControllerTest.swift"
-                  timestampString = "467258477.733074"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HomieTests/SignUpControllerTest.swift"
-            timestampString = "467257899.977044"
+            filePath = "Homie/Helpers/Utils.swift"
+            timestampString = "467332832.271128"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "testSignUpAction()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "randomGenerator()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
