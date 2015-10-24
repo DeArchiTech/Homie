@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Homie/Helpers/Utils.swift"
-            timestampString = "467380629.435986"
+            timestampString = "467411283.844669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "validEmail(_:)"
             landmarkType = "5">
          </BreakpointContent>

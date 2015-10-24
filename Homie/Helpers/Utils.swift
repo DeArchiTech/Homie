@@ -92,7 +92,7 @@ class Utils : NSObject{
         if input.characters.count >= 2 {
         
             //Outter loop: Scan for the first @ character
-            for itr in 0 ... input.characters.count {
+            outterLoop: for itr in 0 ... input.characters.count - 1 {
                 
                 let index = input.startIndex.advancedBy(itr)
                 let firstChar = input[index]
@@ -103,13 +103,13 @@ class Utils : NSObject{
                     let innerStartIndex = input.startIndex.advancedBy(innerItr)
                     
                     //Inner loop: Scan for the first . character
-                    for innerIndex in innerItr ... input.characters.count {
+                    innerLoop: for innerIndex in innerItr ... input.characters.count - 1 {
                         
                         let secondChar = input[input.startIndex.advancedBy(innerIndex)]
                         if secondChar == "."{
                             //Check if there is one more character after the dot
                             result = input.characters.count > innerIndex
-                            
+                            break innerLoop
                         }
                         
                     }
@@ -159,6 +159,11 @@ class Utils : NSObject{
         //check if the length is greater than five characters
         return input.characters.count >= 5
         
+    }
+    
+    func validIdentifierCharacter(input : Character) -> Bool {
+        
+        return false
     }
     
 }

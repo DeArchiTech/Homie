@@ -78,4 +78,16 @@ class UtilsTest : XCTestCase {
         
     }
     
+    
+    func testValidIdentifierCharacter() {
+        
+        var validIdentifierChar : Character  = "A"
+        XCTAssertTrue(self.utils.validIdentifierCharacter(validIdentifierChar))
+        
+        var invalidIdentifierChar : Character  = "~"
+        XCTAssertFalse(self.utils.validIdentifierCharacter(invalidIdentifierChar))
+        
+    }
+    
+    
 }
