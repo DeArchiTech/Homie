@@ -79,25 +79,83 @@ class Utils : NSObject{
 
     func validIdentifier(input : String) -> Bool {
         
-        return false
+        //Return valid email check
+        return self.validEmail(input)
         
     }
     
     func validEmail(input : String) -> Bool {
         
-        return false
+        //check if there is a @ sign and than a . sign that comes after
+        var result : Bool = false
+        
+        if input.characters.count >= 2 {
+        
+            //Outter loop: Scan for the first @ character
+            for index in 1 ... input.characters.count {
+                
+                let arrayFromString = Array(arrayLiteral: input)
+                
+                if("@" == (arrayFromString)[index]){
+                    
+                    var innerStartIndex = index + 1
+                    
+                    //Inner loop: Scan for the first . character
+                    for innerIndex in innerStartIndex ... input.characters.count {
+                        
+                        if (arrayFromString)[innerIndex] == "."{
+                         
+                            //Check if there is one more character after the dot
+                            result = input.characters.count > innerIndex
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+        return result
     
     }
     
     func validPhoneNumber(input : String) -> Bool {
         
-        return false
+        //check if there is at least 10 digits in the string
+        var result : Bool = false
+        
+        //1)check if string has at least a length of 10
+        if input.characters.count > 10{
+            
+            var count : Int = 0
+            //2)Loop through the string and whenever we find a numeric, we add to the count
+            for index in 1 ... input.characters.count {
+            
+                var char = Array(arrayLiteral: input)[index]
+                if char >= "0" && char <= "9" {
+                    
+                    count++
+                    
+                }
+                
+            }
+            result = count >= 10
+            
+        }
+        
+        //3)We assign the result to if the count is > 10 after we leave the loop
+        
+        return result
         
     }
     
     func validPassword(input : String) -> Bool {
-        
-        return false
+     
+        //check if the length is greater than five characters
+        return input.characters.count >= 5
         
     }
     

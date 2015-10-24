@@ -63,7 +63,7 @@ class UtilsTest : XCTestCase {
         var validPhoneNumber : String = "4159605816"
         XCTAssertTrue(self.utils.validIdentifier(validPhoneNumber))
         
-        var invalidPhoneNumber : String = "4159605816"
+        var invalidPhoneNumber : String = "4159605816111"
         XCTAssertFalse(self.utils.validIdentifier(invalidPhoneNumber))
         
     }
