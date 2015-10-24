@@ -92,19 +92,21 @@ class Utils : NSObject{
         if input.characters.count >= 2 {
         
             //Outter loop: Scan for the first @ character
-            for index in 1 ... input.characters.count {
+            for itr in 0 ... input.characters.count {
                 
-                let arrayFromString = Array(arrayLiteral: input)
+                let index = input.startIndex.advancedBy(itr)
+                let firstChar = input[index]
                 
-                if("@" == (arrayFromString)[index]){
+                if "@" == firstChar {
                     
-                    var innerStartIndex = index + 1
+                    var innerItr = itr + 1
+                    let innerStartIndex = input.startIndex.advancedBy(innerItr)
                     
                     //Inner loop: Scan for the first . character
-                    for innerIndex in innerStartIndex ... input.characters.count {
+                    for innerIndex in innerItr ... input.characters.count {
                         
-                        if (arrayFromString)[innerIndex] == "."{
-                         
+                        let secondChar = input[input.startIndex.advancedBy(innerIndex)]
+                        if secondChar == "."{
                             //Check if there is one more character after the dot
                             result = input.characters.count > innerIndex
                             
