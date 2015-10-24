@@ -8,8 +8,11 @@
 
 import Foundation
 import SwiftyJSON
+import Parse
 
 class ParseManager : BackEndProtocol{
+    
+    var erroredOnPreviousCall : Bool = false
     
     init(){
         
@@ -23,17 +26,41 @@ class ParseManager : BackEndProtocol{
         }
     }
     
-    func login(loginForm : LoginForm) -> Int {
+    func login(loginForm : LoginForm) -> Bool {
         
         //Todo: Implement
-        return 0
+        return false
         
     }
     
-    func signUp(signUpForm : SignUpForm) -> Int {
+    func signUp(signUpForm : SignUpForm) -> Bool{
         
-        //Todo: Implement
-        return 0
+        //1)Set User Fields
+        let user = PFUser()
+        user.username = signUpForm.identifier
+        user.password = signUpForm.password
+        
+        //other fields can be set if you want to save more information
+        user["phone"] = "415-960-5816"
+        user["email"] = "davidkwokhochan@gmail.com"
+       
+        //2)Sign up user with parse SDK
+        user.signUpInBackgroundWithBlock{ (success, error) -> Void in
+            if error == nil {
+                
+                self.erroredOnPreviousCall = true
+                //Update view with Error
+                
+            } else {
+                
+                self.erroredOnPreviousCall = false
+                //Update controller
+                
+            }
+        }
+        
+        //3)Return true
+        return true
         
     }
     

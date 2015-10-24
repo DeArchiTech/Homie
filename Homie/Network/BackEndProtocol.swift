@@ -12,8 +12,8 @@ protocol BackEndProtocol{
 
     var endPoint: String { get set }
     
-    func login(loginForm : LoginForm) -> Int
-    func signUp(signUpForm : SignUpForm) -> Int
+    func login(loginForm : LoginForm) -> Bool
+    func signUp(signUpForm : SignUpForm) -> Bool
     
     func getUser(userID : Int) -> UserModel?
     func getTrendingItems() -> [ItemModel]?

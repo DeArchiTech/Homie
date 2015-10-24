@@ -12,7 +12,7 @@ import UIKit
 class Utils : NSObject{
     
     //Returns a String that is in between 5 to 12 characters with Alpha and numerics only
-    func randomGenerator() -> String? {
+    func randomGenerator() -> String {
         
         var result : String = ""
         
@@ -45,7 +45,7 @@ class Utils : NSObject{
         var result : Character
         
         //Notes : ACSII Keyboard has Alpha Numeric as [A-Z] && [a-z] && [0-9], so they
-        //Take on the range of 0 - 9, 65 -90 , 97 - 122
+        //Take on the range of 48 - 57, 65 -90 , 97 - 122
         
         //1)first Randomly generate a number from 0 to Max of the three intervals
         var n : Int?
@@ -69,7 +69,7 @@ class Utils : NSObject{
         var result = false
         
         //Three sets of ACSII intervals
-        if (input >= 0 && input <= 9) || (input >= 65 && input <= 90) || (input >= 97 && input <= 122){
+        if (input >= 48 && input <= 57) || (input >= 65 && input <= 90) || (input >= 97 && input <= 122){
             result = true
         }
         

@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a82e44fa-2dd2-45b1-b571-00f4928a9063" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/Alamofire.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/Alamofire.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/AlamofireObjectMapper.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/AlamofireObjectMapper.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/Bolts.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/Bolts.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HomieTests/ParseManagerTest.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Network/BackEndProtocol.swift" afterPath="$PROJECT_DIR$/Homie/Network/BackEndProtocol.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie.xcworkspace/xcuserdata/Davix.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/Homie.xcworkspace/xcuserdata/Davix.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Controllers/HomeViewController.swift" afterPath="$PROJECT_DIR$/Homie/Controllers/HomeViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Homie.iml" afterPath="$PROJECT_DIR$/.idea/Homie.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/IQKeyboardManagerSwift.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/IQKeyboardManagerSwift.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/OHHTTPStubs.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/OHHTTPStubs.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/ObjectMapper.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/ObjectMapper.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/Parse.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/Parse.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/Pods-Homie.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/Pods-Homie.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/SwiftyJSON.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Davix.xcuserdatad/xcschemes/SwiftyJSON.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/LoginViewController.swift" afterPath="$PROJECT_DIR$/Homie/LoginViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Network/MockBackEndManager.swift" afterPath="$PROJECT_DIR$/Homie/Network/MockBackEndManager.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Network/ParseManager.swift" afterPath="$PROJECT_DIR$/Homie/Network/ParseManager.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HomieTests/SignUpControllerTest.swift" afterPath="$PROJECT_DIR$/HomieTests/SignUpControllerTest.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Controllers/SignUpViewController.swift" afterPath="$PROJECT_DIR$/Homie/Controllers/SignUpViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Helpers/Utils.swift" afterPath="$PROJECT_DIR$/Homie/Helpers/Utils.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HomieTests/UtilsTest.swift" afterPath="$PROJECT_DIR$/HomieTests/UtilsTest.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Homie.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Homie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,8 +89,8 @@
       <file leaf-file-name="MockBackEndManager.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Homie/Network/MockBackEndManager.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49003518">
-              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.26143023">
+              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -106,13 +108,13 @@
         <option value="$PROJECT_DIR$/Homie/Models/Structs/LoginForm.swift" />
         <option value="$PROJECT_DIR$/Homie/Network/BackEndProtocol.swift" />
         <option value="$PROJECT_DIR$/Homie/MockJson.json" />
-        <option value="$PROJECT_DIR$/Homie/Network/MockBackEndManager.swift" />
         <option value="$PROJECT_DIR$/Homie/Network/BackEndManager.swift" />
         <option value="$PROJECT_DIR$/Homie/Models/UserModel.swift" />
         <option value="$PROJECT_DIR$/Homie/UserModelJson.json" />
         <option value="$PROJECT_DIR$/Homie/Stores/MockBackendData.swift" />
         <option value="$PROJECT_DIR$/Homie/Models/Structs/UserInfo.swift" />
         <option value="$PROJECT_DIR$/HomieTests/HomieTests.swift" />
+        <option value="$PROJECT_DIR$/Homie/Network/MockBackEndManager.swift" />
       </list>
     </option>
   </component>
@@ -124,7 +126,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="10" />
+    <option name="y" value="153" />
     <option name="width" value="1920" />
     <option name="height" value="971" />
   </component>
@@ -448,7 +451,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="971" extended-state="0" />
+    <frame x="10" y="153" width="1920" height="971" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -564,6 +567,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2813599">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -601,8 +605,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Homie/Network/MockBackEndManager.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49003518">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.26143023">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
           <folding />
         </state>
       </provider>

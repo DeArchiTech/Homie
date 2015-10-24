@@ -37,11 +37,10 @@ class LoginViewController: UIViewController {
     
     func loginAction(form : LoginForm) -> Bool {
         
-        var response = 404
         if !form.identifier.isEmpty && !form.password.isEmpty{
-            response = backEndManager.login(form)
+            return backEndManager.login(form)
         }
-        return response == 200
+        return false
         
     }
     

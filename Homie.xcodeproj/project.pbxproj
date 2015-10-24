@@ -29,6 +29,7 @@
 		22896B951BD9B4FE00500A45 /* SignUpControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22896B941BD9B4FE00500A45 /* SignUpControllerTest.swift */; settings = {ASSET_TAGS = (); }; };
 		22896B971BD9C03900500A45 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22896B961BD9C03900500A45 /* Utils.swift */; settings = {ASSET_TAGS = (); }; };
 		22896B991BD9C22700500A45 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22896B981BD9C22700500A45 /* UtilsTest.swift */; settings = {ASSET_TAGS = (); }; };
+		228B57921BDAF7B6006C3822 /* ParseManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B57911BDAF7B6006C3822 /* ParseManagerTest.swift */; settings = {ASSET_TAGS = (); }; };
 		2295ADA81BCDA55900CB9601 /* SetttingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295ADA71BCDA55900CB9601 /* SetttingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		229BA6431BC251A700FFEA41 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6421BC251A700FFEA41 /* UserModel.swift */; settings = {ASSET_TAGS = (); }; };
 		229BA6451BC251B000FFEA41 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BA6441BC251B000FFEA41 /* HomeModel.swift */; settings = {ASSET_TAGS = (); }; };
@@ -99,6 +100,7 @@
 		22896B941BD9B4FE00500A45 /* SignUpControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpControllerTest.swift; sourceTree = "<group>"; };
 		22896B961BD9C03900500A45 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		22896B981BD9C22700500A45 /* UtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
+		228B57911BDAF7B6006C3822 /* ParseManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManagerTest.swift; sourceTree = "<group>"; };
 		2295ADA71BCDA55900CB9601 /* SetttingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetttingsViewController.swift; sourceTree = "<group>"; };
 		229BA6421BC251A700FFEA41 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		229BA6441BC251B000FFEA41 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				22B19B371BC5C09F00241232 /* LoginControllerTest.swift */,
 				22896B941BD9B4FE00500A45 /* SignUpControllerTest.swift */,
 				22896B981BD9C22700500A45 /* UtilsTest.swift */,
+				228B57911BDAF7B6006C3822 /* ParseManagerTest.swift */,
 			);
 			path = HomieTests;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				22896B991BD9C22700500A45 /* UtilsTest.swift in Sources */,
 				22B19B381BC5C09F00241232 /* LoginControllerTest.swift in Sources */,
 				22896B951BD9B4FE00500A45 /* SignUpControllerTest.swift in Sources */,
+				228B57921BDAF7B6006C3822 /* ParseManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

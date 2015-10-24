@@ -30,8 +30,9 @@ class UtilsTest : XCTestCase {
         
         //2)Call Func
         var resultFirst = utils.randomGenerator()
+        print(resultFirst)
         var resultSecond = utils.randomGenerator()
-        
+        print(resultSecond)
         //3)Check
         var sameString = (resultFirst == resultSecond)
         XCTAssertFalse(sameString)

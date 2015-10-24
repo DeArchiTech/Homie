@@ -43,36 +43,23 @@ class SignUpViewController: UIViewController{
         var backEnd : BackEndProtocol = ParseManager()
         var result = backEnd.signUp(form)
         
-        //2)Get boolean result code
-        var signUpResult : Bool = getSuccessFromCode(result)
+        //2)Show response to user in an alert dialog
+        showResponseAlert(result)
         
-        //3)Show response to user in an alert dialog
-        showResponseAlert(signUpResult)
-        
-        //4)Return result to caller
-        return signUpResult
+        //3)Return result to caller
+        return result
 
-    }
-    
-    
-    func getSuccessFromCode(result : Int) -> Bool{
-    
-        if result == 200{
-            return true
-        }else{
-            return false
-        }
     }
     
     func showResponseAlert(success : Bool){
         
         var title = "Failure"
-        var message = "Login failed"
+        var message = "Sign Up failed"
         
         if success {
             
             title = "Succeeded"
-            message = "Login Succeeded"
+            message = "Sign Up Succeeded"
         }
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)

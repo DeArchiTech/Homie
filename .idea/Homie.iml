@@ -43,6 +43,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Homie/Views/xib/MarketItemCell.xib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieTests/LoginControllerTest.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomieTests/ParseManagerTest.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieTests/SignUpControllerTest.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieTests/UtilsTest.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomieUITests/HomieUITests.swift" isTestSource="false" />

@@ -22,18 +22,18 @@ class MockBackEndManager : BackEndProtocol {
         }
     }
 
-    func login(loginForm: LoginForm) -> Int{
-        return 200
+    func login(loginForm: LoginForm) -> Bool{
+        return true
     }
 
     func getUser(userID: Int) -> UserModel?{
         return self.data.getUser()
     }
     
-    func signUp(signUpForm : SignUpForm) -> Int {
+    func signUp(signUpForm : SignUpForm) -> Bool {
         
         //Todo: Implement
-        return 0
+        return true
         
     }
     
