@@ -27,13 +27,8 @@ class SignUpViewController: UIViewController{
         var form : SignUpForm = SignUpForm(identifier: userName, password: password)
         var result : Bool = self.signUpAction(form)
         
-        //3)If success, pop self
-        
-        if result == true{
-            
-            //TODO: implement
-            
-        }
+        //3)If success, show tab view contoller
+        self.handleSignUpResponse(result)
         
     }
     
@@ -41,34 +36,17 @@ class SignUpViewController: UIViewController{
         
         //1)Ping BE Manager to sign up given the Form
         var backEnd : BackEndProtocol = ParseManager()
-        var result = backEnd.signUp(form)
         
-        //2)Show response to user in an alert dialog
-        showResponseAlert(result)
-        
-        //3)Return result to caller
-        return result
+        //2)Return result to caller
+        return backEnd.signUp(form)
 
     }
     
-    func showResponseAlert(success : Bool){
-        
-        var title = "Failure"
-        var message = "Sign Up failed"
-        
-        if success {
-            
-            title = "Succeeded"
-            message = "Sign Up Succeeded"
-        }
-        
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
+    func handleSignUpResponse(success : Bool){
         
         if(!developmentMode){
-            presentViewController(alertController, animated: true, completion: nil)
+            presentViewController(
+                AlertHelper().createAlertController(success), animated: true, completion: nil)
         }
         
     }

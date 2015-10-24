@@ -42,6 +42,7 @@
 		22C189F81BD0B8FF0098B55B /* EventUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C189F71BD0B8FF0098B55B /* EventUIView.swift */; settings = {ASSET_TAGS = (); }; };
 		22C189FA1BD0BE9D0098B55B /* EventItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C189F91BD0BE9D0098B55B /* EventItemCell.swift */; settings = {ASSET_TAGS = (); }; };
 		22C189FC1BD0BEB90098B55B /* EventItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C189FB1BD0BEB90098B55B /* EventItemCell.xib */; settings = {ASSET_TAGS = (); }; };
+		22E8585D1BDB2DF200FB141B /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8585C1BDB2DF200FB141B /* AlertHelper.swift */; settings = {ASSET_TAGS = (); }; };
 		22F27E671BD088F2009A4600 /* MarketItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F27E661BD088F2009A4600 /* MarketItemCell.swift */; settings = {ASSET_TAGS = (); }; };
 		22F27E6B1BD08A3B009A4600 /* MarketItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F27E6A1BD08A3B009A4600 /* MarketItemCell.xib */; settings = {ASSET_TAGS = (); }; };
 		22F2BDAE1BCC7C53003F1F93 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2BDAD1BCC7C53003F1F93 /* FinanceViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -112,6 +113,7 @@
 		22C189F71BD0B8FF0098B55B /* EventUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventUIView.swift; sourceTree = "<group>"; };
 		22C189F91BD0BE9D0098B55B /* EventItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventItemCell.swift; sourceTree = "<group>"; };
 		22C189FB1BD0BEB90098B55B /* EventItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventItemCell.xib; sourceTree = "<group>"; };
+		22E8585C1BDB2DF200FB141B /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		22F27E661BD088F2009A4600 /* MarketItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketItemCell.swift; sourceTree = "<group>"; };
 		22F27E6A1BD08A3B009A4600 /* MarketItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketItemCell.xib; sourceTree = "<group>"; };
 		22F2BDAD1BCC7C53003F1F93 /* FinanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinanceViewController.swift; path = ../Controllers/FinanceViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				22896B961BD9C03900500A45 /* Utils.swift */,
+				22E8585C1BDB2DF200FB141B /* AlertHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				22C189F81BD0B8FF0098B55B /* EventUIView.swift in Sources */,
 				3EC1E5029EDC3225307C9EEA /* MockBackendData.swift in Sources */,
 				22137F2D1BD8933800006B54 /* SearchForm.swift in Sources */,
+				22E8585D1BDB2DF200FB141B /* AlertHelper.swift in Sources */,
 				22F27E671BD088F2009A4600 /* MarketItemCell.swift in Sources */,
 				22C16C411BC2839B00D02243 /* Constants.swift in Sources */,
 			);

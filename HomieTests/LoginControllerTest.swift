@@ -25,13 +25,5 @@ class LoginControllerTest: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertTrue(false)
     }
-    
-    func testLoginButtonPressed(){
-      
-        //Test Succeed
-        XCTAssertTrue(false)
-        //Test fail
-        
-    }
 
 }

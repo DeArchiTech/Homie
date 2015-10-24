@@ -13,6 +13,8 @@ import UIKit
 
 class UtilsTest : XCTestCase {
 
+    let utils = Utils()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -25,18 +27,55 @@ class UtilsTest : XCTestCase {
     
     func testRandomGenerator() {
         
-        //1)Set up
-        let utils = Utils()
-        
-        //2)Call Func
+        //1)Call Func
         var resultFirst = utils.randomGenerator()
         print(resultFirst)
         var resultSecond = utils.randomGenerator()
         print(resultSecond)
-        //3)Check
+        //2)Check
         var sameString = (resultFirst == resultSecond)
         XCTAssertFalse(sameString)
     
+    }
+    
+    func testValidIdentifier() {
+        
+        var validIndentifier : String = "david@gmail.com"
+        XCTAssertTrue(self.utils.validIdentifier(validIndentifier))
+        
+        var invalidIndentifier : String = "~!@gmail.com"
+        XCTAssertFalse(self.utils.validIdentifier(invalidIndentifier))
+        
+    }
+    
+    func testValidEmail() {
+        
+        var validIndentifier : String = "david@gmail.com"
+        XCTAssertTrue(self.utils.validIdentifier(validIndentifier))
+        
+        var invalidIndentifier : String = "~!@gmail.com"
+        XCTAssertFalse(self.utils.validIdentifier(invalidIndentifier))
+        
+    }
+    
+    func testValidPhoneNumber() {
+        
+        var validPhoneNumber : String = "4159605816"
+        XCTAssertTrue(self.utils.validIdentifier(validPhoneNumber))
+        
+        var invalidPhoneNumber : String = "4159605816"
+        XCTAssertFalse(self.utils.validIdentifier(invalidPhoneNumber))
+        
+    }
+    
+    func testValidPassword() {
+        
+        var validPassword : String = "123456789"
+        XCTAssertTrue(self.utils.validIdentifier(validPassword))
+        
+        var invalidPassword : String = "415"
+        XCTAssertFalse(self.utils.validIdentifier(invalidPassword))
+        
     }
     
 }

@@ -76,5 +76,29 @@ class Utils : NSObject{
         return result
         
     }
+
+    func validIdentifier(input : String) -> Bool {
+        
+        return false
+        
+    }
+    
+    func validEmail(input : String) -> Bool {
+        
+        return false
+    
+    }
+    
+    func validPhoneNumber(input : String) -> Bool {
+        
+        return false
+        
+    }
+    
+    func validPassword(input : String) -> Bool {
+        
+        return false
+        
+    }
     
 }

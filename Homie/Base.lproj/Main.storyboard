@@ -98,7 +98,6 @@
                                 <animations/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOF-7V-MMX"/>
                                     <segue destination="4b4-HP-21k" kind="show" id="Zzo-7z-CH9"/>
                                 </connections>
                             </button>
@@ -916,6 +915,7 @@
                                         </variation>
                                         <connections>
                                             <action selector="signUpButtonPressed" destination="4b4-HP-21k" eventType="touchUpInside" id="g98-Fl-r3N"/>
+                                            <segue destination="gOt-iL-RSY" kind="show" id="dyL-hq-mgb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -951,7 +951,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APg-Qg-7fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2067.75" y="889.5"/>
+            <point key="canvasLocation" x="1388.25" y="1046.5"/>
         </scene>
         <!--Market-->
         <scene sceneID="T8x-Tw-bSF">
@@ -1056,4 +1056,7 @@
         <image name="user2" width="308" height="308"/>
         <image name="user4" width="308" height="308"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dyL-hq-mgb"/>
+    </inferredMetricsTieBreakers>
 </document>

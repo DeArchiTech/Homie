@@ -46,38 +46,9 @@ class LoginViewController: UIViewController {
     
     func handleLoginResponse(success : Bool){
 
-        if success {
-            
-            //Push community controller
-            
-        }else{
-            
-            showResponseAlert(success)
-        }
-        
-    }
-    
-    @IBAction func signUpButtonPressed(sender: AnyObject) {
-    }
-    
-    func showResponseAlert(success : Bool){
-        
-        var title = "Failure"
-        var message = "Login failed"
-        
-        if success {
-            
-            title = "Succeeded"
-            message = "Login Succeeded"
-        }
-        
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
-        
         if(!developmentMode){
-            presentViewController(alertController, animated: true, completion: nil)
+            presentViewController(AlertHelper().createAlertController(success)
+                , animated: true, completion: nil)
         }
         
     }
