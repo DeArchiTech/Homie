@@ -114,6 +114,13 @@ class Utils : NSObject{
                         
                     }
                     
+                }else{
+                    
+                    //Break loop and return false if we encounter any weird character
+                    if self.validIdentifierCharacter(firstChar) == false {
+                        break outterLoop
+                    }
+                    
                 }
                 
             }
@@ -163,7 +170,8 @@ class Utils : NSObject{
     
     func validIdentifierCharacter(input : Character) -> Bool {
         
-        return false
+        return input.unicodeScalarsValue != 0
+        
     }
     
 }

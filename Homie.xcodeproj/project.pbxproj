@@ -36,6 +36,7 @@
 		229BA6471BC26CAC00FFEA41 /* UserModelJson.json in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1EE4693BD9E4EB29CC822 /* UserModelJson.json */; };
 		22B19B381BC5C09F00241232 /* LoginControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B19B371BC5C09F00241232 /* LoginControllerTest.swift */; settings = {ASSET_TAGS = (); }; };
 		22B19B3A1BC5D21B00241232 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B19B391BC5D21B00241232 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		22B2193D1BDC703100876CA6 /* PrimitivesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B2193C1BDC703100876CA6 /* PrimitivesExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		22C16C3F1BC2708400D02243 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C3E1BC2708400D02243 /* UserInfo.swift */; settings = {ASSET_TAGS = (); }; };
 		22C16C411BC2839B00D02243 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C16C401BC2839B00D02243 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 		22C189F61BD0B8E30098B55B /* EventUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C189F51BD0B8E30098B55B /* EventUIView.xib */; settings = {ASSET_TAGS = (); }; };
@@ -107,6 +108,7 @@
 		229BA6441BC251B000FFEA41 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		22B19B371BC5C09F00241232 /* LoginControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerTest.swift; sourceTree = "<group>"; };
 		22B19B391BC5D21B00241232 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../Controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		22B2193C1BDC703100876CA6 /* PrimitivesExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitivesExtension.swift; sourceTree = "<group>"; };
 		22C16C3E1BC2708400D02243 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		22C16C401BC2839B00D02243 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22C189F51BD0B8E30098B55B /* EventUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventUIView.xib; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				22896B961BD9C03900500A45 /* Utils.swift */,
 				22E8585C1BDB2DF200FB141B /* AlertHelper.swift */,
+				22B2193C1BDC703100876CA6 /* PrimitivesExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				22896B971BD9C03900500A45 /* Utils.swift in Sources */,
 				22794B3B1BC86883008092AE /* EventModel.swift in Sources */,
 				22F2BDB21BCC8DB0003F1F93 /* MarketViewController.swift in Sources */,
+				22B2193D1BDC703100876CA6 /* PrimitivesExtension.swift in Sources */,
 				22F5A4441BC030540050E298 /* AppDelegate.swift in Sources */,
 				3EC1E7A6513357B5502F2D82 /* BackEndProtocol.swift in Sources */,
 				22F2BDAE1BCC7C53003F1F93 /* FinanceViewController.swift in Sources */,
