@@ -56,7 +56,7 @@ class Utils : NSObject{
         }
             
         //3)If number is in the ACSIIinterval, stop
-        while self.inACSIIinterval(n!)
+        while self.inAlphaNumbericInterval(n!) == false
         
         //4)Convert ASCII Int to Chracter
         result = Character(UnicodeScalar(n!))
@@ -64,7 +64,7 @@ class Utils : NSObject{
         
     }
     
-    func inACSIIinterval(input : Int) -> Bool {
+    func inAlphaNumbericInterval(input : Int) -> Bool {
         
         var result = false
         
@@ -99,7 +99,7 @@ class Utils : NSObject{
                 
                 if "@" == firstChar {
                     
-                    var innerItr = itr + 1
+                    let innerItr = itr + 1
                     let innerStartIndex = input.startIndex.advancedBy(innerItr)
                     
                     //Inner loop: Scan for the first . character
@@ -137,14 +137,17 @@ class Utils : NSObject{
         var result : Bool = false
         
         //1)check if string has at least a length of 10
-        if input.characters.count > 10{
+        if input.characters.count == 10{
             
             var count : Int = 0
             //2)Loop through the string and whenever we find a numeric, we add to the count
-            for index in 1 ... input.characters.count {
-            
-                var char = Array(arrayLiteral: input)[index]
-                if char >= "0" && char <= "9" {
+            for char in input.characters{
+                
+                let value : Int = Int(char.unicodeScalarsValue)
+                let lowerBound : Int = Int("0".asciiValue)
+                let uppderBound : Int = Int("9".asciiValue)
+                
+                if value >= lowerBound && value <= uppderBound {
                     
                     count++
                     
@@ -170,7 +173,9 @@ class Utils : NSObject{
     
     func validIdentifierCharacter(input : Character) -> Bool {
         
-        return input.unicodeScalarsValue != 0
+        //Conver input to its int equivalent and than call func
+        let alphaNumericInput : Int = Int(input.unicodeScalarsValue)
+        return self.inAlphaNumbericInterval(alphaNumericInput)
         
     }
     

@@ -28,63 +28,63 @@ class UtilsTest : XCTestCase {
     func testRandomGenerator() {
         
         //1)Call Func
-        var resultFirst = utils.randomGenerator()
+        let resultFirst = utils.randomGenerator()
         print(resultFirst)
-        var resultSecond = utils.randomGenerator()
+        let resultSecond = utils.randomGenerator()
         print(resultSecond)
         //2)Check
-        var sameString = (resultFirst == resultSecond)
+        let sameString = (resultFirst == resultSecond)
         XCTAssertFalse(sameString)
     
     }
     
     func testValidIdentifier() {
         
-        var validIndentifier : String = "david@gmail.com"
+        let validIndentifier : String = "david@gmail.com"
         XCTAssertTrue(self.utils.validIdentifier(validIndentifier))
         
-        var invalidIndentifier : String = "~!@gmail.com"
+        let invalidIndentifier : String = "~!@gmail.com"
         XCTAssertFalse(self.utils.validIdentifier(invalidIndentifier))
         
     }
     
     func testValidEmail() {
         
-        var validIndentifier : String = "david@gmail.com"
+        let validIndentifier : String = "david@gmail.com"
         XCTAssertTrue(self.utils.validIdentifier(validIndentifier))
         
-        var invalidIndentifier : String = "~!@gmail.com"
+        let invalidIndentifier : String = "~!@gmail.com"
         XCTAssertFalse(self.utils.validIdentifier(invalidIndentifier))
         
     }
     
     func testValidPhoneNumber() {
         
-        var validPhoneNumber : String = "4159605816"
-        XCTAssertTrue(self.utils.validIdentifier(validPhoneNumber))
+        let validPhoneNumber : String = "4159605816"
+        XCTAssertTrue(self.utils.validPhoneNumber(validPhoneNumber))
         
-        var invalidPhoneNumber : String = "4159605816111"
-        XCTAssertFalse(self.utils.validIdentifier(invalidPhoneNumber))
+        let invalidPhoneNumber : String = "4159605816111"
+        XCTAssertFalse(self.utils.validPhoneNumber(invalidPhoneNumber))
         
     }
     
     func testValidPassword() {
         
-        var validPassword : String = "123456789"
-        XCTAssertTrue(self.utils.validIdentifier(validPassword))
+        let validPassword : String = "123456789"
+        XCTAssertTrue(self.utils.validPassword(validPassword))
         
-        var invalidPassword : String = "415"
-        XCTAssertFalse(self.utils.validIdentifier(invalidPassword))
+        let invalidPassword : String = "415"
+        XCTAssertFalse(self.utils.validPassword(invalidPassword))
         
     }
     
     
     func testValidIdentifierCharacter() {
         
-        var validIdentifierChar : Character  = "A"
+        let validIdentifierChar : Character  = "A"
         XCTAssertTrue(self.utils.validIdentifierCharacter(validIdentifierChar))
         
-        var invalidIdentifierChar : Character  = "~"
+        let invalidIdentifierChar : Character  = "~"
         XCTAssertFalse(self.utils.validIdentifierCharacter(invalidIdentifierChar))
         
     }
