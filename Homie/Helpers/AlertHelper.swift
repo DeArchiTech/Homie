@@ -11,15 +11,15 @@ import UIKit
 
 class AlertHelper : NSObject{
 
-    func createAlertController(success : Bool) -> UIAlertController{
+    func createAlertController(action: String , success : Bool) -> UIAlertController{
         
         var title = "Failure"
-        var message = "Login failed"
+        var message = action + " failed"
         
         if success {
             
             title = "Succeeded"
-            message = "Login Succeeded"
+            message = action + " Succeeded"
         }
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)

@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
     func handleLoginResponse(success : Bool){
 
         if(!developmentMode){
-            presentViewController(AlertHelper().createAlertController(success)
+            presentViewController(AlertHelper().createAlertController("Login", success : success)
                 , animated: true, completion: nil)
         }
         

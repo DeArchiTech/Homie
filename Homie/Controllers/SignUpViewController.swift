@@ -25,10 +25,21 @@ class SignUpViewController: UIViewController{
         
         //2)Create a SignUp Form
         var form : SignUpForm = SignUpForm(identifier: userName, password: password)
-        var result : Bool = self.signUpAction(form)
         
-        //3)If success, show tab view contoller
-        self.handleSignUpResponse(result)
+        if(self.signUpFormPassesValidation(form)){
+            
+            var result : Bool = self.signUpAction(form)
+            
+            //2a)If success, show tab view contoller
+            self.handleSignUpResponse(result)
+            
+        }else{
+            
+            //2b)Display error Prompt "Invalid Identifier
+            presentViewController(
+                AlertHelper().createAlertController("Form Validation", success : false), animated: true, completion: nil)
+        }
+
         
     }
     
@@ -46,8 +57,15 @@ class SignUpViewController: UIViewController{
         
         if(!developmentMode){
             presentViewController(
-                AlertHelper().createAlertController(success), animated: true, completion: nil)
+                AlertHelper().createAlertController("Sign Up", success: success), animated: true, completion: nil)
         }
+        
+    }
+    
+    func signUpFormPassesValidation(form: SignUpForm) -> Bool {
+        
+        let utils = Utils()
+        return utils.validIdentifier(form.identifier) && utils.validPassword(form.password)
         
     }
     
