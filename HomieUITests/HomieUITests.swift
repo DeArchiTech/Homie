@@ -50,10 +50,29 @@ class HomieUITests: XCTestCase {
         let app = XCUIApplication()
         
         //2)Assert That state is disabled
+        var tabBarsCount = app.tabBars.count
+        XCTAssert(tabBarsCount == 0)
         
         //3)Trigger Function or action
         
+        let identifierTextField = app.textFields["Identifier"]
+        identifierTextField.tap()
+        identifierTextField.typeText("davix1013")
+        app.toolbars.buttons["Done"].tap()
+        
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        
+        if passwordSecureTextField.exists {
+            passwordSecureTextField.tap()
+            passwordSecureTextField.typeText("password")
+            app.toolbars.buttons["Done"].tap()
+        }
+        
+        app.buttons["Take Me Home!"].tap()
+        
         //4)Assert That state is enabled
+        tabBarsCount = app.tabBars.count
+        XCTAssert(tabBarsCount == 1)
         
     }
     
