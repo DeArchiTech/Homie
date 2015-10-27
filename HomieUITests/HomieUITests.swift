@@ -28,19 +28,46 @@ class HomieUITests: XCTestCase {
         super.tearDown()
     }
     
-    func signUpLabelTest() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSignUpLabel() {
+    
+        //1)Create Query Manager
+        let app = XCUIApplication()
+        
+        //2)Assert That state is disabled
+        XCTAssert(app.buttons["Sign Me Up!"].exists == false)
+        
+        //3)Trigger Function or action
+        app.buttons["Sign Up"].tap()
+        
+        //4)Assert That state is enabled
+        XCTAssert(app.buttons["Sign Me Up!"].exists)
+
     }
     
-    func loginUpButtonTest() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testLoginButton() {
+        
+        //1)Create Query Manager
+        let app = XCUIApplication()
+        
+        //2)Assert That state is disabled
+        
+        //3)Trigger Function or action
+        
+        //4)Assert That state is enabled
+        
     }
     
-    func signUpButtonTest(){
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSignUpButton(){
+        
+        //1)Create Query Manager
+        let app = XCUIApplication()
+        
+        //2)Assert That state is disabled
+        
+        //3)Trigger Function or action
+        
+        //4)Assert That state is enabled
+
     }
     
 }
