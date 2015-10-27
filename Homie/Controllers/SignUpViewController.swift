@@ -20,15 +20,15 @@ class SignUpViewController: UIViewController{
     @IBAction func signUpButtonPressed() -> Void {
         
         //1)Get the username , password from the user
-        var userName : String = self.identifierTextField.text!
-        var password : String = self.passwordTextField.text!
+        let userName : String = self.identifierTextField.text!
+        let password : String = self.passwordTextField.text!
         
         //2)Create a SignUp Form
-        var form : SignUpForm = SignUpForm(identifier: userName, password: password)
+        let form : SignUpForm = SignUpForm(identifier: userName, password: password)
         
         if(self.signUpFormPassesValidation(form)){
             
-            var result : Bool = self.signUpAction(form)
+            let result : Bool = self.signUpAction(form)
             
             //2a)If success, show tab view contoller
             self.handleSignUpResponse(result)
@@ -46,7 +46,7 @@ class SignUpViewController: UIViewController{
     func signUpAction(form : SignUpForm) -> Bool {
         
         //1)Ping BE Manager to sign up given the Form
-        var backEnd : BackEndProtocol = ParseManager()
+        let backEnd : BackEndProtocol = ParseManager()
         
         //2)Return result to caller
         return backEnd.signUp(form)
@@ -59,6 +59,11 @@ class SignUpViewController: UIViewController{
             presentViewController(
                 AlertHelper().createAlertController("Sign Up", success: success), animated: true, completion: nil)
         }
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let tabBarController = storyBoard.instantiateViewControllerWithIdentifier("tabBar") as! TabBarController
+        self.presentViewController(tabBarController, animated:true, completion:nil)
+        
         
     }
     

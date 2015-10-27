@@ -82,11 +82,30 @@ class HomieUITests: XCTestCase {
         let app = XCUIApplication()
         
         //2)Assert That state is disabled
+        let initialTabBarsCount = app.tabBars.count
+        XCTAssert(initialTabBarsCount == 0)
         
         //3)Trigger Function or action
         
+        app.buttons["Sign Up"].tap()
+        
+        let element = app.otherElements.containingType(.NavigationBar, identifier:"Homie.SignUpView").childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).elementBoundByIndex(1)
+        let textField = element.childrenMatchingType(.TextField).elementBoundByIndex(0)
+        textField.tap()
+        textField.typeText("davidkwokhochan@gmail.com")
+        
+        let doneButton = app.toolbars.buttons["Done"]
+        doneButton.tap()
+        
+        let secureTextField = app.otherElements.containingType(.NavigationBar, identifier:"Homie.SignUpView").childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.SecureTextField).element
+        secureTextField.tap()
+        secureTextField.typeText("password")
+        doneButton.tap()
+        app.buttons["Sign Me Up!"].tap()
+        
         //4)Assert That state is enabled
-
+        let finalTabBarsCount = app.tabBars.count
+        XCTAssert(finalTabBarsCount == 1)
     }
     
 }
