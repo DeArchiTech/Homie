@@ -28,8 +28,21 @@ class ParseManager : BackEndProtocol{
     
     func login(loginForm : LoginForm) -> Bool {
         
-        //Todo: Implement
-        return false
+        //1)Login user with parse SDK
+        PFUser.logInWithUsernameInBackground("abc", password: "cdda",
+            block:{
+            (PFUser , <#NSError?#>) -> Void in
+            if nil != nil {
+                self.erroredOnPreviousCall = false
+                    //Update view with Error
+            }else {
+                self.erroredOnPreviousCall = true
+                //Update view with Error
+            }
+        })
+        
+        //3)Return true
+        return true
         
     }
     
@@ -39,7 +52,7 @@ class ParseManager : BackEndProtocol{
         let user = PFUser()
         user.username = signUpForm.identifier
         user.password = signUpForm.password
-        
+
         //other fields can be set if you want to save more information
         user["phone"] = "415-960-5816"
         user["email"] = "davidkwokhochan@gmail.com"
@@ -48,12 +61,12 @@ class ParseManager : BackEndProtocol{
         user.signUpInBackgroundWithBlock{ (success, error) -> Void in
             if error == nil {
                 
-                self.erroredOnPreviousCall = true
+                self.erroredOnPreviousCall = false
                 //Update view with Error
                 
             } else {
                 
-                self.erroredOnPreviousCall = false
+                self.erroredOnPreviousCall = true
                 //Update controller
                 
             }
