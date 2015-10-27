@@ -19,12 +19,8 @@ class SignUpViewController: UIViewController{
     
     @IBAction func signUpButtonPressed() -> Void {
         
-        //1)Get the username , password from the user
-        let userName : String = self.identifierTextField.text!
-        let password : String = self.passwordTextField.text!
-        
-        //2)Create a SignUp Form
-        let form : SignUpForm = SignUpForm(identifier: userName, password: password)
+        //1)Create a SignUp Form
+        let form : SignUpForm = SignUpForm(identifier: self.identifierTextField.text!, password: self.passwordTextField.text!)
         
         if(self.signUpFormPassesValidation(form)){
             

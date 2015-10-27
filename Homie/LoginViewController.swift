@@ -31,16 +31,24 @@ class LoginViewController: UIViewController {
         let loginForm = LoginForm(identifier : identifierTextField.text!
             ,password : passwordTextField.text!)
         
-        self.handleLoginResponse(loginAction(loginForm))
+        handleLoginResponse(self.loginAction(loginForm))
         
     }
     
     func loginAction(form : LoginForm) -> Bool {
         
         if self.loginFormPassesValidation(form){
+        
             return backEndManager.login(form)
+        
+        }else{
+            
+            //Alert User that input is invalid
+            presentViewController(
+                AlertHelper().createAlertController("Form Validation", success : false), animated: true, completion: nil)
+            return false
+        
         }
-        return false
         
     }
     
@@ -50,6 +58,9 @@ class LoginViewController: UIViewController {
             presentViewController(AlertHelper().createAlertController("Login", success : success)
                 , animated: true, completion: nil)
         }
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let tabBarController = storyBoard.instantiateViewControllerWithIdentifier("tabBar") as! TabBarController
+        self.presentViewController(tabBarController, animated:true, completion:nil)
         
     }
     

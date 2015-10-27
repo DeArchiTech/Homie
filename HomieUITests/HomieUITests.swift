@@ -7,12 +7,12 @@
 //
 
 import XCTest
+@testable import Homie
 
 class HomieUITests: XCTestCase {
-        
+
     override func setUp() {
         super.setUp()
-        
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
@@ -44,20 +44,20 @@ class HomieUITests: XCTestCase {
 
     }
     
-    func testLoginButton() {
+    func testLoginButtonSuccess() {
         
-        //1)Create Query Manager
+        //Create Query Manager
         let app = XCUIApplication()
         
-        //2)Assert That state is disabled
+        //1)Assert That state is disabled
         var tabBarsCount = app.tabBars.count
         XCTAssert(tabBarsCount == 0)
         
-        //3)Trigger Function or action
+        //2)Trigger Function or action
         
         let identifierTextField = app.textFields["Identifier"]
         identifierTextField.tap()
-        identifierTextField.typeText("davix1013")
+        identifierTextField.typeText("davidkwokhochan@gmail.com")
         app.toolbars.buttons["Done"].tap()
         
         let passwordSecureTextField = app.secureTextFields["Password"]
@@ -70,13 +70,45 @@ class HomieUITests: XCTestCase {
         
         app.buttons["Take Me Home!"].tap()
         
-        //4)Assert That state is enabled
+        //3)Assert That state is enabled
         tabBarsCount = app.tabBars.count
         XCTAssert(tabBarsCount == 1)
         
     }
     
-    func testSignUpButton(){
+    func testLoginButtonFail() {
+        
+        //Create Query Manager
+        let app = XCUIApplication()
+        
+        //1)Assert That state is disabled
+        var tabBarsCount = app.tabBars.count
+        XCTAssert(tabBarsCount == 0)
+        
+        //2)Trigger Function or action
+        
+        let identifierTextField = app.textFields["Identifier"]
+        identifierTextField.tap()
+        identifierTextField.typeText("abc123")
+        app.toolbars.buttons["Done"].tap()
+        
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        
+        if passwordSecureTextField.exists {
+            passwordSecureTextField.tap()
+            passwordSecureTextField.typeText("password")
+            app.toolbars.buttons["Done"].tap()
+        }
+        
+        app.buttons["Take Me Home!"].tap()
+        
+        //3)Assert That state is enabled
+        tabBarsCount = app.tabBars.count
+        XCTAssert(tabBarsCount == 0)
+        
+    }
+    
+    func testSignUpButtonSuccess(){
         
         //1)Create Query Manager
         let app = XCUIApplication()
@@ -92,7 +124,7 @@ class HomieUITests: XCTestCase {
         let element = app.otherElements.containingType(.NavigationBar, identifier:"Homie.SignUpView").childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).elementBoundByIndex(1)
         let textField = element.childrenMatchingType(.TextField).elementBoundByIndex(0)
         textField.tap()
-        textField.typeText("davidkwokhochan@gmail.com")
+        textField.typeText("abc123")
         
         let doneButton = app.toolbars.buttons["Done"]
         doneButton.tap()
@@ -106,6 +138,37 @@ class HomieUITests: XCTestCase {
         //4)Assert That state is enabled
         let finalTabBarsCount = app.tabBars.count
         XCTAssert(finalTabBarsCount == 1)
+    }
+    
+    func testSignUpButtonFail(){
+        
+        //1)Create Query Manager
+        let app = XCUIApplication()
+        
+        //2)Assert That state is disabled
+        let initialTabBarsCount = app.tabBars.count
+        XCTAssert(initialTabBarsCount == 0)
+        
+        //3)Trigger Function or action
+        
+        app.buttons["Sign Up"].tap()
+        
+        let element = app.otherElements.containingType(.NavigationBar, identifier:"Homie.SignUpView").childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).elementBoundByIndex(1)
+        let textField = element.childrenMatchingType(.TextField).elementBoundByIndex(0)
+        textField.tap()
+        textField.typeText("abc123")
+        
+        let doneButton = app.toolbars.buttons["Done"]
+        doneButton.tap()
+        
+        let secureTextField = app.otherElements.containingType(.NavigationBar, identifier:"Homie.SignUpView").childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.SecureTextField).element
+        secureTextField.tap()
+        secureTextField.typeText("password")
+        doneButton.tap()
+
+        app.buttons["Sign Me Up!"].tap()
+        XCTAssert(app.alerts["Failure"].exists)
+
     }
     
 }
