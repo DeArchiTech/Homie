@@ -31,13 +31,14 @@ class LoginViewController: UIViewController {
         
         var loginForm = LoginForm(identifier : identifierTextField.text!
             ,password : passwordTextField.text!)
+        
         handleLoginResponse(loginAction(loginForm))
         
     }
     
     func loginAction(form : LoginForm) -> Bool {
         
-        if !form.identifier.isEmpty && !form.password.isEmpty{
+        if self.loginFormPassesValidation(form){
             return backEndManager.login(form)
         }
         return false
@@ -52,4 +53,16 @@ class LoginViewController: UIViewController {
         }
         
     }
+    
+    func loginFormPassesValidation(loginForm : LoginForm) -> Bool {
+    
+        if !loginForm.identifier.isEmpty && loginForm.password.isEmpty{
+            let utils = Utils()
+            return utils.validIdentifier(loginForm.identifier) &&
+                utils.validPassword(loginForm.password)
+        }
+        return false
+        
+    }
+    
 }

@@ -30,20 +30,22 @@ class SignUpControllerTest: XCTestCase {
         //Test Succeed
 
         //1)Create Success form
-        let form : SignUpForm = SignUpForm(identifier: Utils().randomGenerator(), password: "password")
+        var form : SignUpForm = SignUpForm(identifier: Utils().randomGenerator(), password: "password")
         //2)Call controller's sign up method with the form
-        let result : Bool = self.controller!.signUpAction(form)
+        var result : Bool = self.controller!.signUpAction(form)
         //3)Assert success by checking the result of the function call
         XCTAssertTrue(result)
     
-        //Test fail
-        
+        //Test fail (can't test this case until we figured out asyn testing
+
+        /*
         //1)Create Fail form
-       /* form = SignUpForm(identifier: "superUser", password: "password")
+        form = SignUpForm(identifier: "superUser", password: "password")
         //2)Call controller's sign up method with the form
         result = self.controller!.signUpAction(form)
         //3)Assert failure by checking the result of the function call
-        XCTAssertFalse(result)*/
+        XCTAssertFalse(result)
+        */
         
     }
     
