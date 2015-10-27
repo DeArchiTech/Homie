@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MockBackendData()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,10 +28,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonPressed(){
         
-        var loginForm = LoginForm(identifier : identifierTextField.text!
+        let loginForm = LoginForm(identifier : identifierTextField.text!
             ,password : passwordTextField.text!)
         
-        handleLoginResponse(loginAction(loginForm))
+        self.handleLoginResponse(loginAction(loginForm))
         
     }
     
@@ -56,7 +55,7 @@ class LoginViewController: UIViewController {
     
     func loginFormPassesValidation(loginForm : LoginForm) -> Bool {
     
-        if !loginForm.identifier.isEmpty && loginForm.password.isEmpty{
+        if !loginForm.identifier.isEmpty && !loginForm.password.isEmpty{
             let utils = Utils()
             return utils.validIdentifier(loginForm.identifier) &&
                 utils.validPassword(loginForm.password)

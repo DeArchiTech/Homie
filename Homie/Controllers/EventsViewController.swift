@@ -58,7 +58,7 @@ class EventsViewController: UIViewController , UITableViewDataSource, UITableVie
         
         let cell: UITableViewCell = self.eventsTableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
         
-        var customCell : EventItemCell! = cell as? EventItemCell
+        let customCell : EventItemCell! = cell as? EventItemCell
         
         customCell.eventUIView.titleLabel?.text = self.textArray.objectAtIndex(indexPath.row) as? String
         

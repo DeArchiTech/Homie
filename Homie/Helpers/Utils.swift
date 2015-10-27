@@ -100,7 +100,7 @@ class Utils : NSObject{
                 if "@" == firstChar {
                     
                     let innerItr = itr + 1
-                    let innerStartIndex = input.startIndex.advancedBy(innerItr)
+                    _ = input.startIndex.advancedBy(innerItr)
                     
                     //Inner loop: Scan for the first . character
                     innerLoop: for innerIndex in innerItr ... input.characters.count - 1 {

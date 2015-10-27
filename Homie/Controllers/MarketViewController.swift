@@ -32,7 +32,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.estimatedRowHeight = 88.0
         
         //register custom cell
-        var nib = UINib(nibName: "MarketItemCell", bundle: nil)
+        let nib = UINib(nibName: "MarketItemCell", bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: "marketItemCell")
         
     }
@@ -57,7 +57,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         
         let cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("marketItemCell") as UITableViewCell!
         
-        var customCell : MarketItemCell! = cell as? MarketItemCell
+        let customCell : MarketItemCell! = cell as? MarketItemCell
         
         customCell.titleLabel?.text = self.textArray.objectAtIndex(indexPath.row) as? String
 

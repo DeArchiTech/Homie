@@ -27,14 +27,14 @@ class ParseManagerTest : XCTestCase {
     
     func testLogin() {
     
-        var form = LoginForm(identifier: "davidkwokhochan@gmail.com", password: "password")
+        let form = LoginForm(identifier: "davidkwokhochan@gmail.com", password: "password")
         XCTAssertTrue(self.parseManager!.login(form))
         
     }
     
     func testSignUp() {
      
-        var form = SignUpForm(identifier: self.utils.randomGenerator(), password: "password")
+        let form = SignUpForm(identifier: self.utils.randomGenerator(), password: "password")
         XCTAssertTrue(self.parseManager!.signUp(form))
         
     }

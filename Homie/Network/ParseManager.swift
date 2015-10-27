@@ -29,10 +29,9 @@ class ParseManager : BackEndProtocol{
     func login(loginForm : LoginForm) -> Bool {
         
         //1)Login user with parse SDK
-        PFUser.logInWithUsernameInBackground("abc", password: "cdda",
-            block:{
-            (PFUser , <#NSError?#>) -> Void in
-            if nil != nil {
+        PFUser.logInWithUsernameInBackground(loginForm.identifier, password: loginForm.password,
+            block:{(loggedInuser: PFUser?, signupError: NSError?) -> Void in
+            if loggedInuser != nil {
                 self.erroredOnPreviousCall = false
                     //Update view with Error
             }else {
