@@ -15,6 +15,7 @@ class ParseManagerTest : XCTestCase {
     var parseManager : ParseManager?
     var expectation : XCTestExpectation?
     var testingForPass : Bool = false
+    var defaultDelegate : testDelegateOnComplete?
     
     let utils = Utils()
     
@@ -51,9 +52,11 @@ class ParseManagerTest : XCTestCase {
     }
 
     override func setUp() {
+        
         super.setUp()
         self.parseManager = ParseManager()
-        self.parseManager!.setDelegate(testDelegateOnComplete(pmt :self))
+        self.defaultDelegate = testDelegateOnComplete(pmt :self)
+        self.parseManager!.setDelegate(self.defaultDelegate!)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -138,9 +141,15 @@ class ParseManagerTest : XCTestCase {
         
         //**Failure Case set up
         
-        /*
+        //TODO:
+        //
+        //1)Create a custom delegate to test this particular case
+        //2)Set parsemanager 's delegate to this custom delegate
+        //3)Do the right assertions for this case
+        //4)Swap the delegate back to the original one
+        
         userID = "0NNK3ySSTl" + "XYZ"
-        self.testingForPass = false
+        self.testingForPass = true
         
         //Test Function Fired successfully
         self.expectation = self.expectationWithDescription("Get User Network Call")
@@ -148,7 +157,7 @@ class ParseManagerTest : XCTestCase {
         
         //If test delegate is fired successfully , it will remove this timer
         self.waitForExpectationsWithTimeout(15.0, handler:nil)
-        */
+        
         
         //TODO: Figure out how to recieve actural user objects from Parse Back End
         
@@ -207,12 +216,12 @@ class ParseManagerTest : XCTestCase {
         
         //**Success Case set up
         
-        let image = UIImage()
+        let image = UIImage(named: "iconWallet.png")
         self.testingForPass = true
         
         //Test Function Fired successfully
         self.expectation = self.expectationWithDescription("Post Image Network Call")
-        XCTAssertTrue(self.parseManager!.postImage(image))
+        XCTAssertTrue(self.parseManager!.postImage(image!))
         
         //If test delegate is fired successfully , it will remove this timer
         self.waitForExpectationsWithTimeout(15.0, handler:nil)

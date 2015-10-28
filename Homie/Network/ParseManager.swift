@@ -194,7 +194,7 @@ class ParseManager : BackEndProtocol{
                 //FIRE FAILURE DELEGATE
             }
         }
-        return false
+        return true
         
     }
     

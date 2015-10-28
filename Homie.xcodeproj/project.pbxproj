@@ -24,6 +24,7 @@
 		22137F2F1BD8957600006B54 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22137F2E1BD8957600006B54 /* ParseManager.swift */; settings = {ASSET_TAGS = (); }; };
 		22137F311BD8F23700006B54 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22137F301BD8F23700006B54 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		226074C51BDF2DB100C52EA7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226074C41BDF2DB100C52EA7 /* TabBarController.swift */; settings = {ASSET_TAGS = (); }; };
+		227327401BE0D99D009D78B7 /* iconWallet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2273273F1BE0D99D009D78B7 /* iconWallet.png */; settings = {ASSET_TAGS = (); }; };
 		22794B391BC74D1E008092AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22794B381BC74D1E008092AE /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		22794B3B1BC86883008092AE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22794B3A1BC86883008092AE /* EventModel.swift */; settings = {ASSET_TAGS = (); }; };
 		22794B3D1BC86894008092AE /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22794B3C1BC86894008092AE /* ItemModel.swift */; settings = {ASSET_TAGS = (); }; };
@@ -100,6 +101,7 @@
 		22137F2E1BD8957600006B54 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
 		22137F301BD8F23700006B54 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		226074C41BDF2DB100C52EA7 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		2273273F1BE0D99D009D78B7 /* iconWallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconWallet.png; path = Assets.xcassets/iconWallet.png; sourceTree = "<group>"; };
 		22794B381BC74D1E008092AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22794B3A1BC86883008092AE /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		22794B3C1BC86894008092AE /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				22F5A4431BC030540050E298 /* AppDelegate.swift */,
 				22F5A4471BC030540050E298 /* Main.storyboard */,
 				22794B381BC74D1E008092AE /* Assets.xcassets */,
+				2273273F1BE0D99D009D78B7 /* iconWallet.png */,
 				22F5A44C1BC030540050E298 /* LaunchScreen.storyboard */,
 				22F5A44F1BC030540050E298 /* Info.plist */,
 				3EC1EE4693BD9E4EB29CC822 /* UserModelJson.json */,
@@ -493,6 +496,7 @@
 				22F27E6B1BD08A3B009A4600 /* MarketItemCell.xib in Resources */,
 				22C189FC1BD0BEB90098B55B /* EventItemCell.xib in Resources */,
 				22F5A44E1BC030540050E298 /* LaunchScreen.storyboard in Resources */,
+				227327401BE0D99D009D78B7 /* iconWallet.png in Resources */,
 				22F5A4491BC030540050E298 /* Main.storyboard in Resources */,
 				22C189F61BD0B8E30098B55B /* EventUIView.xib in Resources */,
 				22794B391BC74D1E008092AE /* Assets.xcassets in Resources */,
