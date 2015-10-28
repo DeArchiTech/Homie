@@ -10,9 +10,9 @@ import Foundation
 import SwiftyJSON
 import Parse
 
+//Treat each Network call as with signals, one that sends to server, one that recieves from server
+//Test each network call's signals individually
 class ParseManager : BackEndProtocol{
-    
-    var erroredOnPreviousCall : Bool = false
     
     init(){
         
@@ -32,11 +32,12 @@ class ParseManager : BackEndProtocol{
         PFUser.logInWithUsernameInBackground(loginForm.identifier, password: loginForm.password,
             block:{(loggedInuser: PFUser?, signupError: NSError?) -> Void in
             if loggedInuser != nil {
-                self.erroredOnPreviousCall = false
-                    //Update view with Error
+
+                //FIRE SUCCESS DELEGATE
+                
             }else {
-                self.erroredOnPreviousCall = true
-                //Update view with Error
+
+                //FIRE FAILURE DELEGATE
             }
         })
         
@@ -60,13 +61,11 @@ class ParseManager : BackEndProtocol{
         user.signUpInBackgroundWithBlock{ (success, error) -> Void in
             if error == nil {
                 
-                self.erroredOnPreviousCall = false
-                //Update view with Error
+                //FIRE SUCCESS DELEGATE
                 
             } else {
                 
-                self.erroredOnPreviousCall = true
-                //Update controller
+                //FIRE FAILURE DELEGATE
                 
             }
         }
@@ -97,17 +96,17 @@ class ParseManager : BackEndProtocol{
         
     }
     
-    func postItem(item: ItemModel) -> Int {
+    func postItem(item: ItemModel) -> Bool {
         
         //Todo: Implement
-        return 0
+        return false
         
     }
     
-    func postImage(image: UIImage)-> Int {
+    func postImage(image: UIImage)-> Bool {
         
         //Todo: Implement
-        return 0
+        return false
         
     }
 

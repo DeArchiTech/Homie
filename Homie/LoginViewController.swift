@@ -58,9 +58,7 @@ class LoginViewController: UIViewController {
             presentViewController(AlertHelper().createAlertController("Login", success : success)
                 , animated: true, completion: nil)
         }
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let tabBarController = storyBoard.instantiateViewControllerWithIdentifier("tabBar") as! TabBarController
-        self.presentViewController(tabBarController, animated:true, completion:nil)
+        self.loginCompelete()
         
     }
     
@@ -72,6 +70,14 @@ class LoginViewController: UIViewController {
                 utils.validPassword(loginForm.password)
         }
         return false
+        
+    }
+    
+    func loginCompelete(){
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let tabBarController = storyBoard.instantiateViewControllerWithIdentifier("tabBar") as! TabBarController
+        self.presentViewController(tabBarController, animated:true, completion:nil)
         
     }
     

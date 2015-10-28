@@ -56,10 +56,7 @@ class SignUpViewController: UIViewController{
                 AlertHelper().createAlertController("Sign Up", success: success), animated: true, completion: nil)
         }
         
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let tabBarController = storyBoard.instantiateViewControllerWithIdentifier("tabBar") as! TabBarController
-        self.presentViewController(tabBarController, animated:true, completion:nil)
-        
+        self.signUpComplete()
         
     }
     
@@ -67,6 +64,14 @@ class SignUpViewController: UIViewController{
         
         let utils = Utils()
         return utils.validIdentifier(form.identifier) && utils.validPassword(form.password)
+        
+    }
+    
+    func signUpComplete(){
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let tabBarController = storyBoard.instantiateViewControllerWithIdentifier("tabBar") as! TabBarController
+        self.presentViewController(tabBarController, animated:true, completion:nil)
         
     }
     

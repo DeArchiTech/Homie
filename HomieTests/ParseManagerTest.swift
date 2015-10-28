@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import SwiftyJSON
+
 @testable import Homie
 
 class ParseManagerTest : XCTestCase {
@@ -26,9 +28,12 @@ class ParseManagerTest : XCTestCase {
     }
     
     func testLogin() {
-    
+        
+        //Success Case
         let form = LoginForm(identifier: "davidkwokhochan@gmail.com", password: "password")
+        //1)Test Function Fired successfully
         XCTAssertTrue(self.parseManager!.login(form))
+        //2)Test Delegate Fired successfully
         
     }
     
@@ -38,4 +43,39 @@ class ParseManagerTest : XCTestCase {
         XCTAssertTrue(self.parseManager!.signUp(form))
         
     }
+    
+    func testGetUser(){
+        
+        let userID = 1
+        XCTAssertNotNil(self.parseManager!.getUser(userID))
+        
+    }
+    
+    func testGetTrendingItems(){
+        
+        XCTAssertNotNil(self.parseManager!.getTrendingItems())
+        
+    }
+    
+    func testGetSearchResults(){
+        
+        let jsonObject = JSON(NSData())
+        XCTAssertNotNil(self.parseManager!.getSearchResults(jsonObject))
+        
+    }
+    
+    func testPostItem(){
+        
+        let item = ItemModel()
+        XCTAssertTrue(self.parseManager!.postItem(item))
+        
+    }
+    
+    func testPostImage(){
+        
+        let image = UIImage()
+        XCTAssertTrue(self.parseManager!.postImage(image))
+    }
+    
+    
 }

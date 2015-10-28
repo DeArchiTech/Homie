@@ -51,17 +51,17 @@ class MockBackEndManager : BackEndProtocol {
         
     }
     
-    func postItem(item: ItemModel) -> Int {
+    func postItem(item: ItemModel) -> Bool {
         
         //Todo: Implement
-        return 0
+        return false
         
     }
     
-    func postImage(image: UIImage)-> Int {
+    func postImage(image: UIImage)-> Bool {
         
         //Todo: Implement
-        return 0
+        return false
         
     }
 }
