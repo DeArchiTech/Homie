@@ -11,10 +11,20 @@ import SwiftyJSON
 
 @testable import Homie
 
-class ParseManagerTest : XCTestCase {
+class ParseManagerTest : XCTestCase{
     
     var parseManager : ParseManager?
     let utils = Utils()
+    
+    class ParseManagerTestDelegate : BackEndCallCompleteProtocol{
+        
+        func onNetworkSuccess(nsobject : NSObject){
+            
+        }
+        func onNetworkFailure(statusCode : Int , message : String) {
+            
+        }
+    }
     
     override func setUp() {
         super.setUp()

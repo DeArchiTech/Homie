@@ -9,61 +9,72 @@
 import Foundation
 import UIKit
 
-class SignUpViewController: UIViewController{
+class SignUpViewController: UIViewController , BackEndCallCompleteProtocol{
 
     var developmentMode: Bool = true
+    
+    let backEnd : BackEndProtocol = ParseManager()
     
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var identifierTextField: UITextField!
+    
+    //USER TRIGGERD FUNCTIONS
     
     @IBAction func signUpButtonPressed() -> Void {
         
         //1)Create a SignUp Form
         let form : SignUpForm = SignUpForm(identifier: self.identifierTextField.text!, password: self.passwordTextField.text!)
         
+        self.signUpAction(form)
+        
+    }
+    
+    func signUpAction(form : SignUpForm) -> Bool {
+        
         if(self.signUpFormPassesValidation(form)){
             
-            let result : Bool = self.signUpAction(form)
+            //1)Ping BE Manager to sign up given the Form
+            backEnd.setDelegate(self)
             
-            //2a)If success, show tab view contoller
-            self.handleSignUpResponse(result)
+            return backEnd.signUp(form)
             
         }else{
             
             //2b)Display error Prompt "Invalid Identifier
             presentViewController(
                 AlertHelper().createAlertController("Form Validation", success : false), animated: true, completion: nil)
+            return false
+            
         }
-
-        
-    }
-    
-    func signUpAction(form : SignUpForm) -> Bool {
-        
-        //1)Ping BE Manager to sign up given the Form
-        let backEnd : BackEndProtocol = ParseManager()
-        
-        //2)Return result to caller
-        return backEnd.signUp(form)
 
     }
     
-    func handleSignUpResponse(success : Bool){
-        
-        if(!developmentMode){
-            presentViewController(
-                AlertHelper().createAlertController("Sign Up", success: success), animated: true, completion: nil)
-        }
-        
-        self.signUpComplete()
-        
-    }
     
     func signUpFormPassesValidation(form: SignUpForm) -> Bool {
         
         let utils = Utils()
         return utils.validIdentifier(form.identifier) && utils.validPassword(form.password)
+        
+    }
+    
+    //NETWORK TRIGGERD FUNCTIONS
+    
+    func onNetworkSuccess(nsobject : NSObject){
+        
+        if(!developmentMode){
+            presentViewController(AlertHelper().createAlertController("Sign Up", success : true)
+                , animated: true, completion: nil)
+        }
+        self.signUpComplete()
+        
+    }
+    
+    func onNetworkFailure(statusCode : Int , message : String){
+        
+        //Alert User that input is invalid
+        presentViewController(
+            AlertHelper().createAlertController("Sign Up", success : false), animated: true, completion: nil)
         
     }
     

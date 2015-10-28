@@ -14,11 +14,11 @@ class LoginViewController: UIViewController , BackEndCallCompleteProtocol{
     @IBOutlet weak var passwordTextField: UITextField!
     var developmentMode: Bool = true
     
-    var backEndManager : BackEndProtocol = MockBackEndManager()
+    var backEndManager : BackEndProtocol = ParseManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backEndManager.delegate = self
+        self.backEndManager.setDelegate(self)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -26,6 +26,8 @@ class LoginViewController: UIViewController , BackEndCallCompleteProtocol{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //USER TRIGGERD FUNCTIONS
     
     @IBAction func loginButtonPressed(){
         
@@ -70,6 +72,8 @@ class LoginViewController: UIViewController , BackEndCallCompleteProtocol{
         return false
         
     }
+    
+    //NETWORK TRIGGERD FUNCTIONS
     
     func onNetworkSuccess(nsobject : NSObject){
         

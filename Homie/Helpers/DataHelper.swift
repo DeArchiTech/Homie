@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataHelper(){
+class DataHelper{
     
     
 }
