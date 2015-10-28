@@ -78,12 +78,12 @@ class ParseManager : BackEndProtocol{
     func getUser(userID : String) -> Bool {
         
         let query = PFQuery(className:"User")
-        
-        query.getObjectInBackgroundWithId(userID,
-            block:{(user: PFObject?, error: NSError?) -> Void in
-            if user != nil {
+        query.whereKey("objectId", equalTo: userID)
+        query.findObjectsInBackgroundWithBlock {
+        (objects: [PFObject]?, error: NSError?) -> Void in
+            if objects != nil {
                 
-                self.delegate?.onNetworkSuccess(user!)
+                self.delegate?.onNetworkSuccess(objects!)
                 //FIRE SUCCESS DELEGATE
                 
             }else {
@@ -91,7 +91,7 @@ class ParseManager : BackEndProtocol{
                 self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
                 //FIRE FAILURE DELEGATE
             }
-        })
+        }
         
         return true
         
@@ -99,7 +99,7 @@ class ParseManager : BackEndProtocol{
     
     func getTrendingItems() -> Bool{
     
-        let query = PFQuery(className: "Item")
+        let query = PFQuery(className: "Product")
         query.whereKey("Trending", equalTo: "1")
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -116,7 +116,7 @@ class ParseManager : BackEndProtocol{
             }
         }
         
-        return true;
+        return true
     
     }
 
