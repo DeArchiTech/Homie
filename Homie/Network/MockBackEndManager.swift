@@ -46,7 +46,7 @@ class MockBackEndManager : BackEndProtocol {
         
     }
     
-    func getSearchResults(jsonObject : JSON) -> Bool{
+    func getSearchResults(searchForm : SearchForm) -> Bool{
         
         //Todo: Implement
         return false

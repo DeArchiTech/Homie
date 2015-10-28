@@ -120,11 +120,13 @@ class ParseManager : BackEndProtocol{
     
     }
 
-    func getSearchResults(jsonObject : JSON) -> Bool{
+    func getSearchResults(searchForm : SearchForm) -> Bool{
         
         let query = PFQuery(className: "Item")
-        //TODO IMPLEMENT, THE CORRECT WHERE CLAUSE TO MATCH IN INPUT JSONOBJECT SEARCH FORM
-        query.whereKey("Key", equalTo: "Value")
+        
+        //Set up Query
+        query.whereKey("PickUpCost", greaterThan: 0)
+        query.whereKey("PickUpCost", lessThanOrEqualTo: 10)
         
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in

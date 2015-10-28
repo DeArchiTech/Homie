@@ -62,6 +62,7 @@ class ParseManagerTest : XCTestCase {
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.testingForPass = true
         super.tearDown()
     }
     
@@ -249,14 +250,86 @@ class ParseManagerTest : XCTestCase {
     
     func testGetSearchResults(){
         
+        //1)Create a custom delegate to test this particular case
+        class testGetSearchOnComplete : BackEndCallCompleteProtocol{
+            
+            var pmt : ParseManagerTest?
+            
+            init(pmt : ParseManagerTest){
+                
+                self.pmt = pmt
+                
+            }
+            
+            func onNetworkSuccess(nsobject : NSObject){
+                
+                //Test Delegate Fired successfully
+                XCTAssertNotNil(nsobject)
+                let testingForPass = self.pmt?.testingForPass
+                
+                //1)Cast nsObject
+                let array = nsobject as! NSArray
+                
+                if testingForPass! {
+
+                    //2)Check if nsobject has at least one element
+                    XCTAssert(array.count > 0)
+                    
+                }else{
+                    
+                    //2)Check if nsobject has no element
+                    XCTAssert(array.count == 0)
+                    
+                }
+                self.pmt?.expectation?.fulfill()
+                
+            }
+            
+            func onNetworkFailure(statusCode : Int , message : String) {
+                
+            }
+            
+        }
+        
+        //2)Set parsemanager 's delegate to this custom delegate
+        let delegate = testGetSearchOnComplete(pmt: self)
+        self.parseManager?.setDelegate(delegate)
+        
         //**Success Case set up
         
         self.testingForPass = true
-        let jsonObject = JSON(NSData())
+        
+        var searchForm = SearchForm.init(
+            name: "test" + utils.randomGenerator(),
+            description: "testPass",
+            pickUpPriceRangeLow: "0",
+            pickUpPriceRangeHigh: "100",
+            deliveryPriceRangeLow: "0",
+            deliveryPriceRangeHigh: "100")
+        
+        //Test Function Fired successfully
+        self.expectation = self.expectationWithDescription("Search with Search Form as filter with > 0 results - Network Call")
+        XCTAssertTrue(self.parseManager!.getSearchResults(searchForm))
+        
+        //If test delegate is fired successfully , it will remove this timer
+        self.waitForExpectationsWithTimeout(15.0, handler:nil)
+        
+        
+        //**Failure Case set up
+        
+        self.testingForPass = false
+        
+        searchForm = SearchForm.init(
+            name: "test" + utils.randomGenerator(),
+            description: "testFailure",
+            pickUpPriceRangeLow: "100",
+            pickUpPriceRangeHigh: "0",
+            deliveryPriceRangeLow: "100",
+            deliveryPriceRangeHigh: "0")
         
         //Test Function Fired successfully
         self.expectation = self.expectationWithDescription("Search with JSON Object as filter - Network Call")
-        XCTAssertTrue(self.parseManager!.getSearchResults(jsonObject))
+        XCTAssertTrue(self.parseManager!.getSearchResults(searchForm))
         
         //If test delegate is fired successfully , it will remove this timer
         self.waitForExpectationsWithTimeout(15.0, handler:nil)
@@ -270,8 +343,8 @@ class ParseManagerTest : XCTestCase {
         let item = ItemModel()
         item.name = "test" + self.utils.randomGenerator() + " item"
         item.description = "test" + " description"
-        item.pickUpPrice = "test" + " Pick Up Price"
-        item.deliveryPrice = "test" + " delivery Price"
+        item.pickUpPrice = 0.0
+        item.deliveryPrice = 0.0
         self.testingForPass = true
         
         //Test Function Fired successfully

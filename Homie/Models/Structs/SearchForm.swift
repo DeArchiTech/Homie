@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct searchForm {
+struct SearchForm {
 
     var name: String?
     var description: String?

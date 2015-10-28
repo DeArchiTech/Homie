@@ -17,7 +17,7 @@ protocol BackEndProtocol{
     
     func getUser(userID : String) -> Bool
     func getTrendingItems() -> Bool
-    func getSearchResults(jsonObject : JSON) -> Bool
+    func getSearchResults(searchForm : SearchForm) -> Bool
     func postItem(item: ItemModel) -> Bool
     func postImage(image: UIImage)-> Bool
     func setDelegate(delegate : BackEndCallCompleteProtocol)
