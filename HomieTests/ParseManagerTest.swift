@@ -16,16 +16,6 @@ class ParseManagerTest : XCTestCase{
     var parseManager : ParseManager?
     let utils = Utils()
     
-    class ParseManagerTestDelegate : BackEndCallCompleteProtocol{
-        
-        func onNetworkSuccess(nsobject : NSObject){
-            
-        }
-        func onNetworkFailure(statusCode : Int , message : String) {
-            
-        }
-    }
-    
     override func setUp() {
         super.setUp()
         self.parseManager = ParseManager()
@@ -39,11 +29,33 @@ class ParseManagerTest : XCTestCase{
     
     func testLogin() {
         
+        class loginTestDelegate : BackEndCallCompleteProtocol{
+            
+            
+            func onNetworkSuccess(nsobject : NSObject){
+                
+                //Test Delegate Fired successfully
+                XCTAssertNotNil(nsobject)
+                
+            }
+            
+            func onNetworkFailure(statusCode : Int , message : String) {
+                
+                //Test Delegate Fired successfully
+                XCTAssertTrue(statusCode != 200)
+                
+            }
+            
+        }
+
         //Success Case
         let form = LoginForm(identifier: "davidkwokhochan@gmail.com", password: "password")
+        self.parseManager!.setDelegate(loginTestDelegate())
+        
         //1)Test Function Fired successfully
         XCTAssertTrue(self.parseManager!.login(form))
-        //2)Test Delegate Fired successfully
+
+        
         
     }
     
