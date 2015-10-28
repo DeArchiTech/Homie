@@ -127,6 +127,47 @@ class ParseManagerTest : XCTestCase {
     
     func testGetUser(){
         
+        //1)Create a custom delegate to test this particular case
+        class testGetUserOnComplete : BackEndCallCompleteProtocol{
+            
+            var pmt : ParseManagerTest?
+            
+            init(pmt : ParseManagerTest){
+                
+                self.pmt = pmt
+                
+            }
+            
+            func onNetworkSuccess(nsobject : NSObject){
+                
+                //Test Delegate Fired successfully
+                XCTAssertNotNil(nsobject)
+                let testingForPass = self.pmt?.testingForPass
+                if testingForPass! {
+                    
+                    //1)Cast nsObject
+                    //2)Check if nsobject has at least one element
+                    
+                }else{
+                    
+                    //1)Cast nsObject
+                    //2)Check if nsobject has zero element;
+                    
+                }
+                self.pmt?.expectation?.fulfill()
+                
+            }
+            
+            func onNetworkFailure(statusCode : Int , message : String) {
+                
+            }
+            
+        }
+        
+        //2)Set parsemanager 's delegate to this custom delegate
+        let delegate = testGetUserOnComplete(pmt: self)
+        self.parseManager?.setDelegate(delegate)
+        
         //**Success Case set up
         
         var userID = "0NNK3ySSTl"
@@ -141,30 +182,60 @@ class ParseManagerTest : XCTestCase {
         
         //**Failure Case set up
         
-        //TODO:
-        //
-        //1)Create a custom delegate to test this particular case
-        //2)Set parsemanager 's delegate to this custom delegate
-        //3)Do the right assertions for this case
-        //4)Swap the delegate back to the original one
-        
         userID = "0NNK3ySSTl" + "XYZ"
-        self.testingForPass = true
+        self.testingForPass = false
         
         //Test Function Fired successfully
         self.expectation = self.expectationWithDescription("Get User Network Call")
+        
+        //4)Do the right assertions for this case
         XCTAssertTrue(self.parseManager!.getUser(userID))
         
         //If test delegate is fired successfully , it will remove this timer
         self.waitForExpectationsWithTimeout(15.0, handler:nil)
         
-        
-        //TODO: Figure out how to recieve actural user objects from Parse Back End
-        
     }
     
     func testGetTrendingItems(){
         
+        //1)Create a custom delegate to test this particular case
+        class testGetTrendingOnComplete : BackEndCallCompleteProtocol{
+            
+            var pmt : ParseManagerTest?
+            
+            init(pmt : ParseManagerTest){
+                
+                self.pmt = pmt
+                
+            }
+            
+            func onNetworkSuccess(nsobject : NSObject){
+                
+                //Test Delegate Fired successfully
+                XCTAssertNotNil(nsobject)
+                let testingForPass = self.pmt?.testingForPass
+                if testingForPass! {
+                    
+                    //1)Cast nsObject
+                    let array = nsobject as! NSArray
+                    //2)Check if nsobject has at least one element
+                    XCTAssert(array.count > 0)
+                    
+                }
+                self.pmt?.expectation?.fulfill()
+                
+            }
+            
+            func onNetworkFailure(statusCode : Int , message : String) {
+                
+            }
+            
+        }
+        
+        //2)Set parsemanager 's delegate to this custom delegate
+        let delegate = testGetTrendingOnComplete(pmt: self)
+        self.parseManager?.setDelegate(delegate)
+
         self.testingForPass = true
         
         //Test Function Fired successfully

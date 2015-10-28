@@ -99,7 +99,7 @@ class ParseManager : BackEndProtocol{
     
     func getTrendingItems() -> Bool{
     
-        let query = PFQuery(className: "Product")
+        let query = PFQuery(className: "Item")
         query.whereKey("Trending", equalTo: "1")
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -152,7 +152,7 @@ class ParseManager : BackEndProtocol{
         product["Name"] = item.name
         product["Description"] = item.description
         product["PickUpPrice"] = item.pickUpPrice
-        product["Deliver"] = item.deliveryPrice
+        product["DeliverPrice"] = item.deliveryPrice
         
         product.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in

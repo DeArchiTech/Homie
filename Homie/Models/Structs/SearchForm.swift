@@ -7,6 +7,16 @@
 //
 
 import Foundation
+
 struct searchForm {
- 
+
+    var name: String?
+    var description: String?
+    
+    var pickUpPriceRangeLow : String?
+    var pickUpPriceRangeHigh : String?
+    
+    var deliveryPriceRangeLow : String?
+    var deliveryPriceRangeHigh : String?
+    
 }
