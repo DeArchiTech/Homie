@@ -47,20 +47,20 @@ class ParseManagerTest : XCTestCase {
     func testGetUser(){
         
         let userID = 1
-        XCTAssertNotNil(self.parseManager!.getUser(userID))
+        XCTAssertTrue(self.parseManager!.getUser(userID))
         
     }
     
     func testGetTrendingItems(){
         
-        XCTAssertNotNil(self.parseManager!.getTrendingItems())
+        XCTAssertTrue(self.parseManager!.getTrendingItems())
         
     }
     
     func testGetSearchResults(){
         
         let jsonObject = JSON(NSData())
-        XCTAssertNotNil(self.parseManager!.getSearchResults(jsonObject))
+        XCTAssertTrue(self.parseManager!.getSearchResults(jsonObject))
         
     }
     

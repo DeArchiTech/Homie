@@ -14,6 +14,8 @@ import Parse
 //Test each network call's signals individually
 class ParseManager : BackEndProtocol{
     
+    var delegate : BackEndCallCompleteProtocol?
+    
     init(){
         
     }
@@ -33,15 +35,16 @@ class ParseManager : BackEndProtocol{
             block:{(loggedInuser: PFUser?, signupError: NSError?) -> Void in
             if loggedInuser != nil {
 
+                self.delegate?.onNetworkSuccess(loggedInuser!)
                 //FIRE SUCCESS DELEGATE
                 
             }else {
 
+                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
                 //FIRE FAILURE DELEGATE
             }
         })
         
-        //3)Return true
         return true
         
     }
@@ -61,55 +64,147 @@ class ParseManager : BackEndProtocol{
         user.signUpInBackgroundWithBlock{ (success, error) -> Void in
             if error == nil {
                 
+                self.delegate?.onNetworkSuccess(user)
                 //FIRE SUCCESS DELEGATE
                 
             } else {
                 
+                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
                 //FIRE FAILURE DELEGATE
                 
             }
         }
         
-        //3)Return true
         return true
         
     }
     
-    func getUser(userID : Int) -> UserModel? {
+    func getUser(userID : String) -> Bool {
         
-        //Todo: Implement
-        return nil
+        let query = PFQuery(className:"User")
+        
+        query.getObjectInBackgroundWithId(userID,
+            block:{(user: PFObject?, error: NSError?) -> Void in
+            if user != nil {
+                
+                self.delegate?.onNetworkSuccess(user!)
+                //FIRE SUCCESS DELEGATE
+                
+            }else {
+                
+                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                //FIRE FAILURE DELEGATE
+            }
+        })
+        
+        return true
         
     }
     
-    func getTrendingItems() -> [ItemModel]?{
-        
-        //Todo: Implement
-        return nil
-        
-    }
+    func getTrendingItems() -> Bool{
     
-    func getSearchResults(jsonObject : JSON) ->[ItemModel]?{
+        let query = PFQuery(className: "Item")
+        query.whereKey("Trending", equalTo: "1")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+
+                self.delegate?.onNetworkSuccess(objects!)
+                //FIRE SUCCESS DELEGATE
+            } else {
+                
+                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                //FIRE FAILURE DELEGATE
+                
+            }
+        }
         
-        //Todo: Implement
-        return nil
+        return true;
+    
+    }
+
+    func getSearchResults(jsonObject : JSON) -> Bool{
+        
+        let query = PFQuery(className: "Item")
+        //TODO IMPLEMENT, THE CORRECT WHERE CLAUSE TO MATCH IN INPUT JSONOBJECT SEARCH FORM
+        query.whereKey("Key", equalTo: "Value")
+        
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                self.delegate?.onNetworkSuccess(objects!)
+                //FIRE SUCCESS DELEGATE
+            } else {
+                
+                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                //FIRE FAILURE DELEGATE
+                
+            }
+        }
+        
+        return true;
         
     }
     
     func postItem(item: ItemModel) -> Bool {
         
-        //Todo: Implement
+        let product = PFObject(className:"Product")
+
+        product["Name"] = item.name
+        product["Description"] = item.description
+        product["PickUpPrice"] = item.pickUpPrice
+        product["Deliver"] = item.deliveryPrice
+        
+        product.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                
+                self.delegate?.onNetworkSuccess(success)
+                //FIRE SUCCESS DELEGATE
+
+            } else {
+                
+                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                //FIRE FAILURE DELEGATE
+            }
+        }
         return false
         
     }
     
     func postImage(image: UIImage)-> Bool {
         
-        //Todo: Implement
+        let imageData = UIImagePNGRepresentation(image)
+        let imageFile = PFFile(name:"image.png", data:imageData!)
+        
+        let image = PFObject(className:"Image")
+        
+        image["Name"] = "Item Image"
+        image["Image"] = imageFile
+        
+        image.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                
+                self.delegate?.onNetworkSuccess(success)
+                //FIRE SUCCESS DELEGATE
+                
+            } else {
+                
+                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                //FIRE FAILURE DELEGATE
+            }
+        }
         return false
         
     }
-
-
+    
+    func setDelegate(delegate : BackEndCallCompleteProtocol){
+        
+        self.delegate = delegate
+    }
     
 }

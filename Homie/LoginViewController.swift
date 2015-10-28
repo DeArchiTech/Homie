@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController , BackEndCallCompleteProtocol{
 
     @IBOutlet weak var identifierTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.backEndManager.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -31,7 +32,7 @@ class LoginViewController: UIViewController {
         let loginForm = LoginForm(identifier : identifierTextField.text!
             ,password : passwordTextField.text!)
         
-        handleLoginResponse(self.loginAction(loginForm))
+        self.loginAction(loginForm)
         
     }
     
@@ -54,10 +55,7 @@ class LoginViewController: UIViewController {
     
     func handleLoginResponse(success : Bool){
 
-        if(!developmentMode){
-            presentViewController(AlertHelper().createAlertController("Login", success : success)
-                , animated: true, completion: nil)
-        }
+
         self.loginCompelete()
         
     }
@@ -70,6 +68,24 @@ class LoginViewController: UIViewController {
                 utils.validPassword(loginForm.password)
         }
         return false
+        
+    }
+    
+    func onNetworkSuccess(nsobject : NSObject){
+        
+        if(!developmentMode){
+            presentViewController(AlertHelper().createAlertController("Login", success : true)
+                , animated: true, completion: nil)
+        }
+        self.loginCompelete()
+        
+    }
+    
+    func onNetworkFailure(statusCode : Int , message : String){
+        
+        //Alert User that input is invalid
+        presentViewController(
+            AlertHelper().createAlertController("Login", success : false), animated: true, completion: nil)
         
     }
     

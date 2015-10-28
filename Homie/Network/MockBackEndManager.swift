@@ -10,6 +10,8 @@ class MockBackEndManager : BackEndProtocol {
 
     var data: MockBackendData = MockBackendData()
 
+    var delegate : BackEndCallCompleteProtocol?
+    
     init(){
 
     }
@@ -26,28 +28,28 @@ class MockBackEndManager : BackEndProtocol {
         return true
     }
 
-    func getUser(userID: Int) -> UserModel?{
-        return self.data.getUser()
+    func getUser(userID: String) -> Bool{
+        return false
     }
     
     func signUp(signUpForm : SignUpForm) -> Bool {
         
         //Todo: Implement
-        return true
+        return false
         
     }
     
-    func getTrendingItems() -> [ItemModel]?{
+    func getTrendingItems() -> Bool{
         
         //Todo: Implement
-        return nil
+        return false
         
     }
     
-    func getSearchResults(jsonObject : JSON) ->[ItemModel]?{
+    func getSearchResults(jsonObject : JSON) -> Bool{
         
         //Todo: Implement
-        return nil
+        return false
         
     }
     
@@ -64,4 +66,11 @@ class MockBackEndManager : BackEndProtocol {
         return false
         
     }
+    
+    func setDelegate(delegate : BackEndCallCompleteProtocol){
+        
+        self.delegate = delegate
+        
+    }
+    
 }

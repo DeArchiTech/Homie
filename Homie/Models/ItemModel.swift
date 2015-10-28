@@ -16,5 +16,7 @@ class ItemModel{
     var photos : [String]?
     var lattitude : Double?
     var longitute : Double?
+    var pickUpPrice : String?
+    var deliveryPrice : String?
     
 }
