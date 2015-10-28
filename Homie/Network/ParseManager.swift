@@ -55,10 +55,6 @@ class ParseManager : BackEndProtocol{
         let user = PFUser()
         user.username = signUpForm.identifier
         user.password = signUpForm.password
-
-        //other fields can be set if you want to save more information
-        user["phone"] = "415-960-5816"
-        user["email"] = "davidkwokhochan@gmail.com"
        
         //2)Sign up user with parse SDK
         user.signUpInBackgroundWithBlock{ (success, error) -> Void in
