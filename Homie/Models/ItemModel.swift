@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ItemModel{
+class ItemModel : DetailItemViewModel{
     
     var name: String?
     var description: String?
@@ -18,4 +18,45 @@ class ItemModel{
     var pickUpPrice : Double?
     var deliveryPrice : Double?
     
+    func getSellerProfileImage() -> String{
+        
+        return ""
+        
+    }
+    
+    func getItemImage() -> String{
+        
+        return ""
+        
+    }
+    
+    func getDistrictName() -> String{
+        
+        return ""
+        
+    }
+    
+    func getItemName() -> String{
+        
+        return ""
+        
+    }
+    
+    func getItemDescription() -> String{
+        
+        return ""
+        
+    }
+    
+    func getPickUpPrice() -> String{
+        
+        return ""
+        
+    }
+    
+    func getDeliveryPrice() -> String{
+        
+        return ""
+        
+    }
 }

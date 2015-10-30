@@ -114,6 +114,14 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="deliveryPrice" destination="hV9-bI-FOh" id="MgX-pY-PtV"/>
+                <outlet property="descriptionLabel" destination="V5c-hK-Ahh" id="Ztl-f6-DLA"/>
+                <outlet property="pickUpPrice" destination="3IP-XM-jFD" id="oeZ-rC-7fx"/>
+                <outlet property="profileImageView" destination="xNL-v1-qOX" id="pTS-jn-N0R"/>
+                <outlet property="titleLabel" destination="XnY-CI-tHq" id="YOX-tJ-s7c"/>
+                <outlet property="userActionLabel" destination="dBr-QE-j0r" id="Hgm-Uu-HfN"/>
+            </connections>
             <point key="canvasLocation" x="380" y="362"/>
         </tableViewCell>
     </objects>

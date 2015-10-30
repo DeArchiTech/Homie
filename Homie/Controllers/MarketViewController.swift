@@ -36,7 +36,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.registerNib(nib, forCellReuseIdentifier: "marketItemCell")
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.rowHeight = 300.0
+        self.tableView.rowHeight = 380.0
     
     }
     
@@ -70,6 +70,17 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         
         return self.arrayTitle
         
+    }
+    
+    func loadItemCell(customCell : MarketItemCell , itemViewModel : DetailItemViewModel) -> Bool{
+        
+        return false
+        
+    }
+    
+    func createItemViewModel(index : Int, itemArrary : NSMutableArray) -> DetailItemViewModel?{
+        
+        return nil
     }
     
 }
