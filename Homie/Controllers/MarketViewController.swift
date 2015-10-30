@@ -35,6 +35,9 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         let nib = UINib(nibName: "MarketItemCell", bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: "marketItemCell")
         
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = 300.0
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,11 +62,8 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         
         let customCell : MarketItemCell! = cell as? MarketItemCell
         
-        customCell.titleLabel?.text = self.textArray.objectAtIndex(indexPath.row) as? String
-
-        customCell.descriptionLabel?.text = self.textArray.objectAtIndex(indexPath.row) as? String
+        return customCell
         
-        return cell
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

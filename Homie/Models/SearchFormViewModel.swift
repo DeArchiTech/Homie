@@ -16,27 +16,63 @@ class SearchFormViewModel{
         self.searchForm = searchForm
     }
     
-    func getDeliveryLowerRange() -> Double{
+    func getDeliveryLowerBound() -> Double{
         
-        return 0.0
+        var bound : String? = self.searchForm.deliveryPriceRangeLow
         
-    }
-    
-    func getDeliveryUpperRange() -> Double{
-        
-        return 0.0
-        
-    }
-    
-    func getPickupLowerRange() -> Double{
-        
-        return 0.0
+        if bound == nil || bound! == ""{
+            
+            return 0.0
+            
+        }else{
+            
+            return (bound! as NSString).doubleValue
+        }
         
     }
     
-    func getPickUpUpperRange() -> Double{
+    func getDeliveryUpperBound() -> Double{
         
-        return 0.0
+        var bound : String? = self.searchForm.deliveryPriceRangeHigh
+        
+        if bound == nil || bound! == ""{
+            
+            return 0.0
+            
+        }else{
+            
+            return (bound! as NSString).doubleValue
+        }
+        
+    }
+    
+    func getPickupLowerBound() -> Double{
+        
+        var bound : String? = self.searchForm.pickUpPriceRangeLow
+        
+        if bound == nil || bound! == ""{
+            
+            return 0.0
+            
+        }else{
+            
+            return (bound! as NSString).doubleValue
+        }
+        
+    }
+    
+    func getPickUpUpperBound() -> Double{
+        
+        var bound : String? = self.searchForm.pickUpPriceRangeHigh
+        
+        if bound == nil || bound! == ""{
+            
+            return 0.0
+            
+        }else{
+            
+            return (bound! as NSString).doubleValue
+        }
         
     }
 }

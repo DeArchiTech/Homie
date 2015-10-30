@@ -604,7 +604,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YOJ-C1-oK7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i0f-nB-r2i">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oyn-f2-nD3">
@@ -839,9 +839,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="signUp" translatesAutoresizingMaskIntoConstraints="NO" id="YXP-NQ-y4S">
                                         <rect key="frame" x="0.0" y="0.0" width="662" height="43"/>
                                         <animations/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="80" y="0.0" width="141" height="36"/>
-                                        </variation>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jcx-hA-JcW">
                                         <rect key="frame" x="0.0" y="73" width="662" height="30"/>
@@ -858,8 +855,7 @@
                                                 <exclude reference="wsL-JH-FaD"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="66" width="300" height="45"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="NfO-hQ-6E8"/>
                                                 <include reference="wsL-JH-FaD"/>
@@ -881,8 +877,7 @@
                                                 <exclude reference="wXs-3h-rVJ"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="141" width="300" height="45"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="1zp-Az-k1k"/>
                                                 <include reference="wXs-3h-rVJ"/>
@@ -905,8 +900,7 @@
                                                 <exclude reference="TOm-lA-jZh"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="216" width="300" height="45"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="ShP-RK-725"/>
                                                 <include reference="TOm-lA-jZh"/>
@@ -960,7 +954,7 @@
                         <viewControllerLayoutGuide type="bottom" id="q9G-z7-SG5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1Xw-mh-VfS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uED-KC-m9b">
