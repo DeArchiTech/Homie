@@ -341,7 +341,7 @@ class ParseManagerTest : XCTestCase {
         //**Success Case set up
         
         let item = ItemModel()
-        item.name = "test" + self.utils.randomGenerator() + " item"
+        item.itemName = "test" + self.utils.randomGenerator() + " item"
         item.description = "test" + " description"
         item.pickUpPrice = 0.0
         item.deliveryPrice = 0.0

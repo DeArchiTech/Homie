@@ -10,14 +10,30 @@ import XCTest
 import UIKit
 @testable import Homie
 
-class DetailItemViewModelTest : XCTestCase{
+class DetailItemViewModelTest: XCTestCase {
     
     var model : DetailItemViewModel?
+    let utils = Utils()
+    
+    let profileImage = "dummieProfileImage"
+    let itemImage = "dummmieItemImage"
+    let districtName = "dummieDistrictName"
+    let itemName = "dummieItemName"
+    let itemDescription = "dummieDescription"
+    let district = "disctrictOne"
+    let itemPhotos = ["photo1" , "photo2" , "photo3"]
+    
+    let pickUpPrice = 100.00
+    let deliveryPrice = 200.00
+    let data = MockBackendData()
+    let itemModel = ItemModel()
     
     override func setUp() {
+    
         super.setUp()
-        self.model = ItemModel()
+        self.model = itemModel
         // Put setup code here. This method is called before the invocation of each test method in the class.
+    
     }
     
     override func tearDown() {
@@ -27,48 +43,59 @@ class DetailItemViewModelTest : XCTestCase{
     
     func testGetSellerProfileImage(){
         
-        XCTAssertNotEqual("",self.model!.getSellerProfileImage())
+        let profileImage = "ABCD"
+        let userModel = UserModel(userInfo: self.data.getUser().userInfo, image : profileImage)
+        itemModel.seller = userModel
+        XCTAssertEqual(profileImage , self.model!.getSellerProfileImageUrl())
         
     }
     
     func testGetItemImage(){
         
-        XCTAssertNotEqual("",self.model!.getItemImage())
+        itemModel.photos = self.itemPhotos
+        XCTAssertEqual(self.itemPhotos[0],self.model!.getItemImageUrl())
         
     }
     
     
     func testGetDistrictName(){
         
-        XCTAssertNotEqual("",self.model!.getDistrictName())
+        let locModel = LocationModel(districtName: self.district)
+        itemModel.locationModel = locModel
+        XCTAssertEqual(self.district , self.model!.getDistrictName())
         
     }
     
     
     func testGetItemName(){
         
-        XCTAssertNotEqual("",self.model!.getItemName())
+        itemModel.itemName = self.itemName
+        XCTAssertEqual(self.itemName ,self.model!.getItemName())
         
     }
     
     
     func testGetItemDescription(){
         
-        XCTAssertNotEqual("",self.model!.getItemDescription())
+        
+        itemModel.description = self.itemDescription
+        XCTAssertEqual(self.itemDescription , self.model!.getItemDescription())
         
     }
     
     
     func testGetPickUpPrice(){
         
-        XCTAssertNotEqual("",self.model!.getPickUpPrice())
+        itemModel.pickUpPrice = self.pickUpPrice
+        XCTAssertEqual(self.pickUpPrice ,self.model!.getPickUpPrice())
         
     }
     
     
     func testGetDeliveryPrice(){
         
-        XCTAssertNotEqual("",self.model!.getDeliveryPrice())
+        itemModel.deliveryPrice = self.deliveryPrice
+        XCTAssertEqual(self.deliveryPrice ,self.model!.getDeliveryPrice())
         
     }
     

@@ -18,7 +18,7 @@ class SearchFormViewModel{
     
     func getDeliveryLowerBound() -> Double{
         
-        var bound : String? = self.searchForm.deliveryPriceRangeLow
+        let bound : String? = self.searchForm.deliveryPriceRangeLow
         
         if bound == nil || bound! == ""{
             
@@ -33,7 +33,7 @@ class SearchFormViewModel{
     
     func getDeliveryUpperBound() -> Double{
         
-        var bound : String? = self.searchForm.deliveryPriceRangeHigh
+        let bound : String? = self.searchForm.deliveryPriceRangeHigh
         
         if bound == nil || bound! == ""{
             
@@ -48,7 +48,7 @@ class SearchFormViewModel{
     
     func getPickupLowerBound() -> Double{
         
-        var bound : String? = self.searchForm.pickUpPriceRangeLow
+        let bound : String? = self.searchForm.pickUpPriceRangeLow
         
         if bound == nil || bound! == ""{
             
@@ -63,7 +63,7 @@ class SearchFormViewModel{
     
     func getPickUpUpperBound() -> Double{
         
-        var bound : String? = self.searchForm.pickUpPriceRangeHigh
+        let bound : String? = self.searchForm.pickUpPriceRangeHigh
         
         if bound == nil || bound! == ""{
             

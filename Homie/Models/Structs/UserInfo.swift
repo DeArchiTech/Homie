@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct UserInfo: Mappable{
+struct UserInfo : Mappable{
     
     var userID : Int?
     var identifier : String?
@@ -21,6 +21,5 @@ struct UserInfo: Mappable{
         userID <- map["userID"]
         identifier <- map["identifier"]
     }
-
     
 }

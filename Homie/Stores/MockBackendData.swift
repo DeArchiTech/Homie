@@ -25,7 +25,7 @@ class MockBackendData {
             
             let JSONObject: AnyObject? = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
             let userInfo = Mapper<UserInfo>().map(JSONObject)
-            self.user = UserModel(userInfo : userInfo!)
+            self.user = UserModel(userInfo : userInfo! , image : "ABCD")
         
         }catch{
             

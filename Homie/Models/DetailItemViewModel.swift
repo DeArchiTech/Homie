@@ -10,9 +10,9 @@ import Foundation
 
 protocol DetailItemViewModel{
     
-    func getSellerProfileImage() -> String
+    func getSellerProfileImageUrl() -> String
     
-    func getItemImage() -> String
+    func getItemImageUrl() -> String
     
     func getDistrictName() -> String
     
@@ -20,8 +20,8 @@ protocol DetailItemViewModel{
     
     func getItemDescription() -> String
     
-    func getPickUpPrice() -> String
+    func getPickUpPrice() -> Double
     
-    func getDeliveryPrice() -> String
+    func getDeliveryPrice() -> Double
 
 }

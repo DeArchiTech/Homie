@@ -151,7 +151,7 @@ class ParseManager : BackEndProtocol{
         
         let product = PFObject(className:"Product")
 
-        product["Name"] = item.name
+        product["Name"] = item.itemName
         product["Description"] = item.description
         product["PickUpPrice"] = item.pickUpPrice
         product["DeliverPrice"] = item.deliveryPrice

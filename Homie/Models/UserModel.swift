@@ -12,8 +12,28 @@ import ObjectMapper
 class UserModel{
 
     var userInfo : UserInfo
+    var image : String?
     
-    init(userInfo : UserInfo){
+    init(userInfo : UserInfo , image : String){
+        
         self.userInfo = userInfo
+        self.image = image
+        
     }
+    
+    func getProfilePicture() -> String{
+        
+        if let _ = self.image{
+            
+            let result :String = self.image!
+            return result
+            
+        }else{
+            
+            return ""
+        
+        }
+        
+    }
+
 }
