@@ -31,7 +31,18 @@ class DetailItemViewModelTest: XCTestCase {
     override func setUp() {
     
         super.setUp()
-        self.model = itemModel
+        let userModel = UserModel(userInfo: self.data.getUser().userInfo, image : profileImage)
+        let locModel = LocationModel(districtName: self.district)
+
+        self.itemModel.photos = self.itemPhotos
+        self.itemModel.itemName = self.itemName
+        self.itemModel.description = self.itemDescription
+        self.itemModel.pickUpPrice = self.pickUpPrice
+        self.itemModel.deliveryPrice = self.deliveryPrice
+        
+        self.model = DetailItemViewModel(item : self.itemModel , seller : userModel)
+        self.model!.locationModel = locModel
+        self.model!.profileImage = self.profileImage
         // Put setup code here. This method is called before the invocation of each test method in the class.
     
     }
@@ -42,59 +53,43 @@ class DetailItemViewModelTest: XCTestCase {
     }
     
     func testGetSellerProfileImage(){
-        
-        let profileImage = "ABCD"
-        let userModel = UserModel(userInfo: self.data.getUser().userInfo, image : profileImage)
-        itemModel.seller = userModel
-        XCTAssertEqual(profileImage , self.model!.getSellerProfileImageUrl())
+
+        XCTAssertEqual(self.profileImage , self.model!.getSellerProfileImageUrl())
         
     }
     
     func testGetItemImage(){
-        
-        itemModel.photos = self.itemPhotos
+
         XCTAssertEqual(self.itemPhotos[0],self.model!.getItemImageUrl())
         
     }
     
-    
     func testGetDistrictName(){
-        
-        let locModel = LocationModel(districtName: self.district)
-        itemModel.locationModel = locModel
+
         XCTAssertEqual(self.district , self.model!.getDistrictName())
         
     }
     
-    
     func testGetItemName(){
         
-        itemModel.itemName = self.itemName
         XCTAssertEqual(self.itemName ,self.model!.getItemName())
         
     }
     
-    
     func testGetItemDescription(){
-        
-        
-        itemModel.description = self.itemDescription
+
         XCTAssertEqual(self.itemDescription , self.model!.getItemDescription())
         
     }
     
-    
     func testGetPickUpPrice(){
-        
-        itemModel.pickUpPrice = self.pickUpPrice
+
         XCTAssertEqual(self.pickUpPrice ,self.model!.getPickUpPrice())
         
     }
     
-    
     func testGetDeliveryPrice(){
-        
-        itemModel.deliveryPrice = self.deliveryPrice
+
         XCTAssertEqual(self.deliveryPrice ,self.model!.getDeliveryPrice())
         
     }

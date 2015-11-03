@@ -15,7 +15,7 @@ class MarketItemCell: UITableViewCell {
     @IBOutlet weak var userActionLabel: UILabel!
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLacccbel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var pickUpPrice: UILabel!
     @IBOutlet weak var deliveryPrice: UILabel!
