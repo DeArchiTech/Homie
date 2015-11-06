@@ -8,7 +8,7 @@ import Alamofire
 import AlamofireObjectMapper
 import SwiftyJSON
 
-protocol BackEndProtocol{
+protocol APIFetchingProtocol{
 
     var endPoint: String { get set }
     
@@ -20,6 +20,7 @@ protocol BackEndProtocol{
     func getSearchResults(searchForm : SearchForm) -> Bool
     func postItem(item: ItemModel) -> Bool
     func postImage(image: UIImage)-> Bool
-    func setDelegate(delegate : BackEndCallCompleteProtocol)
+    func getUsers() -> Bool
+    func setDelegate(delegate : NetworkOnCompleteCallBack)
     
 }

@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class SignUpViewController: UIViewController , BackEndCallCompleteProtocol{
+class SignUpViewController: UIViewController , APIonCompleteProtocol{
 
     var developmentMode: Bool = true
-    
-    let backEnd : BackEndProtocol = ParseManager()
+
+    var apiManager : APIManager = APIManager()
     
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -34,10 +34,7 @@ class SignUpViewController: UIViewController , BackEndCallCompleteProtocol{
         
         if(self.signUpFormPassesValidation(form)){
             
-            //1)Ping BE Manager to sign up given the Form
-            backEnd.setDelegate(self)
-            
-            return backEnd.signUp(form)
+            return self.apiManager.signUp(form, onComplete: self)
             
         }else{
             

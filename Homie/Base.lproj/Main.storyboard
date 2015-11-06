@@ -839,6 +839,9 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="signUp" translatesAutoresizingMaskIntoConstraints="NO" id="YXP-NQ-y4S">
                                         <rect key="frame" x="0.0" y="0.0" width="662" height="43"/>
                                         <animations/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="80" y="0.0" width="141" height="36"/>
+                                        </variation>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jcx-hA-JcW">
                                         <rect key="frame" x="0.0" y="73" width="662" height="30"/>
@@ -855,7 +858,8 @@
                                                 <exclude reference="wsL-JH-FaD"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact">
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="66" width="300" height="45"/>
                                             <mask key="constraints">
                                                 <include reference="NfO-hQ-6E8"/>
                                                 <include reference="wsL-JH-FaD"/>
@@ -877,7 +881,8 @@
                                                 <exclude reference="wXs-3h-rVJ"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact">
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="141" width="300" height="45"/>
                                             <mask key="constraints">
                                                 <include reference="1zp-Az-k1k"/>
                                                 <include reference="wXs-3h-rVJ"/>
@@ -900,7 +905,8 @@
                                                 <exclude reference="TOm-lA-jZh"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact">
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="216" width="300" height="45"/>
                                             <mask key="constraints">
                                                 <include reference="ShP-RK-725"/>
                                                 <include reference="TOm-lA-jZh"/>

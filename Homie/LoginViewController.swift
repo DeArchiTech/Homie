@@ -8,17 +8,16 @@
 
 import UIKit
 
-class LoginViewController: UIViewController , BackEndCallCompleteProtocol{
+class LoginViewController: UIViewController , APIonCompleteProtocol{
 
     @IBOutlet weak var identifierTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var developmentMode: Bool = true
     
-    var backEndManager : BackEndProtocol = ParseManager()
+    var apiManager : APIManager = APIManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backEndManager.setDelegate(self)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -42,7 +41,7 @@ class LoginViewController: UIViewController , BackEndCallCompleteProtocol{
         
         if self.loginFormPassesValidation(form){
         
-            return backEndManager.login(form)
+            return self.apiManager.login(form , onComplete: self)
         
         }else{
             

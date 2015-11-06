@@ -19,7 +19,7 @@ class ParseManagerTest : XCTestCase {
     
     let utils = Utils()
     
-    class testDelegateOnComplete : BackEndCallCompleteProtocol{
+    class testDelegateOnComplete : NetworkOnCompleteCallBack{
         
         var pmt : ParseManagerTest?
         
@@ -54,9 +54,8 @@ class ParseManagerTest : XCTestCase {
     override func setUp() {
         
         super.setUp()
-        self.parseManager = ParseManager()
+        self.parseManager = ParseManager(delegate: self.defaultDelegate!)
         self.defaultDelegate = testDelegateOnComplete(pmt :self)
-        self.parseManager!.setDelegate(self.defaultDelegate!)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -129,7 +128,7 @@ class ParseManagerTest : XCTestCase {
     func testGetUser(){
         
         //1)Create a custom delegate to test this particular case
-        class testGetUserOnComplete : BackEndCallCompleteProtocol{
+        class testGetUserOnComplete : NetworkOnCompleteCallBack{
             
             var pmt : ParseManagerTest?
             
@@ -200,7 +199,7 @@ class ParseManagerTest : XCTestCase {
     func testGetTrendingItems(){
         
         //1)Create a custom delegate to test this particular case
-        class testGetTrendingOnComplete : BackEndCallCompleteProtocol{
+        class testGetTrendingOnComplete : NetworkOnCompleteCallBack{
             
             var pmt : ParseManagerTest?
             
@@ -251,7 +250,7 @@ class ParseManagerTest : XCTestCase {
     func testGetSearchResults(){
         
         //1)Create a custom delegate to test this particular case
-        class testGetSearchOnComplete : BackEndCallCompleteProtocol{
+        class testGetSearchOnComplete : NetworkOnCompleteCallBack{
             
             var pmt : ParseManagerTest?
             

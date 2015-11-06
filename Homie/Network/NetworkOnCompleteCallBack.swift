@@ -1,16 +1,15 @@
 //
-//  BackEndDataDelegate.swift
+//  ParseOnCompleteProtocol.swift
 //  Homie
 //
-//  Created by davix on 10/27/15.
+//  Created by davix on 11/5/15.
 //  Copyright © 2015 Homie. All rights reserved.
 //
 
 import Foundation
 
-
-protocol BackEndCallCompleteProtocol{
-
+protocol NetworkOnCompleteCallBack{
+    
     func onNetworkSuccess(nsobject : NSObject) -> Void
     func onNetworkFailure(statusCode : Int , message : String) -> Void
     

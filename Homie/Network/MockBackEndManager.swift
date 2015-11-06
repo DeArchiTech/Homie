@@ -6,11 +6,11 @@
 import Foundation
 import SwiftyJSON
 
-class MockBackEndManager : BackEndProtocol {
+class MockBackEndManager : APIFetchingProtocol{
 
     var data: MockBackendData = MockBackendData()
 
-    var delegate : BackEndCallCompleteProtocol?
+    var delegate : NetworkOnCompleteCallBack?
     
     init(){
 
@@ -67,7 +67,14 @@ class MockBackEndManager : BackEndProtocol {
         
     }
     
-    func setDelegate(delegate : BackEndCallCompleteProtocol){
+    func getUsers() -> Bool{
+        
+        //Todo: Implement
+        return false
+        
+    }
+    
+    func setDelegate(delegate : NetworkOnCompleteCallBack){
         
         self.delegate = delegate
         

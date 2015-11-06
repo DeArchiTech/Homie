@@ -12,12 +12,13 @@ import Parse
 
 //Treat each Network call as with signals, one that sends to server, one that recieves from server
 //Test each network call's signals individually
-class ParseManager : BackEndProtocol{
+class ParseManager : APIFetchingProtocol{
     
-    var delegate : BackEndCallCompleteProtocol?
+    var delegate : NetworkOnCompleteCallBack
     
-    init(){
+    init(delegate : NetworkOnCompleteCallBack){
         
+        self.delegate = delegate
     }
     
     var endPoint: String {
@@ -35,12 +36,12 @@ class ParseManager : BackEndProtocol{
             block:{(loggedInuser: PFUser?, signupError: NSError?) -> Void in
             if loggedInuser != nil {
 
-                self.delegate?.onNetworkSuccess(loggedInuser!)
+                self.delegate.onNetworkSuccess(loggedInuser!)
                 //FIRE SUCCESS DELEGATE
                 
             }else {
 
-                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                self.delegate.onNetworkFailure(404, message: "Network Called Failed")
                 //FIRE FAILURE DELEGATE
             }
         })
@@ -60,12 +61,12 @@ class ParseManager : BackEndProtocol{
         user.signUpInBackgroundWithBlock{ (success, error) -> Void in
             if error == nil {
                 
-                self.delegate?.onNetworkSuccess(user)
+                self.delegate.onNetworkSuccess(user)
                 //FIRE SUCCESS DELEGATE
                 
             } else {
                 
-                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                self.delegate.onNetworkFailure(404, message: "Network Called Failed")
                 //FIRE FAILURE DELEGATE
                 
             }
@@ -83,12 +84,33 @@ class ParseManager : BackEndProtocol{
         (objects: [PFObject]?, error: NSError?) -> Void in
             if objects != nil {
                 
-                self.delegate?.onNetworkSuccess(objects!)
+                self.delegate.onNetworkSuccess(objects!)
                 //FIRE SUCCESS DELEGATE
                 
             }else {
                 
-                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                self.delegate.onNetworkFailure(404, message: "Network Called Failed")
+                //FIRE FAILURE DELEGATE
+            }
+        }
+        
+        return true
+        
+    }
+    
+    func getUsers() -> Bool {
+        
+        let query = PFQuery(className:"User")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            if objects != nil {
+                
+                self.delegate.onNetworkSuccess(objects!)
+                //FIRE SUCCESS DELEGATE
+                
+            }else {
+                
+                self.delegate.onNetworkFailure(404, message: "Network Called Failed")
                 //FIRE FAILURE DELEGATE
             }
         }
@@ -106,11 +128,11 @@ class ParseManager : BackEndProtocol{
             
             if error == nil {
 
-                self.delegate?.onNetworkSuccess(objects!)
+                self.delegate.onNetworkSuccess(objects!)
                 //FIRE SUCCESS DELEGATE
             } else {
                 
-                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                self.delegate.onNetworkFailure(404, message: "Network Called Failed")
                 //FIRE FAILURE DELEGATE
                 
             }
@@ -122,29 +144,28 @@ class ParseManager : BackEndProtocol{
 
     func getSearchResults(searchForm : SearchForm) -> Bool{
         
+        //Get the items when previous network call is successful
         let query = PFQuery(className: "Item")
         
         //Set up Query
         query.whereKey("PickUpCost", greaterThan: 0)
-        query.whereKey("PickUpCost", lessThanOrEqualTo: 10)
+        query.whereKey("DeliveryCost", greaterThan: 0)
         
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
                 
-                self.delegate?.onNetworkSuccess(objects!)
+                self.delegate.onNetworkSuccess(objects!)
                 //FIRE SUCCESS DELEGATE
             } else {
                 
-                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                self.delegate.onNetworkFailure(404, message: "Network Called Failed")
                 //FIRE FAILURE DELEGATE
-                
             }
         }
         
-        return true;
-        
+        return true
     }
     
     func postItem(item: ItemModel) -> Bool {
@@ -160,12 +181,12 @@ class ParseManager : BackEndProtocol{
             (success: Bool, error: NSError?) -> Void in
             if (success) {
                 
-                self.delegate?.onNetworkSuccess(success)
+                self.delegate.onNetworkSuccess(success)
                 //FIRE SUCCESS DELEGATE
 
             } else {
                 
-                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                self.delegate.onNetworkFailure(404, message: "Network Called Failed")
                 //FIRE FAILURE DELEGATE
             }
         }
@@ -187,12 +208,12 @@ class ParseManager : BackEndProtocol{
             (success: Bool, error: NSError?) -> Void in
             if (success) {
                 
-                self.delegate?.onNetworkSuccess(success)
+                self.delegate.onNetworkSuccess(success)
                 //FIRE SUCCESS DELEGATE
                 
             } else {
                 
-                self.delegate?.onNetworkFailure(404, message: "Network Called Failed")
+                self.delegate.onNetworkFailure(404, message: "Network Called Failed")
                 //FIRE FAILURE DELEGATE
             }
         }
@@ -200,7 +221,7 @@ class ParseManager : BackEndProtocol{
         
     }
     
-    func setDelegate(delegate : BackEndCallCompleteProtocol){
+    func setDelegate(delegate : NetworkOnCompleteCallBack){
         
         self.delegate = delegate
     }

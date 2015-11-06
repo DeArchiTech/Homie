@@ -17,5 +17,6 @@ class ItemModel{
     var longitute : Double?
     var pickUpPrice : Double?
     var deliveryPrice : Double?
+    var sellerID : String?
 
 }

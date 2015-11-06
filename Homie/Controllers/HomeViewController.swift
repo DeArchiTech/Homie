@@ -13,7 +13,7 @@ import Parse
 
 class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     
-    var backEndManager : BackEndProtocol = MockBackEndManager()
+    var backEndManager : APIFetchingProtocol = MockBackEndManager()
     
     let locationManager = CLLocationManager()
 

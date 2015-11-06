@@ -27,17 +27,11 @@ class MarketViewControllerTest: XCTestCase{
         self.item = ItemModel()
         self.item?.itemName = itemName
         self.controller = MarketViewController()
-        self.model = DetailItemViewModel(item: self.item! , seller : self.seller)
+    
+        self.controller?.detailItemViewModels = [DetailItemViewModel]()
+        let itemToAppend = DetailItemViewModel(item: self.item!, seller: MockBackendData().getUser())
+        self.controller?.detailItemViewModels.append(itemToAppend)
         
-        var users = [UserModel]()
-        users.append(MockBackendData().getUser())
-        
-        var items = [ItemModel]()
-        items.append(self.item!)
-        
-        self.controller?.items = items
-        self.controller?.sellers = users
-
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -46,12 +40,9 @@ class MarketViewControllerTest: XCTestCase{
         super.tearDown()
     }
     
+    func testGetDataAction(){
+        
+        XCTAssertNotNil(self.controller!.getData(SearchForm()))
     
-    func testCreateItemViewModel(){
-        
-        //JUST CHECK ITEM'S NAME
-        let item = self.controller?.createItemViewModel(0)
-        XCTAssertEqual(self.itemName , item?.getItemName())
-        
     }
 }

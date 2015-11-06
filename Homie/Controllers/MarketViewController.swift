@@ -9,30 +9,26 @@
 import Foundation
 import UIKit
 
-class MarketViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MarketViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIonCompleteProtocol{
     
     @IBOutlet weak var tableView: UITableView!
+    
     var arrayTitle: String = "Buy and sell items"
+    var detailItemViewModels = [DetailItemViewModel]()
+    var apiManager : APIManager = APIManager()
     
-    //Hold Sellers and Items
-    
-    var sellers : [UserModel]?
-    var items : [ItemModel]?
+    var developmentMode: Bool = true
     
     override func viewDidLoad(){
         
         super.viewDidLoad()
+        self.apiManager = APIManager()
+        if let _ = self.getData(SearchForm()){
+            
+            self.loadTable(self.getData(SearchForm())!)
         
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 88.0
+        }
         
-        //register custom cell
-        let nib = UINib(nibName: "MarketItemCell", bundle: nil)
-        self.tableView.registerNib(nib, forCellReuseIdentifier: "marketItemCell")
-        
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.rowHeight = 380.0
-    
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,9 +42,9 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return (self.items?.count)!
-    
+
+        return self.detailItemViewModels.count
+
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -56,6 +52,16 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         let cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("marketItemCell") as UITableViewCell!
         
         let customCell : MarketItemCell! = cell as? MarketItemCell
+        
+        if self.detailItemViewModels.count > 0{
+        
+            let currentRow : Int = indexPath.row
+        
+            let model : DetailItemViewModel =  self.detailItemViewModels[currentRow]
+    
+            self.loadItemCell(customCell, itemViewModel: model)
+            
+        }
         
         return customCell
         
@@ -77,16 +83,64 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-    func createItemViewModel(index : Int) -> DetailItemViewModel?{
+    func getData(form: SearchForm?) -> [DetailItemViewModel]?{
         
-        if index < self.items?.count {
+        if self.searchFormPassesValidation(form!){
             
-            let seller = self.sellers![index]
-            let item = self.items![index]
-            return DetailItemViewModel(item: item, seller: seller)
-        
+            return self.apiManager.getSearchResults(form!, onComplete: self)
+            
+        }else{
+            
+            //Alert User that input is invalid
+            presentViewController(
+                AlertHelper().createAlertController("Search Form Validation", success : false), animated: true, completion: nil)
+            return nil
+            
         }
-        return nil
+    }
+    
+    func searchFormPassesValidation(form : SearchForm) -> Bool{
+        
+        //return true for now, add validation later
+        return true
+        
+    }
+    
+    func loadTable(items : [DetailItemViewModel]){
+        
+        //Assign Variables
+        self.detailItemViewModels = items
+        
+        //Customize the nib
+        let nib = UINib(nibName: "MarketItemCell", bundle: nil)
+        self.tableView.registerNib(nib, forCellReuseIdentifier: "marketItemCell")
+        self.tableView.rowHeight = 380.0
+        
+        //reload Data
+        self.tableView.reloadData()
+    }
+    
+    
+    //NETWORK TRIGGERD FUNCTIONS
+    
+    func onNetworkSuccess(nsobject : NSObject){
+        
+        if(!developmentMode){
+            presentViewController(AlertHelper().createAlertController("Network Request", success : true)
+                , animated: true, completion: nil)
+        }
+        //Cast the Object back to DetailItemViewModel Array
+        let array = (nsobject as! NSArray) as! [DetailItemViewModel]
+        self.loadTable(array)
+        
+    }
+    
+    func onNetworkFailure(statusCode : Int , message : String){
+        
+        //Alert User that input is invalid
+        presentViewController(
+            AlertHelper().createAlertController("Network Request", success : false), animated: true, completion: nil)
+        
     }
     
 }
