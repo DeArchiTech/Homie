@@ -10,6 +10,7 @@
 		220013981BE9CBAC002A0197 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220013971BE9CBAC002A0197 /* APIManager.swift */; settings = {ASSET_TAGS = (); }; };
 		2200139A1BEB6EBF002A0197 /* NetworkOnCompleteCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220013991BEB6EBF002A0197 /* NetworkOnCompleteCallBack.swift */; settings = {ASSET_TAGS = (); }; };
 		2200139C1BEBD994002A0197 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200139B1BEBD994002A0197 /* Enums.swift */; settings = {ASSET_TAGS = (); }; };
+		2200139E1BEC58E5002A0197 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200139D1BEC58E5002A0197 /* Stack.swift */; settings = {ASSET_TAGS = (); }; };
 		22137F121BD8352E00006B54 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22137F111BD8352E00006B54 /* Accounts.framework */; };
 		22137F141BD8364800006B54 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22137F131BD8364800006B54 /* AudioToolbox.framework */; };
 		22137F161BD8365400006B54 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22137F151BD8365400006B54 /* CFNetwork.framework */; };
@@ -93,6 +94,7 @@
 		220013971BE9CBAC002A0197 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = ../Helpers/APIManager.swift; sourceTree = "<group>"; };
 		220013991BEB6EBF002A0197 /* NetworkOnCompleteCallBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOnCompleteCallBack.swift; sourceTree = "<group>"; };
 		2200139B1BEBD994002A0197 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		2200139D1BEC58E5002A0197 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		22137F111BD8352E00006B54 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		22137F131BD8364800006B54 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		22137F151BD8365400006B54 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -269,6 +271,7 @@
 				22B2193C1BDC703100876CA6 /* PrimitivesExtension.swift */,
 				22E3E0F91BE0895E00FE560E /* DataHelper.swift */,
 				2200139B1BEBD994002A0197 /* Enums.swift */,
+				2200139D1BEC58E5002A0197 /* Stack.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				22C16C3F1BC2708400D02243 /* UserInfo.swift in Sources */,
 				226074C51BDF2DB100C52EA7 /* TabBarController.swift in Sources */,
 				3EC1E5029EDC3225307C9EEA /* MockBackendData.swift in Sources */,
+				2200139E1BEC58E5002A0197 /* Stack.swift in Sources */,
 				22137F2D1BD8933800006B54 /* SearchForm.swift in Sources */,
 				2200139A1BEB6EBF002A0197 /* NetworkOnCompleteCallBack.swift in Sources */,
 				220013981BE9CBAC002A0197 /* APIManager.swift in Sources */,

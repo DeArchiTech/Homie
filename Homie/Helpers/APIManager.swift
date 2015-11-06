@@ -16,8 +16,11 @@ class APIManager : NetworkOnCompleteCallBack{
     var usersCache : [String : UserModel]?
     var searchCache : [String :DetailItemViewModel]?
     var currentUser : UserModel?
-
-    var lastAPICall : APICalls = APICalls.None
+    var stackOfApiCalls = Stack<APICalls>()
+    
+    //So if a particular network call needs additional calls
+    //First push all the calls onto the stack and call them one by one
+    //When we have no more items in the stack, call on complete CallBack
     
     init(){
         
@@ -28,7 +31,7 @@ class APIManager : NetworkOnCompleteCallBack{
     func getTrending(onComplete : APIonCompleteProtocol) -> [ItemModel]?{
         
         //Network Call
-        self.lastAPICall = APICalls.GetTrending
+        self.stackOfApiCalls.push(APICalls.GetTrending)
         self.apiOnComplete = onComplete
         self.backEndProtocol!.getTrendingItems()
         
@@ -47,10 +50,20 @@ class APIManager : NetworkOnCompleteCallBack{
     func getSearchResults(searchForm : SearchForm , onComplete : APIonCompleteProtocol) -> [DetailItemViewModel]?{
         
         //Network Call
-        self.lastAPICall = APICalls.GetSearchResults
+        self.stackOfApiCalls.push(APICalls.GetSearchResults)
         self.apiOnComplete = onComplete
-        self.backEndProtocol!.getSearchResults(searchForm)
         
+        if let users = self.usersCache{
+            
+            self.backEndProtocol!.getSearchResults(searchForm)
+        
+        }else{
+        
+            self.stackOfApiCalls.push(APICalls.GetUsers)
+            self.backEndProtocol?.getUsers()
+        
+        }
+
         //Return what I have in the cache
         if let dict = self.searchCache {
             
@@ -65,7 +78,8 @@ class APIManager : NetworkOnCompleteCallBack{
     
     func login(loginForm : LoginForm , onComplete : APIonCompleteProtocol) -> Bool {
         
-        self.lastAPICall = APICalls.Login
+        self.stackOfApiCalls.push(APICalls.Login)
+        self.stackOfApiCalls.push(APICalls.GetSearchResults)
         self.apiOnComplete = onComplete
         return self.backEndProtocol!.login(loginForm)
         
@@ -73,7 +87,7 @@ class APIManager : NetworkOnCompleteCallBack{
     
     func signUp(signUpForm : SignUpForm , onComplete : APIonCompleteProtocol) -> Bool{
         
-        self.lastAPICall = APICalls.SignUp
+        self.stackOfApiCalls.push(APICalls.SignUp)
         self.apiOnComplete = onComplete
         return self.backEndProtocol!.signUp(signUpForm)
         
@@ -81,7 +95,7 @@ class APIManager : NetworkOnCompleteCallBack{
     
     func getUsers(onComplete : APIonCompleteProtocol) -> [UserModel]?{
         
-        self.lastAPICall = APICalls.GetUsers
+        self.stackOfApiCalls.push(APICalls.GetUsers)
         self.apiOnComplete = onComplete
         self.backEndProtocol!.getUsers()
         
@@ -97,19 +111,63 @@ class APIManager : NetworkOnCompleteCallBack{
     }
     
     func onNetworkSuccess(nsobject : NSObject) -> Void{
+
+        let call = self.stackOfApiCalls.pop()
         
-        switch self.lastAPICall {
+        //If nothing left in stack, just handle the callback back to View
+
+        if self.stackOfApiCalls.size() == 0 {
+            self.handleCallBackToView(call , nsobject: nsobject)
+        }
+            
+        //Else If there is something in the stack, do chain calling
+        
+        else {
+            self.handleChainedApiCalling(call)
+        }
+
+
+
+        
+    }
+    
+    func handleChainedApiCalling(apiCall : APICalls) -> Void{
+        
+        switch apiCall {
+            
+        case .GetSearchResults:
+            
+            self.backEndProtocol?.getUsers()
+            
+        case .GetTrending: break
+            
+        case .SignUp: break
+            
+        case .Login: break
+            
+        case .GetUsers: break
+            
+        case .None: break
+            
+        default: break
+            
+        }
+        
+    }
+    
+    func handleCallBackToView(apiCall : APICalls ,nsobject : NSObject) -> Void{
+        
+        switch apiCall {
             
         case .GetSearchResults:
             
             //If missing users, fetch from BE
             //Return what I have in the cache
             let dict = self.usersCache
-                
+            
             if dict == nil{
                 
                 self.getUsers(self.apiOnComplete!)
-                self.lastAPICall = APICalls.GetSearchResults
                 
             }else if let _ = self.trendingCache{
                 
@@ -118,16 +176,19 @@ class APIManager : NetworkOnCompleteCallBack{
                 self.apiOnComplete?.onNetworkSuccess([DetailItemViewModel](dictionary.values))
                 
             }
-
             
-        case .GetTrending: break
-        
             
-        case .SignUp: break
+        case .GetTrending:
             
-        
-        case .Login: break
-        
+            self.apiOnComplete?.onNetworkSuccess(nsobject)
+            
+        case .SignUp:
+            
+            self.apiOnComplete?.onNetworkSuccess(nsobject)
+            
+        case .Login:
+            
+            self.apiOnComplete?.onNetworkSuccess(nsobject)
             
         case .None: break
             
@@ -139,7 +200,7 @@ class APIManager : NetworkOnCompleteCallBack{
     
     func onNetworkFailure(statusCode : Int , message : String) -> Void{
         
-        self.lastAPICall = APICalls.None
+        //Clear Stack
         self.apiOnComplete?.onNetworkFailure(statusCode, message: message)
         
     }
